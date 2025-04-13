@@ -14,24 +14,24 @@ body {
   padding: 30px 20px;
 }
 
-/* Header */
+* Header */
 header {
   background-color: #1f1f1f;
-  padding: 40px 0;
+  padding: 20px 0; /* reduced from 40px to 20px */
   text-align: center;
   border-bottom: 1px solid #333;
 }
 
 header h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  color: #ffffff;
+  font-size: 36px; /* was 48px */
+  margin-bottom: 5px; /* was 10px */
 }
 
 header p {
-  font-size: 20px;
+  font-size: 16px; /* was 20px */
   color: #bbbbbb;
 }
+
 
 /* Content Sections */
 .content h2 {
@@ -47,16 +47,17 @@ header p {
 /* Footer */
 footer {
   background-color: #1f1f1f;
-  padding: 30px 20px;
+  padding: 15px 20px; /* reduced from 30px */
   border-top: 1px solid #333;
 }
 
 .footer-left {
   text-align: left;
-  font-size: 15px;
+  font-size: 14px; /* slightly smaller */
   color: #aaaaaa;
   width: 100%;
 }
+
 
 .footer-left a {
   color: #bbbbbb;
