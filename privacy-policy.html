@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="style.css">
   <style>
     header, footer {
-      padding: 10px 0; /* Reduce top/bottom spacing */
+      padding: 10px 0;
     }
 
-    header h1, footer p {
-      font-size: 1.4em; /* Slightly smaller title and footer text */
+    header h1 {
+      font-size: 1.4em;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1em;
+      color: #bbbbbb;
     }
 
     .container {
@@ -22,6 +28,24 @@
 
     main section {
       margin-bottom: 25px;
+    }
+
+    /* Consistent footer link styling */
+    .footer-left {
+      text-align: left;
+      font-size: 15px;
+      color: #aaaaaa;
+    }
+
+    .footer-left a {
+      color: #bbbbbb;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-left a:hover {
+      color: #4da3ff;
     }
   </style>
 </head>
@@ -117,8 +141,7 @@
       </section>
     </main>
   </div>
-
-  <footer>
+<footer>
     <div class="footer-left">
       <p>
         <a href="index.html">Home</a> | 
@@ -128,6 +151,6 @@
       <p>© 2025 - Talken by Flex Studios</p>
     </div>
   </footer>
-<script src="js/theme-loader.js"></script>
+  <script src="js/theme-loader.js"></script>
 </body>
 </html>
