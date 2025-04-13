@@ -1,69 +1,98 @@
-/* General Dark Theme Styles */
-body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Dark Theme Base */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Container */
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
 /* Header */
 header {
-    background-color: #1f1f1f;
-    padding: 40px 0;
-    text-align: center;
-    border-bottom: 1px solid #333;
+  background-color: #1f1f1f;
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
 }
 
 header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 header p {
-    font-size: 20px;
-    color: #bbbbbb;
+  font-size: 20px;
+  color: #bbbbbb;
 }
 
-/* Section */
+/* Content Sections */
 .content h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .content p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* Footer */
 footer {
-    background-color: #1f1f1f;
-    padding: 30px 20px;
-    border-top: 1px solid #333;
+  background-color: #1f1f1f;
+  padding: 30px 20px;
+  border-top: 1px solid #333;
 }
 
 .footer-left {
-    text-align: left;
-    font-size: 15px;
-    color: #aaaaaa;
+  text-align: left;
+  font-size: 15px;
+  color: #aaaaaa;
+  width: 100%;
 }
 
 .footer-left a {
-    color: #bbbbbb;
-    text-decoration: none;
-    margin-right: 10px;
-    transition: color 0.3s ease;
+  color: #bbbbbb;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s ease;
 }
 
 .footer-left a:hover {
-    color: #4da3ff;
+  color: #4da3ff;
+}
+
+/* Downloads Section */
+.downloads .download-item {
+  margin: 20px 0;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.downloads h3 {
+  margin: 0 0 10px 0;
+}
+
+.downloads button {
+  background-color: #4da3ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.downloads button:hover {
+  background-color: #0073e6;
 }
