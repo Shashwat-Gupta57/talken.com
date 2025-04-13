@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talken is a chat app, built by a single developer">
-    <title>Talken - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Talken is a chat app, built by a single developer" />
+  <title>Talken - Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-theme">
-    <header>
-        <div class="container">
-            <h1>Talken</h1>
-            <p>Aiming Towards A Better Future Of Social Connectivity</p>
-        </div>
-    </header>
+<body>
+  <header>
+    <div class="container">
+      <h1>Talken</h1>
+      <p>Aiming Towards A Better Future Of Social Connectivity</p>
+    </div>
+  </header>
 
-    <section class="content">
-        <div class="container">
-            <h2>About</h2>
-            <p>Talken is a privacy-focused chat app built by a solo developer, aiming to revolutionize digital communication by ensuring data privacy and user freedom.</p>
-        </div>
-    </section>
+  <section class="content">
+    <div class="container">
+        <h2>Your Messages, Your Control</h2>
+        <p>Talken is a minimalist chat app built by a solo developer, designed to put <strong>privacy first</strong>.</p>
 
-    <footer>
-        <div class="footer-left">
-            <p>
-                <a href="privacy-policy.html">Privacy Policy</a> |
-                <a href="terms-and-conditions.html">Terms & Conditions</a>
-            </p>
-            <p>© 2025 - Talken by Flex Studios</p>
+        <div class="feature-list">
+            <h3>How Talken Works:</h3>
+            <ul>
+                <li>🔐 <strong>Zero-Server Storage</strong> - Messages are backed up to <em>your Google Drive</em>, not our servers</li>
+                <li>🤖 <strong>No Ads, No Tracking</strong> - Built for communication, not surveillance</li>
+                <li>🔄 <strong>Mandatory Backups</strong> - Automatic Google Drive sync ensures you never lose chats</li>
+                <li>👨‍💻 <strong>One-Person Mission</strong> - Developed independently by Shashwat Gupta of Flex Studios</li>
+            </ul>
         </div>
-    </footer>
+
+        <p>For developers: <a href="https://github.com/shashwat-gupta57" target="_blank">View the developer's GitHub</a></p>
+    </div>
+</section>
+
+  <section class="content downloads">
+    <div class="container">
+      <h2>Downloads</h2>
+      <div class="download-item">
+        <h3>Talken Toolbox Desktop</h3>
+        <button onclick="startDownload('fileID1')">Download</button>
+      </div>
+      <div class="download-item">
+        <h3>Talken Desktop App</h3>
+        <button onclick="startDownload('fileID2')">Download</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+      </p>
+      <p>© 2025 - Talken by Flex Studios</p>
+    </div>
+  </footer>
+
+  <script>
+    function startDownload(fileId) {
+      const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+      const a = document.createElement("a");
+      a.href = directLink;
+      a.download = ""; // Optional: triggers download
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
 </body>
 </html>
