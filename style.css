@@ -1,104 +1,69 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Dark Theme Styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-.logo {
-    height: 60px;           /* adjust height as needed */
-    width: auto;            /* keeps aspect ratio */
-    display: block;
-    margin: 0 auto;         /* centers the logo horizontally */
-    padding: 10px 0;        /* vertical spacing */
-    object-fit: contain;    /* ensures logo scales nicely */
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
-.footer-left {
-  text-align: left;
-  margin-top: 30px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-.footer-left a {
-  text-decoration: none;
-  color: #333;
-  margin-right: 10px;
-  transition: color 0.3s ease;
-}
-
-.footer-left a:hover {
-  color: #007bff;
-}
-
-
+/* Header */
 header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px 0;
+    background-color: #1f1f1f;
+    padding: 40px 0;
     text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #ffffff;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 20px;
+    color: #bbbbbb;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Container for main content */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/* Content Section */
-.content {
-    padding: 20px;
-    background-color: white;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
+/* Section */
 .content h2 {
-    font-size: 1.8em;
-    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .content p {
-    font-size: 1.1em;
+    font-size: 18px;
     line-height: 1.6;
 }
 
-/* Link styling */
-a {
-    color: #007BFF;
-    text-decoration: none;
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    padding: 30px 20px;
+    border-top: 1px solid #333;
 }
 
-a:hover {
-    text-decoration: underline;
+.footer-left {
+    text-align: left;
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+.footer-left a {
+    color: #bbbbbb;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+    color: #4da3ff;
 }
