@@ -16,6 +16,24 @@ body {
     object-fit: contain;    /* ensures logo scales nicely */
 }
 
+.policy-links {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.policy-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.policy-links a:hover {
+  color: #007bff;
+}
+
 header {
     background-color: #007BFF;
     color: white;
