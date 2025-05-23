@@ -2,19 +2,56 @@
 body {
   background-color: #121212;
   color: #e0e0e0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Container */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px 20px;
+* {
+  box-sizing: border-box;
 }
 
-* Header */
+
+/*side-menu*/
+
+.side-menu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  width: 200px;
+  height: 100%;
+  z-index: 1000;
+}
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.side-menu li {
+  margin: 1rem 0;
+}
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.side-menu a:hover {
+  text-decoration: underline;
+}
+
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 220px;
+  padding: 0 1rem;
+}
+
+/* Header */
 header {
   background-color: #1f1f1f;
   padding: 10px 0; /* reduced from 40px to 20px */
@@ -167,3 +204,30 @@ footer {
   background: var(--accent-color);
   color: white;
 }
+
+/* ===== Responsive Fix for Mobile Screens ===== */
+@media (max-width: 768px) {
+  .side-menu {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .container {
+    margin-left: 0;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content p, .downloads button {
+    font-size: 16px;
+  }
+}
+
