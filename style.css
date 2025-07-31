@@ -1,143 +1,19 @@
-/* Dark Theme Base */
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-  font-family: 'Inter', sans-serif;
+/* ===== CSS Reset and Base Styles ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-
-/*side-menu*/
-
-.side-menu {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  background-color: #222;
-  color: white;
-  padding: 1rem;
-  width: 200px;
-  height: 100%;
-  z-index: 1000;
-}
-.side-menu ul {
-  list-style: none;
-  padding: 0;
-}
-.side-menu li {
-  margin: 1rem 0;
-}
-.side-menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-.side-menu a:hover {
-  text-decoration: underline;
-}
-
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-left: 220px;
-  padding: 0 1rem;
-}
-
-/* Header */
-header {
-  background-color: #1f1f1f;
-  padding: 10px 0; /* reduced from 40px to 20px */
-  text-align: center;
-  border-bottom: 1px solid #333;
-}
-
-header h1 {
-  font-size: 36px; /* was 48px */
-  margin-bottom: 5px; /* was 10px */
-}
-
-header p {
-  font-size: 16px; /* was 20px */
-  color: #bbbbbb;
-}
-
-
-/* Content Sections */
-.content h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.content p {
-  font-size: 18px;
+body {
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Footer */
-footer {
-  background-color: #1f1f1f;
-  padding: 15px 20px; /* reduced from 30px */
-  border-top: 1px solid #333;
-}
-
-.footer-left {
-  text-align: left;
-  font-size: 14px; /* slightly smaller */
-  color: #aaaaaa;
-  width: 100%;
-}
-
-
-.footer-left a {
-  color: #bbbbbb;
-  text-decoration: none;
-  margin-right: 10px;
-  transition: color 0.3s ease;
-}
-
-.footer-left a:hover {
-  color: #4da3ff;
-}
-
-/* Downloads Section */
-.downloads .download-item {
-  margin: 20px 0;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
-}
-
-.downloads h3 {
-  margin: 0 0 10px 0;
-}
-
-.downloads button {
-  background-color: #4da3ff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.downloads button:hover {
-  background-color: #0073e6;
-}
-
-/* ===== Theme Switching System ===== */
+/* ===== CSS Variables for Theme System ===== */
 :root {
-  /* Dark theme defaults (matches your existing colors) */
+  /* Dark theme defaults */
   --bg-color: #121212;
   --text-color: #e0e0e0;
   --header-bg: #1f1f1f;
@@ -145,6 +21,10 @@ footer {
   --border-color: #333;
   --accent-color: #4da3ff;
   --footer-bg: #1f1f1f;
+  --sidebar-bg: #222;
+  --sidebar-hover: #333;
+  --card-bg: #1e1e1e;
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="light"] {
@@ -155,79 +35,557 @@ footer {
   --border-color: #e0e0e0;
   --accent-color: #0073e6;
   --footer-bg: #f0f0f0;
+  --sidebar-bg: #ffffff;
+  --sidebar-hover: #f0f0f0;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Theme-aware elements */
+/* ===== Body and Main Layout ===== */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* ===== Mobile Menu Toggle ===== */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mobile-menu-toggle span {
+  width: 20px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* ===== Sidebar Navigation ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 10px var(--shadow);
+}
+
+.logo-section {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.logo-section h2 {
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.side-menu li {
+  margin: 0;
+}
+
+.side-menu a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  border-left: 3px solid transparent;
+}
+
+.side-menu a:hover {
+  background-color: var(--sidebar-hover);
+  border-left-color: var(--accent-color);
+}
+
+.side-menu a.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-left-color: var(--accent-color);
+}
+
+/* ===== Main Content Area ===== */
+.main-content {
+  margin-left: 250px;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== Header ===== */
 header {
   background-color: var(--header-bg);
-  border-bottom-color: var(--border-color);
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px var(--shadow);
 }
 
-.container, .downloads .download-item {
-  background-color: var(--container-bg);
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
 }
 
-footer {
-  background-color: var(--footer-bg);
-  border-top-color: var(--border-color);
+header p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
-.downloads button {
-  background-color: var(--accent-color);
+/* ===== Content Sections ===== */
+.content {
+  padding: 2rem 0;
 }
 
-/* Theme toggle button */
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+  color: var(--text-color);
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ===== Theme Toggle ===== */
 .theme-toggle-container {
   display: flex;
   justify-content: flex-end;
-  margin: -15px 0 20px;
+  margin-bottom: 2rem;
 }
 
 #themeToggle {
   background: var(--container-bg);
   color: var(--text-color);
   border: 1px solid var(--border-color);
-  padding: 8px 15px;
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s;
+  box-shadow: 0 2px 5px var(--shadow);
 }
 
 #themeToggle:hover {
   background: var(--accent-color);
   color: white;
+  transform: translateY(-2px);
 }
 
-/* ===== Responsive Fix for Mobile Screens ===== */
+/* ===== Feature List ===== */
+.feature-list {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+/* ===== Downloads Section ===== */
+.download-section {
+  margin: 2rem 0;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.download-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.download-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.download-card.featured {
+  border-color: var(--accent-color);
+  border-width: 2px;
+}
+
+.featured-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--accent-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.download-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.download-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.download-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.download-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.download-btn:hover {
+  background: var(--accent-color);
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* ===== System Requirements ===== */
+.system-requirements {
+  margin: 3rem 0;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.req-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.req-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* ===== Installation Guide ===== */
+.installation-guide {
+  margin: 3rem 0;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.step-number {
+  background: var(--accent-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Support Section ===== */
+.support-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+/* ===== Legal Content ===== */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.legal-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.legal-content h2:first-of-type {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+.privacy-highlight,
+.terms-highlight {
+  background: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.privacy-highlight h3,
+.terms-highlight h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* ===== Temporary Downloads Section ===== */
+.downloads-temp {
+  background: var(--card-bg);
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.downloads-temp .download-item {
+  background: var(--container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.downloads-temp button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.downloads-temp button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-left {
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.footer-left a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-left a:hover {
+  color: var(--accent-color);
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-  .side-menu {
-    position: static;
-    width: 100%;
-    height: auto;
-    padding: 0.5rem;
+  .mobile-menu-toggle {
+    display: flex;
   }
 
-  .container {
+  .side-menu {
+    transform: translateX(-100%);
+  }
+
+  .side-menu.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
     margin-left: 0;
   }
 
+  .container {
+    padding: 0 1rem;
+  }
+
   header h1 {
-    font-size: 28px;
+    font-size: 2rem;
   }
 
   .content h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
-  .content p, .downloads button {
-    font-size: 16px;
+  .download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .requirements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-details {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
+@media (max-width: 480px) {
+  header {
+    padding: 1rem 0;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 1rem 0;
+  }
+
+  .feature-list,
+  .support-section,
+  .privacy-highlight,
+  .terms-highlight {
+    padding: 1.5rem;
+  }
+
+  .download-card,
+  .req-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ===== Smooth Scrolling ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent-color);
+  filter: brightness(1.2);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
