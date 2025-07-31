@@ -1,58 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Terms & Conditions - Talken</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Talken Terms and Conditions" />
+  <title>Talken - Terms & Conditions</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Terms and Conditions</h1>
-    <p><strong>Last Updated:</strong> 13/04/2025</p>
+  <!-- Mobile menu toggle -->
+  <button class="mobile-menu-toggle" id="mobileMenuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <h2>1. Account & Usage</h2>
-    <p>Talken is built to prioritize privacy and freedom of communication. We do not read, moderate, or censor messages sent via the app, as this would interfere with planned end-to-end encryption.</p>
-    <p>However, client-side detection (inside the app) may automatically flag or prevent the sharing of illegal content such as child pornography (CP), pornography or extreme gore. Such activity will result in the user’s account being put under serious observation.</p>
-    <p>We will never penalize users for sending legal content such as adult content. Your privacy is our top concern.</p>
-
-    <h2>2. Google Drive Requirements</h2>
-    <p>Drive access is required to enable backup features and media storage. Without it, some functionality may be limited. Talken uses Drive to back up your chats and messages into a folder named <strong>Talken</strong>.</p>
-    <p>If you remove Talken's access to your Google Drive or delete the backup folder, the app may no longer function properly.</p>
-
-    <h2>3. Data Liability</h2>
-    <p>We are not liable for any data loss on your Google Drive. Backups are stored in your Drive and are your responsibility.</p>
-    <p>Messages are <strong>not stored</strong> on our servers. Only essential data like Group IDs and member lists are temporarily stored.</p>
-
-    <h2>4. Account Suspension & Deletion</h2>
-    <p>You may delete your Talken account at any time. Doing so will erase all data related to you stored on our servers.</p>
-    <p>Flex Studios reserves the right to suspend accounts, especially in cases involving serious content abuse or legal concerns. In most cases, we will notify the user at least 3 days before enforcing account suspension.</p>
-
-    <h2>5. Prohibited Content</h2>
-    <p>Talken does not allow content related to child abuse (CP), Pornography , gore, or similarly harmful material. Such violations may lead to your account being flagged or suspended.</p>
-    <p>We do not monitor or penalize users for content like moderate nudity, which falls within user privacy rights.</p>
-
-    <h2>6. Updates to Terms</h2>
-    <p>These terms may be updated at any time during the app’s development phase without prior notice.</p>
-    <p>After launch, users will be notified about any changes via in-app alerts or email.</p>
-
-    <h2>7. Legal Jurisdiction</h2>
-    <p>These terms are governed under Indian law. To the best of our knowledge, Talken complies with applicable legal standards in India.</p>
-    <p>If any Indian governmental agency requests user information, we will only provide it for accounts under serious observation. All other user data remains confidential and protected.</p>
-
-    <h2>8. Contact</h2>
-    <p>Developer: Shashwat Gupta (Flex Studios)</p>
-    <p>Contact: <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a></p>
-  </div>
-  <footer>
-    <div class="footer-left">
-      <p>
-        <a href = "index.html">Home</a> | 
-        <a href="privacy-policy.html">Privacy Policy</a> | 
-        <a href="terms-and-conditions.html">Terms & Conditions</a>
-      </p>
-      <p>© 2025 - Talken by Flex Studios</p>
+  <!-- Sidebar Navigation -->
+  <nav class="side-menu" id="sideMenu">
+    <div class="logo-section">
+      <h2>Talken</h2>
     </div>
-  </footer>
-  <script src="js/theme-loader.js"></script>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="downloads.html">📥 Downloads</a></li>
+      <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
+      <li><a href="terms-and-conditions.html" class="active">📋 Terms & Conditions</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <div class="container">
+        <h1>Terms & Conditions</h1>
+        <p>Please read these terms carefully</p>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="container">
+        <div class="theme-toggle-container">
+          <button id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌓</span> Toggle Theme
+          </button>
+        </div>
+
+        <div class="legal-content">
+          <p><strong>Last Updated:</strong> January 2025</p>
+
+          <h2>1. Acceptance of Terms</h2>
+          <p>By downloading, installing, or using Talken, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our application.</p>
+
+          <h2>2. Description of Service</h2>
+          <p>Talken is a privacy-focused chat application that:</p>
+          <ul>
+            <li>Stores messages and files in your personal Google Drive</li>
+            <li>Provides end-to-end encrypted communication</li>
+            <li>Offers peer-to-peer calling functionality</li>
+            <li>Supports file sharing up to 15 GB or your available Google Drive space</li>
+          </ul>
+
+          <h2>3. User Responsibilities</h2>
+          <h3>3.1 Account Security</h3>
+          <ul>
+            <li>You are responsible for maintaining the security of your Google account</li>
+            <li>You must not share your account credentials with others</li>
+            <li>You must notify us immediately of any unauthorized use</li>
+          </ul>
+
+          <h3>3.2 Acceptable Use</h3>
+          <p>You agree NOT to use Talken for:</p>
+          <ul>
+            <li>Illegal activities or content</li>
+            <li>Harassment, bullying, or threatening behavior</li>
+            <li>Sharing copyrighted material without permission</li>
+            <li>Distributing malware, viruses, or harmful code</li>
+            <li>Spamming or unsolicited commercial messages</li>
+            <li>Impersonating others or creating fake accounts</li>
+          </ul>
+
+          <h2>4. Content and Data</h2>
+          <h3>4.1 Your Content</h3>
+          <ul>
+            <li>You retain full ownership of all content you share through Talken</li>
+            <li>You are solely responsible for the content you share</li>
+            <li>You grant Talken permission to transmit your content to intended recipients</li>
+          </ul>
+
+          <h3>4.2 Data Storage</h3>
+          <ul>
+            <li>All messages and files are stored in YOUR Google Drive, not our servers</li>
+            <li>You control the retention and deletion of your data</li>
+            <li>We do not have access to your stored messages or files</li>
+          </ul>
+
+          <h2>5. Privacy and Security</h2>
+          <ul>
+            <li>We implement industry-standard security measures</li>
+            <li>Your privacy is protected as outlined in our Privacy Policy</li>
+            <li>We do not sell, rent, or share your personal information</li>
+            <li>Communication is encrypted end-to-end</li>
+          </ul>
+
+          <h2>6. Intellectual Property</h2>
+          <ul>
+            <li>Talken and its original content are owned by Flex Studios</li>
+            <li>You may not copy, modify, or distribute our software without permission</li>
+            <li>All trademarks and logos are property of their respective owners</li>
+          </ul>
+
+          <h2>7. Disclaimers and Limitations</h2>
+          <h3>7.1 Service Availability</h3>
+          <ul>
+            <li>We strive for 99.9% uptime but cannot guarantee uninterrupted service</li>
+            <li>Maintenance and updates may temporarily affect availability</li>
+            <li>Third-party service dependencies (Google Drive) may impact functionality</li>
+          </ul>
+
+          <h3>7.2 Limitation of Liability</h3>
+          <p>Talken is provided "as is" without warranties. We are not liable for:</p>
+          <ul>
+            <li>Data loss or corruption</li>
+            <li>Service interruptions</li>
+            <li>Third-party actions or content</li>
+            <li>Indirect or consequential damages</li>
+          </ul>
+
+          <h2>8. System Requirements</h2>
+          <ul>
+            <li>Compatible operating system (Windows 7+, macOS 10.12+, Linux)</li>
+            <li>Java Runtime Environment (JRE 8+ for non-bundled versions)</li>
+            <li>Active Google account with Drive access</li>
+            <li>Stable internet connection</li>
+            <li>Minimum 2 GB RAM and 500 MB storage space</li>
+          </ul>
+
+          <h2>9. Updates and Modifications</h2>
+          <ul>
+            <li>We may update Talken to improve functionality and security</li>
+            <li>Updates may be automatic or require manual installation</li>
+            <li>Continued use after updates constitutes acceptance of changes</li>
+          </ul>
+
+          <h2>10. Termination</h2>
+          <h3>10.1 By You</h3>
+          <ul>
+            <li>You may stop using Talken at any time</li>
+            <li>Uninstall the application to terminate your use</li>
+            <li>Your data remains in your Google Drive</li>
+          </ul>
+
+          <h3>10.2 By Us</h3>
+          <p>We may terminate your access if you:</p>
+          <ul>
+            <li>Violate these terms</li>
+            <li>Use the service for illegal purposes</li>
+            <li>Attempt to harm or exploit the service</li>
+          </ul>
+
+          <h2>11. Governing Law</h2>
+          <p>These terms are governed by the laws of India. Any disputes will be resolved in the courts of Prayagraj, Uttar Pradesh, India.</p>
+
+          <h2>12. Contact Information</h2>
+          <p>For questions about these Terms and Conditions:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a></li>
+            <li><strong>Developer:</strong> Shashwat Gupta, Flex Studios</li>
+            <li><strong>Location:</strong> Prayagraj, Uttar Pradesh, India</li>
+          </ul>
+
+          <h2>13. Changes to Terms</h2>
+          <p>We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of Talken after changes constitutes acceptance of the new terms.</p>
+
+          <div class="terms-highlight">
+            <h3>📋 Fair Use Promise</h3>
+            <p>These terms exist to protect both you and us. We believe in fair, transparent policies that respect your rights while ensuring Talken remains a safe, reliable platform for everyone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>
+            <a href="index.html">Home</a> |
+            <a href="downloads.html">Downloads</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+          </p>
+          <p>© 2025 - Talken by Flex Studios</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/navigation.js"></script>
 </body>
 </html>
