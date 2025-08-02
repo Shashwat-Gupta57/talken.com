@@ -9,19 +9,40 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Mobile menu toggle -->
-  <button class="mobile-menu-toggle" id="mobileMenuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Sidebar Navigation -->
-  <nav class="side-menu" id="sideMenu">
-    <div class="logo-section">
-      <h2>Talken</h2>
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <!-- Logo on the left -->
+      <div class="nav-logo">
+        <div class="logo-icon">T</div>
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      
+      <!-- Main title in center -->
+      <div class="nav-title">
+        <h1>Talken</h1>
+      </div>
+      
+      <!-- Theme toggle on the right -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <span class="theme-icon">🌓</span>
+        </button>
+      </div>
     </div>
-    <ul>
+  </nav>
+
+  <!-- Right Sidebar (Hidden by default) -->
+  <nav class="right-sidebar" id="rightSidebar">
+    <div class="sidebar-header">
+      <h3>Navigation</h3>
+      <button class="sidebar-close" id="sidebarClose">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="downloads.html" class="active">📥 Downloads</a></li>
       <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
@@ -29,9 +50,12 @@
     </ul>
   </nav>
 
+  <!-- Overlay for mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <!-- Main Content -->
   <main class="main-content">
-    <header>
+    <header class="page-header">
       <div class="container">
         <h1>Downloads</h1>
         <p>Get Talken for your platform</p>
@@ -39,213 +63,133 @@
     </header>
 
     <section class="content">
-  <div class="container">
-    <div class="theme-toggle-container">
-      <button id="themeToggle" aria-label="Toggle theme">
-        <span class="theme-icon">🌓</span> Toggle Theme
-      </button>
-    </div>
-
-    <!-- Talken Downloads Section -->
-    <div class="download-section talken-section">
-      <div class="section-header">
-        <h2>Talken Downloads</h2>
-        <p>Privacy-first chat application - Choose your platform</p>
-      </div>
-
-      <div class="download-grid">
-        <div class="download-card">
-          <div class="download-icon">🧰</div>
-          <h3>Talken Toolbox Desktop</h3>
-          <p>Complete development toolkit with all features and utilities for advanced users.</p>
-          <div class="download-details">
-            <span class="file-size">~50 MB</span>
-            <span class="compatibility">Windows, Linux, macOS</span>
+      <div class="container">
+        <!-- Talken Downloads Section -->
+        <div class="download-section talken-section">
+          <div class="section-header">
+            <h2>Talken Downloads</h2>
+            <p>Privacy-first chat application - Choose your platform</p>
           </div>
-          <button class="download-btn primary" onclick="startDownload('13tg0Y7fnJlEkjUXqLIO0KtKYHC4OaRhT')">
-            📥 Download Toolbox
-          </button>
-        </div>
 
-        <div class="download-card featured">
-          <div class="featured-badge">Recommended</div>
-          <div class="download-icon">☕</div>
-          <h3>Talken Desktop App With JRE Bundled</h3>
-          <p>Complete package with Java Runtime Environment included. No additional setup required.</p>
-          <div class="download-details">
-            <span class="file-size">~150 MB</span>
-            <span class="compatibility">Windows, Linux, macOS</span>
-          </div>
-          <button class="download-btn primary" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">
-            📥 Download with JRE
-          </button>
-        </div>
-
-        <div class="download-card">
-          <div class="download-icon">☕</div>
-          <h3>Talken Desktop Executable</h3>
-          <p>Lightweight Windows executable. Requires Java to be installed separately.</p>
-          <div class="download-details">
-            <span class="file-size">~25 MB</span>
-            <span class="compatibility">Windows Only</span>
-          </div>
-          <button class="download-btn primary" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">
-            📥 Download for Windows
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- SG Store Section -->
-    <div class="download-section sg-store-section">
-      <div class="section-header">
-        <div class="store-logo">
-          <h2>🏪 SG Store</h2>
-          <p class="store-tagline">Premium Software by Shashwat Gupta</p>
-        </div>
-        <p>Discover more innovative applications from Flex Studios</p>
-      </div>
-
-      <div class="download-grid">
-        <!-- Example software entries - you can customize these -->
-        <div class="download-card coming-soon">
-          <div class="coming-soon-badge">Coming Soon</div>
-          <div class="download-icon">📊</div>
-          <h3>SG Paint</h3>
-          <p>My own paint application created to test my skills while I was in 10th. It has many feaures from MS paint, but some of it have bugs</p>
-          <div class="download-details">
-            <span class="file-size">1.75MB</span>
-            <span class="compatibility">Cross-platform</span>
-          </div>
-          <button class="download-btn disabled" disabled>
-            🔜 Coming Soon
-          </button>
-        </div>
-
-        <div class="download-card coming-soon">
-          <div class="coming-soon-badge">Coming Soon</div>
-          <div class="download-icon">📄</div>
-          <h3>Notes</h3>
-          <p>Text editor similar to Windows Notepad but wth additional features like personalisation and encryption options.</p>
-          <div class="download-details">
-            <span class="file-size">TBA</span>
-            <span class="compatibility">Cross-platform</span>
-          </div>
-          <button class="download-btn disabled" disabled>
-            🔜 Coming Soon
-          </button>
-        </div>
-
-        <div class="download-card coming-soon">
-          <div class="coming-soon-badge">Coming Soon</div>
-          <div class="download-icon">🔐</div>
-          <h3>Flappy Bird</h3>
-          <p>Another vacation game project to enhance my skills, it is similar to the OG game flappy bird in all aspects.</p>
-          <div class="download-details">
-            <span class="file-size">TBA</span>
-            <span class="compatibility">Cross-platform</span>
-          </div>
-          <button class="download-btn disabled" disabled>
-            🔜 Coming Soon
-          </button>
-        </div>
-      </div>
-
-      <div class="store-info">
-        <h3>About SG Store</h3>
-        <p>SG Store is your destination for premium, privacy-focused software solutions developed by Shashwat Gupta. Each application is crafted with the same attention to detail and commitment to user privacy that makes Talken special.</p>
-        <div class="store-features">
-          <div class="feature-item">
-            <span class="feature-icon">🛡️</span>
-            <span>Privacy First</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">⚡</span>
-            <span>Lightweight</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🔄</span>
-            <span>Regular Updates</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">💝</span>
-            <span>Free Forever</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-        <div class="system-requirements">
-          <h2>System Requirements</h2>
-          <div class="requirements-grid">
-            <div class="req-card">
-              <h4>Minimum Requirements</h4>
-              <ul>
-                <li><strong>OS:</strong> Windows 7+, macOS 10.12+, Linux</li>
-                <li><strong>RAM:</strong> 2 GB</li>
-                <li><strong>Storage:</strong> 500 MB free space</li>
-                <li><strong>Java:</strong> JRE 8+ (if not using bundled version)</li>
-                <li><strong>Internet:</strong> Required for Google Drive sync</li>
-              </ul>
-            </div>
-            <div class="req-card">
-              <h4>Recommended</h4>
-              <ul>
-                <li><strong>OS:</strong> Windows 10+, macOS 12+, Ubuntu 20.04+</li>
-                <li><strong>RAM:</strong> 4 GB or more</li>
-                <li><strong>Storage:</strong> 1 GB free space</li>
-                <li><strong>Java:</strong> Latest JRE version</li>
-                <li><strong>Internet:</strong> Stable broadband connection</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="installation-guide">
-          <h2>Installation Guide</h2>
-          <div class="guide-steps">
-            <div class="step">
-              <div class="step-number">1</div>
-              <div class="step-content">
-                <h4>Download</h4>
-                <p>Choose and download the appropriate version for your system from above.</p>
+          <div class="download-grid">
+            <div class="download-card">
+              <div class="download-icon">🧰</div>
+              <h3>Talken Toolbox Desktop</h3>
+              <p>Complete development toolkit with all features and utilities for advanced users.</p>
+              <div class="download-details">
+                <span class="file-size">~50 MB</span>
+                <span class="compatibility">Windows, Linux, macOS</span>
               </div>
+              <button class="download-btn primary" onclick="startDownload('13tg0Y7fnJlEkjUXqLIO0KtKYHC4OaRhT')">
+                📥 Download Toolbox
+              </button>
             </div>
-            <div class="step">
-              <div class="step-number">2</div>
-              <div class="step-content">
-                <h4>Extract</h4>
-                <p>Extract the downloaded file to your preferred location (Desktop, Program Files, etc.).</p>
+
+            <div class="download-card featured">
+              <div class="featured-badge">Recommended</div>
+              <div class="download-icon">☕</div>
+              <h3>Talken Desktop App With JRE Bundled</h3>
+              <p>Complete package with Java Runtime Environment included. No additional setup required.</p>
+              <div class="download-details">
+                <span class="file-size">~150 MB</span>
+                <span class="compatibility">Windows, Linux, macOS</span>
               </div>
+              <button class="download-btn primary" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">
+                📥 Download with JRE
+              </button>
             </div>
-            <div class="step">
-              <div class="step-number">3</div>
-              <div class="step-content">
-                <h4>Run</h4>
-                <p>Double-click the Talken executable to launch the application.</p>
+
+            <div class="download-card">
+              <div class="download-icon">🪟</div>
+              <h3>Talken Desktop Executable</h3>
+              <p>Lightweight Windows executable. Requires Java to be installed separately.</p>
+              <div class="download-details">
+                <span class="file-size">~25 MB</span>
+                <span class="compatibility">Windows Only</span>
               </div>
+              <button class="download-btn primary" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">
+                📥 Download for Windows
+              </button>
             </div>
-            <div class="step">
-              <div class="step-number">4</div>
-              <div class="step-content">
-                <h4>Setup</h4>
-                <p>Follow the on-screen setup wizard to connect your Google Drive and start chatting!</p>
+          </div>
+        </div>
+
+        <!-- SG Store Section -->
+        <div class="download-section sg-store-section">
+          <div class="section-header">
+            <div class="store-logo">
+              <h2>🏪 SG Store</h2>
+              <p class="store-tagline">Premium Software by Shashwat Gupta</p>
+            </div>
+            <p>Discover more innovative applications from Flex Studios</p>
+          </div>
+
+          <div class="download-grid">
+            <div class="download-card coming-soon">
+              <div class="coming-soon-badge">Coming Soon</div>
+              <div class="download-icon">📊</div>
+              <h3>DataViz Pro</h3>
+              <p>Advanced data visualization tool for creating stunning charts and graphs.</p>
+              <div class="download-details">
+                <span class="file-size">TBA</span>
+                <span class="compatibility">Cross-platform</span>
+              </div>
+              <button class="download-btn disabled" disabled>
+                🔜 Coming Soon
+              </button>
+            </div>
+
+            <div class="download-card coming-soon">
+              <div class="coming-soon-badge">Coming Soon</div>
+              <div class="download-icon">🎵</div>
+              <h3>AudioMaster</h3>
+              <p>Professional audio editing and enhancement suite for content creators.</p>
+              <div class="download-details">
+                <span class="file-size">TBA</span>
+                <span class="compatibility">Cross-platform</span>
+              </div>
+              <button class="download-btn disabled" disabled>
+                🔜 Coming Soon
+              </button>
+            </div>
+
+            <div class="download-card coming-soon">
+              <div class="coming-soon-badge">Coming Soon</div>
+              <div class="download-icon">🔐</div>
+              <h3>SecureVault</h3>
+              <p>Military-grade file encryption and secure storage solution.</p>
+              <div class="download-details">
+                <span class="file-size">TBA</span>
+                <span class="compatibility">Cross-platform</span>
+              </div>
+              <button class="download-btn disabled" disabled>
+                🔜 Coming Soon
+              </button>
+            </div>
+          </div>
+
+          <div class="store-info">
+            <h3>About SG Store</h3>
+            <p>SG Store is your destination for premium, privacy-focused software solutions developed by Shashwat Gupta. Each application is crafted with the same attention to detail and commitment to user privacy that makes Talken special.</p>
+            <div class="store-features">
+              <div class="feature-item">
+                <span class="feature-icon">🛡️</span>
+                <span>Privacy First</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <span>Lightweight</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔄</span>
+                <span>Regular Updates</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">💝</span>
+                <span>Free Forever</span>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="support-section">
-          <h2>Need Help?</h2>
-          <p>If you encounter any issues during installation or usage:</p>
-          <ul>
-            <li>Make sure you have the latest Java version installed (for non-bundled versions)</li>
-            <li>Check that your antivirus isn't blocking the application</li>
-            <li>Ensure you have sufficient storage space and internet connectivity</li>
-            <li>Contact us at <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a> for support</li>
-          </ul>
         </div>
       </div>
     </section>
