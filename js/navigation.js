@@ -1,55 +1,43 @@
-// Navigation functionality
+// Navigation functionality for top nav and right sidebar
 document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle")
-  const sideMenu = document.getElementById("sideMenu")
-  const mainContent = document.querySelector(".main-content")
+  const menuToggle = document.getElementById("menuToggle")
+  const rightSidebar = document.getElementById("rightSidebar")
+  const sidebarClose = document.getElementById("sidebarClose")
+  const sidebarOverlay = document.getElementById("sidebarOverlay")
 
-  // Mobile menu toggle functionality
-  if (mobileMenuToggle && sideMenu) {
-    mobileMenuToggle.addEventListener("click", () => {
-      sideMenu.classList.toggle("active")
-
-      // Animate hamburger menu
-      const spans = mobileMenuToggle.querySelectorAll("span")
-      if (sideMenu.classList.contains("active")) {
-        spans[0].style.transform = "rotate(45deg) translate(5px, 5px)"
-        spans[1].style.opacity = "0"
-        spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)"
-      } else {
-        spans[0].style.transform = "none"
-        spans[1].style.opacity = "1"
-        spans[2].style.transform = "none"
-      }
+  // Menu toggle functionality
+  if (menuToggle && rightSidebar) {
+    menuToggle.addEventListener("click", () => {
+      rightSidebar.classList.toggle("active")
+      sidebarOverlay.classList.toggle("active")
+      menuToggle.classList.toggle("active")
     })
 
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", (event) => {
-      if (window.innerWidth <= 768) {
-        if (!sideMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
-          sideMenu.classList.remove("active")
+    // Close sidebar when clicking close button
+    if (sidebarClose) {
+      sidebarClose.addEventListener("click", () => {
+        rightSidebar.classList.remove("active")
+        sidebarOverlay.classList.remove("active")
+        menuToggle.classList.remove("active")
+      })
+    }
 
-          // Reset hamburger menu
-          const spans = mobileMenuToggle.querySelectorAll("span")
-          spans[0].style.transform = "none"
-          spans[1].style.opacity = "1"
-          spans[2].style.transform = "none"
-        }
-      }
-    })
+    // Close sidebar when clicking overlay
+    if (sidebarOverlay) {
+      sidebarOverlay.addEventListener("click", () => {
+        rightSidebar.classList.remove("active")
+        sidebarOverlay.classList.remove("active")
+        menuToggle.classList.remove("active")
+      })
+    }
 
-    // Close mobile menu when clicking on a link
-    const menuLinks = sideMenu.querySelectorAll("a")
+    // Close sidebar when clicking on a link
+    const menuLinks = rightSidebar.querySelectorAll("a")
     menuLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-          sideMenu.classList.remove("active")
-
-          // Reset hamburger menu
-          const spans = mobileMenuToggle.querySelectorAll("span")
-          spans[0].style.transform = "none"
-          spans[1].style.opacity = "1"
-          spans[2].style.transform = "none"
-        }
+        rightSidebar.classList.remove("active")
+        sidebarOverlay.classList.remove("active")
+        menuToggle.classList.remove("active")
       })
     })
   }
@@ -57,15 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle window resize
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
-      sideMenu.classList.remove("active")
-
-      // Reset hamburger menu
-      if (mobileMenuToggle) {
-        const spans = mobileMenuToggle.querySelectorAll("span")
-        spans[0].style.transform = "none"
-        spans[1].style.opacity = "1"
-        spans[2].style.transform = "none"
-      }
+      rightSidebar.classList.remove("active")
+      sidebarOverlay.classList.remove("active")
+      menuToggle.classList.remove("active")
     }
   })
 
