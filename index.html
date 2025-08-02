@@ -10,25 +10,49 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Mobile menu toggle -->
-  <button class="mobile-menu-toggle" id="mobileMenuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Sidebar Navigation -->
-  <nav class="side-menu" id="sideMenu">
-    <div class="logo-section">
-      <h2>Talken</h2>
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <!-- Logo on the left -->
+      <div class="nav-logo">
+        <div class="logo-icon">T</div>
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      
+      <!-- Main title in center -->
+      <div class="nav-title">
+        <h1>Talken</h1>
+      </div>
+      
+      <!-- Theme toggle on the right -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <span class="theme-icon">🌓</span>
+        </button>
+      </div>
     </div>
-    <ul>
+  </nav>
+
+  <!-- Right Sidebar (Hidden by default) -->
+  <nav class="right-sidebar" id="rightSidebar">
+    <div class="sidebar-header">
+      <h3>Navigation</h3>
+      <button class="sidebar-close" id="sidebarClose">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
       <li><a href="index.html" class="active">🏠 Home</a></li>
       <li><a href="downloads.html">📥 Downloads</a></li>
       <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
       <li><a href="terms-and-conditions.html">📋 Terms & Conditions</a></li>
     </ul>
   </nav>
+
+  <!-- Overlay for mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <!-- Main Content -->
   <main class="main-content">
@@ -45,12 +69,6 @@
     <!-- Introduction Section -->
     <section class="content intro-section">
       <div class="container">
-        <div class="theme-toggle-container">
-          <button id="themeToggle" aria-label="Toggle theme">
-            <span class="theme-icon">🌓</span> Toggle Theme
-          </button>
-        </div>
-        
         <div class="intro-content">
           <h2 class="section-title">Your Messages, Your Control</h2>
           <p class="section-description">Talken is a minimalist chat app built by a solo developer, designed to put <strong>privacy first</strong>.</p>
@@ -137,16 +155,16 @@
                 <span class="achievement-label">GUI Applications Built</span>
               </div>
               <div class="achievement-item">
-                <span class="achievement-number">2,200+</span>
+                <span class="achievement-number">2,030+</span>
                 <span class="achievement-label">LinkedIn Followers</span>
               </div>
               <div class="achievement-item">
-                <span class="achievement-number">13</span>
+                <span class="achievement-number">11</span>
                 <span class="achievement-label">Java Certifications</span>
               </div>
               <div class="achievement-item">
                 <span class="achievement-number">95%</span>
-                <span class="achievement-label">10th Board Exam Score</span>
+                <span class="achievement-label">Board Exam Score</span>
               </div>
             </div>
             
@@ -177,7 +195,7 @@
               <button class="quick-download-btn" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">Download</button>
             </div>
             <div class="quick-download-item">
-              <div class="download-icon">☕</div>
+              <div class="download-icon">🪟</div>
               <h3>Talken Desktop App Executable For Windows</h3>
               <button class="quick-download-btn" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">Download</button>
             </div>
