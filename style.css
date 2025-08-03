@@ -126,6 +126,7 @@ body {
   align-items: center;
   gap: 1rem;
   margin-left: auto;
+  margin-right: 60px; /* Add right margin to move away from menu button */
 }
 
 .theme-toggle-btn {
@@ -229,13 +230,28 @@ body {
   transform: translateX(100%);
   transition: transform 0.3s ease;
   box-shadow: -5px 0 20px var(--shadow);
+  opacity: 0; /* Hide by default */
+  visibility: hidden; /* Hide by default */
 }
 
 .floating-nav-header.active {
   transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 
-.floating-nav-header h3 {
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--nav-border);
+  height: 70px;
+  background: var(--nav-bg);
+}
+
+.sidebar-header h3 {
   color: var(--accent-color);
   font-size: 1.8rem;
   font-weight: 700;
@@ -243,14 +259,10 @@ body {
   letter-spacing: -0.02em;
 }
 
-.sidebar-header {
-  display: none; /* Hide the original header */
-}
-
 .sidebar-menu {
   list-style: none;
   padding: 2rem 0;
-  margin-top: 70px; /* Space for floating header */
+  margin-top: 0; /* Remove the top margin since we have a proper header now */
 }
 
 .sidebar-menu li {
@@ -410,7 +422,7 @@ body {
 
 .showcase-image {
   width: 100%;
-  height: 220px; /* Adjusted height for better aspect ratio */
+  height: 280px; /* Increased height for better desktop display */
   background: var(--border-color);
   display: flex;
   align-items: center;
@@ -420,13 +432,15 @@ body {
   opacity: 0.7;
   overflow: hidden;
   position: relative;
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
 }
 
 .showcase-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This will crop the image to fit while maintaining aspect ratio */
-  object-position: center; /* Center the image */
+  object-fit: contain; /* Changed from cover to contain to show full image */
+  object-position: center;
+  background: var(--bg-color); /* Add background for letterboxing */
 }
 
 .showcase-content {
@@ -1519,6 +1533,18 @@ footer {
   .showcase-grid {
     grid-template-columns: 1fr;
   }
+
+  .nav-actions {
+    margin-right: 50px; /* Less margin on mobile */
+  }
+
+  .showcase-image {
+    height: 200px; /* Smaller height on mobile */
+  }
+
+  .floating-nav-header {
+    width: 280px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1571,6 +1597,18 @@ footer {
 
   .cert-grid {
     grid-template-columns: 1fr;
+  }
+
+  .nav-actions {
+    margin-right: 45px; /* Even less margin on small mobile */
+  }
+
+  .showcase-image {
+    height: 180px; /* Even smaller on very small screens */
+  }
+
+  .floating-nav-header {
+    width: 100%;
   }
 }
 
