@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle")
   const rightSidebar = document.getElementById("rightSidebar")
   const sidebarOverlay = document.getElementById("sidebarOverlay")
+  const floatingNavHeader = document.getElementById("floatingNavHeader")
 
   // Menu toggle functionality
   if (menuToggle && rightSidebar) {
     menuToggle.addEventListener("click", () => {
       rightSidebar.classList.toggle("active")
       sidebarOverlay.classList.toggle("active")
+      floatingNavHeader.classList.toggle("active")
       menuToggle.classList.toggle("active")
     })
 
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sidebarOverlay.addEventListener("click", () => {
         rightSidebar.classList.remove("active")
         sidebarOverlay.classList.remove("active")
+        floatingNavHeader.classList.remove("active")
         menuToggle.classList.remove("active")
       })
     }
@@ -27,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", () => {
         rightSidebar.classList.remove("active")
         sidebarOverlay.classList.remove("active")
+        floatingNavHeader.classList.remove("active")
         menuToggle.classList.remove("active")
       })
     })
@@ -37,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth > 768) {
       rightSidebar.classList.remove("active")
       sidebarOverlay.classList.remove("active")
+      floatingNavHeader.classList.remove("active")
       menuToggle.classList.remove("active")
     }
   })
