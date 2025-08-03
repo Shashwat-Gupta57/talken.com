@@ -10,49 +10,52 @@
 </head>
 <body>
   <!-- Top Navigation Bar -->
-  <nav class="top-nav">
-    <div class="nav-container">
-      <!-- Logo on the left (shifted further left) -->
-      <div class="nav-logo">
-        <div class="logo-icon">T</div>
-      </div>
-      
-      <!-- Main title in center -->
-      <div class="nav-title">
-        <h1>Talken</h1>
-      </div>
-      
-      <!-- Menu toggle and theme toggle on the right -->
-      <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-          <span class="theme-icon">🌓</span>
-        </button>
-        <button class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+<nav class="top-nav">
+  <div class="nav-container">
+    <!-- Logo on the left (shifted further left) -->
+    <div class="nav-logo">
+      <div class="logo-icon">T</div>
     </div>
-  </nav>
-
-  <!-- Right Sidebar (Hidden by default) -->
-  <nav class="right-sidebar" id="rightSidebar">
-    <div class="sidebar-header">
-      <h3>Navigation</h3>
-      <button class="sidebar-close" id="sidebarClose">&times;</button>
+    
+    <!-- Main title in center -->
+    <div class="nav-title">
+      <h1>Talken</h1>
     </div>
-    <ul class="sidebar-menu">
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="downloads.html">📥 Downloads</a></li>
-      <li><a href="about-developer.html" class="active">👨‍💻 About Developer</a></li>
-      <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
-      <li><a href="terms-and-conditions.html">📋 Terms & Conditions</a></li>
-    </ul>
-  </nav>
+    
+    <!-- Theme toggle on the right -->
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+        <span class="theme-icon">🌓</span>
+      </button>
+    </div>
+  </div>
+</nav>
 
-  <!-- Overlay for mobile -->
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+<!-- Floating Menu Button -->
+<button class="menu-toggle" id="menuToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Floating Navigation Header -->
+<div class="floating-nav-header" id="floatingNavHeader">
+  <h3>Navigation</h3>
+</div>
+
+<!-- Right Sidebar (Hidden by default) -->
+<nav class="right-sidebar" id="rightSidebar">
+  <ul class="sidebar-menu">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="downloads.html">📥 Downloads</a></li>
+    <li><a href="about-developer.html" class="active">👨‍💻 About Developer</a></li>
+    <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
+    <li><a href="terms-and-conditions.html">📋 Terms & Conditions</a></li>
+  </ul>
+</nav>
+
+<!-- Overlay for mobile -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <!-- Main Content -->
   <main class="main-content">
