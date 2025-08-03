@@ -120,7 +120,7 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Actions Section (Right - menu toggle moved here) */
+/* Actions Section (Right - theme toggle only) */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Menu Toggle Button - Always visible on top */
+/* Menu Toggle Button - Floating independently */
 .menu-toggle {
   display: flex;
   flex-direction: column;
@@ -164,6 +164,10 @@ body {
   right: 1rem;
   top: 15px;
   box-shadow: 0 2px 10px var(--shadow);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-toggle:hover {
@@ -202,38 +206,51 @@ body {
   z-index: 1001;
   transition: right 0.3s ease;
   box-shadow: -5px 0 20px var(--shadow);
-  padding-top: 70px;
 }
 
 .right-sidebar.active {
   right: 0;
 }
 
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem; /* Reduced padding to move text higher */
+/* Floating Navigation Header - Independent of sidebar */
+.floating-nav-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 70px;
+  background: var(--nav-bg);
   border-bottom: 1px solid var(--nav-border);
-  height: 50px; /* Reduced height */
-  margin-top: 20px; /* Add top margin to align better */
+  border-left: 1px solid var(--nav-border);
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -5px 0 20px var(--shadow);
 }
 
-.sidebar-header h3 {
+.floating-nav-header.active {
+  transform: translateX(0);
+}
+
+.floating-nav-header h3 {
   color: var(--accent-color);
-  font-size: 1.8rem; /* Same size as main nav title */
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
-.sidebar-close {
-  display: none; /* Hide the separate close button */
+.sidebar-header {
+  display: none; /* Hide the original header */
 }
 
 .sidebar-menu {
   list-style: none;
   padding: 2rem 0;
+  margin-top: 70px; /* Space for floating header */
 }
 
 .sidebar-menu li {
@@ -364,7 +381,7 @@ body {
   border-radius: 2px;
 }
 
-/* ===== Talken Showcase Section (New) ===== */
+/* ===== Talken Showcase Section (Updated for proper aspect ratio) ===== */
 .talken-showcase {
   padding: 8rem 0;
   background: var(--container-bg);
@@ -374,7 +391,7 @@ body {
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
   margin-top: 4rem;
 }
@@ -393,7 +410,7 @@ body {
 
 .showcase-image {
   width: 100%;
-  height: 200px;
+  height: 220px; /* Adjusted height for better aspect ratio */
   background: var(--border-color);
   display: flex;
   align-items: center;
@@ -401,6 +418,15 @@ body {
   color: var(--text-color);
   font-size: 1.1rem;
   opacity: 0.7;
+  overflow: hidden;
+  position: relative;
+}
+
+.showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the image to fit while maintaining aspect ratio */
+  object-position: center; /* Center the image */
 }
 
 .showcase-content {
@@ -559,14 +585,14 @@ body {
   font-size: 1.4rem;
 }
 
-/* Projects Gallery */
+/* Projects Gallery - Updated for better image display */
 .projects-gallery {
   padding: 6rem 0;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -586,7 +612,7 @@ body {
 
 .project-image {
   width: 100%;
-  height: 150px;
+  height: 180px; /* Adjusted for better aspect ratio */
   background: var(--border-color);
   display: flex;
   align-items: center;
@@ -594,6 +620,15 @@ body {
   color: var(--text-color);
   opacity: 0.7;
   font-size: 0.9rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop to fit while maintaining aspect ratio */
+  object-position: center;
 }
 
 .project-info {
@@ -1381,17 +1416,21 @@ footer {
   }
 
   .nav-title h1 {
-    font-size: 1.4rem; /* Slightly smaller on mobile */
-    transform: translateX(-45%); /* Shift slightly right */
+    font-size: 1.4rem;
+    transform: translateX(-45%);
   }
 
   .theme-toggle-btn {
-    padding: 6px 12px; /* Smaller padding on mobile */
+    padding: 6px 12px;
     font-size: 12px;
   }
 
   .menu-toggle {
-    right: 0.5rem; /* Closer to edge on mobile */
+    right: 0.5rem;
+  }
+
+  .floating-nav-header {
+    width: 280px;
   }
 
   .right-sidebar {
@@ -1476,12 +1515,16 @@ footer {
   .cert-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
   .nav-title h1 {
     font-size: 1.2rem;
-    transform: translateX(-40%); /* More shift on smaller screens */
+    transform: translateX(-40%);
   }
 
   .theme-toggle-btn {
@@ -1510,6 +1553,10 @@ footer {
   .right-sidebar {
     width: 100%;
     right: -100%;
+  }
+
+  .floating-nav-header {
+    width: 100%;
   }
 
   .profile-icon {
