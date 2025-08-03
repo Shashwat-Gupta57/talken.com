@@ -148,19 +148,22 @@ body {
   transform: translateY(-1px);
 }
 
-/* Menu Toggle Button (Now on the right with higher z-index) */
+/* Menu Toggle Button - Always visible on top */
 .menu-toggle {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  background: none;
-  border: none;
+  background: var(--nav-bg);
+  border: 1px solid var(--border-color);
   cursor: pointer;
   padding: 8px;
   border-radius: 5px;
-  transition: background-color 0.3s;
-  z-index: 1003; /* Higher z-index to stay on top of sidebar */
-  position: relative;
+  transition: all 0.3s;
+  z-index: 1004; /* Highest z-index to always stay on top */
+  position: fixed;
+  right: 1rem;
+  top: 15px;
+  box-shadow: 0 2px 10px var(--shadow);
 }
 
 .menu-toggle:hover {
@@ -210,9 +213,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* Reduced top padding to align with nav title */
+  padding: 0.5rem 2rem; /* Reduced padding to move text higher */
   border-bottom: 1px solid var(--nav-border);
-  height: 70px; /* Same height as nav bar */
+  height: 50px; /* Reduced height */
+  margin-top: 20px; /* Add top margin to align better */
 }
 
 .sidebar-header h3 {
@@ -224,23 +228,7 @@ body {
 }
 
 .sidebar-close {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--text-color);
-  cursor: pointer;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.sidebar-close:hover {
-  background: var(--border-color);
+  display: none; /* Hide the separate close button */
 }
 
 .sidebar-menu {
@@ -1393,7 +1381,17 @@ footer {
   }
 
   .nav-title h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Slightly smaller on mobile */
+    transform: translateX(-45%); /* Shift slightly right */
+  }
+
+  .theme-toggle-btn {
+    padding: 6px 12px; /* Smaller padding on mobile */
+    font-size: 12px;
+  }
+
+  .menu-toggle {
+    right: 0.5rem; /* Closer to edge on mobile */
   }
 
   .right-sidebar {
@@ -1482,7 +1480,13 @@ footer {
 
 @media (max-width: 480px) {
   .nav-title h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    transform: translateX(-40%); /* More shift on smaller screens */
+  }
+
+  .theme-toggle-btn {
+    padding: 4px 8px;
+    font-size: 11px;
   }
 
   .hero-title {
@@ -1544,4 +1548,16 @@ a:hover {
 ::selection {
   background: var(--accent-color);
   color: white;
+}
+
+.category-section {
+  margin: 4rem 0;
+}
+
+.category-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
 }
