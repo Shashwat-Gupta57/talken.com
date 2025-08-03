@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle")
   const rightSidebar = document.getElementById("rightSidebar")
-  const sidebarClose = document.getElementById("sidebarClose")
   const sidebarOverlay = document.getElementById("sidebarOverlay")
 
   // Menu toggle functionality
@@ -12,15 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       sidebarOverlay.classList.toggle("active")
       menuToggle.classList.toggle("active")
     })
-
-    // Close sidebar when clicking close button
-    if (sidebarClose) {
-      sidebarClose.addEventListener("click", () => {
-        rightSidebar.classList.remove("active")
-        sidebarOverlay.classList.remove("active")
-        menuToggle.classList.remove("active")
-      })
-    }
 
     // Close sidebar when clicking overlay
     if (sidebarOverlay) {
