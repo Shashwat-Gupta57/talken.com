@@ -262,7 +262,7 @@ body {
 .sidebar-menu {
   list-style: none;
   padding: 2rem 0;
-  margin-top: 0; /* Remove the top margin since we have a proper header now */
+  margin-top: 0;
 }
 
 .sidebar-menu li {
@@ -380,16 +380,29 @@ body {
   font-size: 1.5rem;
   color: var(--text-color);
   opacity: 0.8;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-weight: 400;
   letter-spacing: 0.01em;
+}
+
+/* MVP badge directly under hero subtitle */
+.mvp-badge {
+  display: inline-block;
+  margin: 0.5rem auto 2rem auto;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-color);
 }
 
 .hero-accent {
   width: 100px;
   height: 4px;
   background: linear-gradient(90deg, var(--accent-color), transparent);
-  margin: 0 auto;
+  margin: 0.75rem auto 0 auto;
   border-radius: 2px;
 }
 
@@ -422,8 +435,8 @@ body {
 
 .showcase-image {
   width: 100%;
-  height: 280px; /* Increased height for better desktop display */
-  background: var(--border-color);
+  aspect-ratio: 16 / 10;
+  background: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -432,15 +445,17 @@ body {
   opacity: 0.7;
   overflow: hidden;
   position: relative;
-  border-radius: 12px 12px 0 0; /* Rounded top corners */
+  border-radius: 12px 12px 0 0;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
 }
 
 .showcase-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Changed from cover to contain to show full image */
+  object-fit: contain;
   object-position: center;
-  background: var(--bg-color); /* Add background for letterboxing */
+  background: var(--bg-color);
 }
 
 .showcase-content {
@@ -599,7 +614,7 @@ body {
   font-size: 1.4rem;
 }
 
-/* Projects Gallery - Updated for better image display */
+/* Projects Gallery */
 .projects-gallery {
   padding: 6rem 0;
 }
@@ -626,7 +641,7 @@ body {
 
 .project-image {
   width: 100%;
-  height: 180px; /* Adjusted for better aspect ratio */
+  height: 180px;
   background: var(--border-color);
   display: flex;
   align-items: center;
@@ -641,7 +656,7 @@ body {
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crop to fit while maintaining aspect ratio */
+  object-fit: cover;
   object-position: center;
 }
 
@@ -838,6 +853,7 @@ body {
   border-radius: 15px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 20px var(--shadow);
+  flex-wrap: wrap; /* allow long content to wrap nicely */
 }
 
 .contact-icon {
@@ -854,6 +870,8 @@ body {
 .contact-info a {
   color: var(--text-color);
   opacity: 0.8;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .cta-section {
@@ -919,14 +937,6 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
-.quick-downloads-section {
-  padding: 8rem 0;
-  background: linear-gradient(135deg, var(--bg-color) 0%, var(--container-bg) 100%);
-  border: 2px dashed var(--border-color);
-  margin: 4rem 0;
-  border-radius: 20px;
-}
-
 /* Typography - Premium Feel */
 .section-title {
   font-size: 3.5rem;
@@ -934,8 +944,8 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--accent-color);
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
 }
 
 .section-description {
@@ -1085,7 +1095,7 @@ body {
 }
 
 .achievement-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .achievement-number {
@@ -1100,80 +1110,6 @@ body {
   font-size: 1rem;
   color: var(--text-color);
   opacity: 0.8;
-}
-
-.contact-info {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 2rem;
-  background: var(--card-bg);
-  border-radius: 15px;
-  border: 2px solid var(--accent-color);
-  box-shadow: 0 4px 20px var(--shadow);
-}
-
-/* Quick Downloads - Temporary Section */
-.quick-downloads-content {
-  text-align: center;
-}
-
-.section-note {
-  font-size: 1rem;
-  color: var(--text-color);
-  opacity: 0.7;
-  margin-bottom: 3rem;
-  font-style: italic;
-}
-
-.quick-download-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.quick-download-item {
-  background: var(--card-bg);
-  padding: 2.5rem;
-  border-radius: 15px;
-  border: 1px solid var(--border-color);
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px var(--shadow);
-}
-
-.quick-download-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px var(--shadow);
-}
-
-.quick-download-item .download-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.quick-download-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  color: var(--accent-color);
-}
-
-.quick-download-btn {
-  background: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.quick-download-btn:hover {
-  background: var(--accent-color);
-  filter: brightness(1.1);
-  transform: translateY(-2px);
 }
 
 /* Downloads Page Styles */
@@ -1232,7 +1168,7 @@ body {
 }
 
 .download-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 8px 25px var(--shadow);
 }
 
@@ -1299,11 +1235,11 @@ body {
 .download-btn.disabled {
   background: var(--border-color);
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .download-card.coming-soon {
-  opacity: 0.8;
+  opacity: 0.9;
   border-style: dashed;
 }
 
@@ -1315,25 +1251,6 @@ body {
   border-radius: 20px;
   border: 1px solid var(--border-color);
   box-shadow: 0 8px 32px var(--shadow);
-}
-
-.store-features {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-}
-
-.feature-icon {
-  font-size: 1.2rem;
 }
 
 /* Legal Content */
@@ -1481,11 +1398,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .store-features {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   .download-details {
     flex-direction: column;
     gap: 0.5rem;
@@ -1535,15 +1447,7 @@ footer {
   }
 
   .nav-actions {
-    margin-right: 50px; /* Less margin on mobile */
-  }
-
-  .showcase-image {
-    height: 200px; /* Smaller height on mobile */
-  }
-
-  .floating-nav-header {
-    width: 280px;
+    margin-right: 50px;
   }
 }
 
@@ -1600,15 +1504,7 @@ footer {
   }
 
   .nav-actions {
-    margin-right: 45px; /* Even less margin on small mobile */
-  }
-
-  .showcase-image {
-    height: 180px; /* Even smaller on very small screens */
-  }
-
-  .floating-nav-header {
-    width: 100%;
+    margin-right: 45px;
   }
 }
 
