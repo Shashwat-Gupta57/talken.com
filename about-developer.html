@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="About Shashwat Gupta - Developer of Talken and Founder of Flex Studios" />
-  <title>Talken - About The Developer</title>
-  <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="About Shashwat Gupta - Developer of Talken and Founder of Flex Studios" />
+<title>Talken - About The Developer</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Navigation Bar -->
+ Top Navigation Bar 
 <nav class="top-nav">
   <div class="nav-container">
-    <!-- Logo on the left (shifted further left) -->
     <div class="nav-logo">
       <div class="logo-icon">T</div>
     </div>
-    
-    <!-- Main title in center -->
     <div class="nav-title">
       <h1>Talken</h1>
     </div>
-    
-    <!-- Theme toggle on the right -->
     <div class="nav-actions">
       <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
         <span class="theme-icon">🌓</span>
@@ -31,14 +26,14 @@
   </div>
 </nav>
 
-<!-- Floating Menu Button -->
+ Floating Menu Button 
 <button class="menu-toggle" id="menuToggle">
   <span></span>
   <span></span>
   <span></span>
 </button>
 
-<!-- Right Sidebar (Hidden by default) -->
+ Right Sidebar (Hidden by default) 
 <nav class="right-sidebar" id="rightSidebar">
   <div class="sidebar-header">
     <h3>Navigation</h3>
@@ -52,418 +47,489 @@
   </ul>
 </nav>
 
-<!-- Overlay for mobile -->
+ Overlay for mobile 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <header class="page-header">
-      <div class="container">
-        <h1>About The Developer</h1>
-        <p>Meet Shashwat Gupta - The mind behind Talken</p>
+ Main Content 
+<main class="main-content">
+  <header class="page-header">
+    <div class="container">
+      <h1>About The Developer</h1>
+      <p>Meet Shashwat Gupta - The mind behind Talken</p>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="container">
+       Developer Introduction 
+      <div class="developer-intro">
+        <div class="developer-profile">
+          <div class="profile-image-placeholder">
+            <div class="profile-icon">SG</div>
+          </div>
+          <div class="profile-info">
+            <h2>Shashwat Gupta</h2>
+            <p class="profile-title">Founder & Lead Developer, Flex Studios</p>
+            <p class="profile-location">📍 Prayagraj, Uttar Pradesh, India</p>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <section class="content">
-      <div class="container">
-        <!-- Developer Introduction -->
-        <div class="developer-intro">
-          <div class="developer-profile">
-            <div class="profile-image-placeholder">
-              <div class="profile-icon">SG</div>
+       Hardware Section: Current + Previous 
+      <div class="hardware-section">
+        <div class="container">
+          <div class="hardware-content">
+            <h2 class="section-title">Building Against The Odds</h2>
+            <p class="section-description">Evolving the development setup to deliver a polished, privacy-first experience with Talken.</p>
+
+             Current Development Rig 
+            <div class="hardware-card">
+              <h3>Current Development Rig</h3>
+              <p>Recently upgraded specifically to accelerate ongoing development of Talken.</p>
+              <div class="hardware-specs">
+                <div class="spec-item">
+                  <div class="spec-label">Laptop</div>
+                  <div class="spec-value">Asus TUF Gaming F16 (2025)</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Processor</div>
+                  <div class="spec-value">Intel Core i7-14650HX</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Graphics</div>
+                  <div class="spec-value">NVIDIA RTX 5060 — 8 GB</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Memory</div>
+                  <div class="spec-value">32 GB DDR5-5600</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Storage</div>
+                  <div class="spec-value">1 TB NVMe SSD</div>
+                </div>
+              </div>
+              <p>This setup enables faster builds, smoother tooling, and shorter iteration loops—directly translating to a better Talken experience.</p>
             </div>
-            <div class="profile-info">
-              <h2>Shashwat Gupta</h2>
-              <p class="profile-title">Founder & Lead Developer, Flex Studios</p>
-              <p class="profile-location">📍 Prayagraj, Uttar Pradesh, India</p>
+
+             Previous Development Setup 
+            <div class="hardware-card" style="margin-top:2rem;">
+              <h3>Previous Development Setup</h3>
+              <p>Every line of the earliest Talken prototypes was written on modest hardware that demanded discipline and ingenuity.</p>
+              <div class="hardware-specs">
+                <div class="spec-item">
+                  <div class="spec-label">Device</div>
+                  <div class="spec-value">Microsoft Surface Pro 5</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Processor</div>
+                  <div class="spec-value">Intel i5-7300U</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Memory</div>
+                  <div class="spec-value">4 GB DDR3 @ 1867Hz</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Graphics</div>
+                  <div class="spec-value">Integrated Only</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Storage</div>
+                  <div class="spec-value">128 GB SSD</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">Display</div>
+                  <div class="spec-value">12" Touch Screen</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-label">IntelliJ Load Time</div>
+                  <div class="spec-value">57 seconds</div>
+                </div>
+              </div>
+              <p><strong>The Reality:</strong> Android Studio wouldn’t even start. Phone connectivity for testing was impractical. Every IDE took nearly a minute to load. Yet this constraint-driven environment became the foundation for creating 18 applications and counting.</p>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Hardware Challenge Section -->
-        <div class="hardware-section">
-          <div class="container">
-            <div class="hardware-content">
-              <h2 class="section-title">Building Against The Odds</h2>
-              <p class="section-description">Creating professional software on limited hardware - a testament to determination over resources.</p>
-              
-              <div class="hardware-card">
-                <h3>Development Setup</h3>
-                <p>Every line of code in Talken was written on a Microsoft Surface Pro 5 - a machine that many would consider inadequate for serious development work. Yet, it became the birthplace of innovation.</p>
-                
-                <div class="hardware-specs">
-                  <div class="spec-item">
-                    <div class="spec-label">Processor</div>
-                    <div class="spec-value">Intel i5-7300U</div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-label">Memory</div>
-                    <div class="spec-value">4 GB DDR3 @ 1867Hz</div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-label">Graphics</div>
-                    <div class="spec-value">Integrated Only</div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-label">Storage</div>
-                    <div class="spec-value">128 GB SSD</div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-label">Display</div>
-                    <div class="spec-value">12" Touch Screen</div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-label">IntelliJ Load Time</div>
-                    <div class="spec-value">57 seconds</div>
-                  </div>
-                </div>
-                
-                <p><strong>The Reality:</strong> Android Studio wouldn't even start. Phone connectivity for testing was impossible. Every IDE took nearly a minute to load. Yet, this became the foundation for creating 18 applications and counting.</p>
+       Journey Timeline 
+      <div class="journey-timeline">
+        <div class="container">
+          <h2 class="section-title">The Coding Journey</h2>
+          <p class="section-description">From hating programming to building revolutionary software — a transformation story.</p>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Oct 2023</div>
+            <div class="timeline-content">
+              <h3>The Turning Point</h3>
+              <p>Until my 9th grade half-yearly exams, I genuinely despised coding. It seemed pointless, complex, and utterly boring. But on November 8th, 2023, a simple idea changed everything — what if I could create a character that moves across a terminal screen based on user input?</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Nov 2023</div>
+            <div class="timeline-content">
+              <h3>First Breakthrough</h3>
+              <p>Using nothing but BlueJ — a beginner IDE that struggles with codebases over 1000 lines — I created my first program. A simple character spawner that placed alphanumeric characters at specific positions. Then I evolved it into an 8‑line player character, added animations by clearing the terminal every 500ms, and made it walk across the screen. All within a month.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Late 2023</div>
+            <div class="timeline-content">
+              <h3>First GUI Applications</h3>
+              <p>The terminal wasn’t enough anymore. I created my first GUI application — a Click Per Second tester. Then came my first game: Rex Run, inspired by Chrome’s dinosaur game and Geometry Dash. The addiction to creating had begun.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <h3>The Creative Explosion</h3>
+              <p>What followed was an unstoppable creative streak. I built 16 more applications: Ping Pong Game, Flying Dual (local multiplayer), Flappy Bird, Memo (Simon replica), Tic Tac Toe, SG Paint (MS Paint replica), Notes (a more capable notepad), four widgets (Weather, Clock, Mixed, Transparent Clock), a JRE Installer, a floating keyboard, and a color picker.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Jan 2024</div>
+            <div class="timeline-content">
+              <h3>The Talken Vision</h3>
+              <p>The idea for Talken was born — a privacy‑first chat application that would redefine how we think about digital communication. I spent months exploring the right technologies.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Dec 2024</div>
+            <div class="timeline-content">
+              <h3>Technology Discovery</h3>
+              <p>After months of research and learning, I identified the stack to bring Talken to life. The vision was clear, the tools were ready.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Apr 2025</div>
+            <div class="timeline-content">
+              <h3>Academic Excellence & Resume</h3>
+              <p>Achieved 95% in my board exams and resumed serious work on Talken with renewed focus, clarity, and momentum.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">May 2025</div>
+            <div class="timeline-content">
+              <h3>First Test Version</h3>
+              <p>The first testable build of Talken was ready — laying the foundation for a privacy‑first messaging experience.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">June 2025</div>
+            <div class="timeline-content">
+              <h3>Decentralized Storage Systems Completed</h3>
+              <p>Shipped the decentralized storage layer that powers user‑owned data. Introduced content‑addressed media, integrity checks, and resilient, resumable uploads to personal cloud storage.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">July–Aug 2025</div>
+            <div class="timeline-content">
+              <h3>Decentralized Server Systems Built</h3>
+              <p>Implemented lightweight, stateless coordination services and relay nodes for presence, signaling, and push delivery — horizontally scalable and region‑aware by design.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Sep–Oct 2025</div>
+            <div class="timeline-content">
+              <h3>Decentralized Databases Built</h3>
+              <p>Delivered a distributed metadata index with conflict‑free replication to keep conversations discoverable and in sync, while preserving user ownership and enabling offline‑first behavior.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">Oct / Nov 2025</div>
+            <div class="timeline-content">
+              <h3>Talken MVP Launch <span class="upcoming-badge">Upcoming</span></h3>
+              <p>The MVP introduces 1:1 chat, secure Google Sign‑In, Google Drive–backed storage, end‑to‑end encryption, and a polished desktop experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       Projects Gallery 
+      <div class="projects-gallery">
+        <div class="container">
+          <h2 class="section-title">Project Showcase</h2>
+          <p class="section-description">A visual journey through 18 applications built with passion and determination.</p>
+          
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="res/talken-app.png" alt="Talken Application" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='💬 Talken Screenshot'">
+              </div>
+              <div class="project-info">
+                <h4>Talken</h4>
+                <p>Privacy-first chat application with Google Drive integration</p>
+                <span class="project-type">Communication</span>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="res/sg-paint.png" alt="SG Paint Application" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='🎨 SG Paint Screenshot'">
+              </div>
+              <div class="project-info">
+                <h4>SG Paint</h4>
+                <p>Full-featured painting application, replica of MS Paint</p>
+                <span class="project-type">Creative Tool</span>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="res/rex-run-game.png" alt="Rex Run Game" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='🦖 Rex Run Game Screenshot'">
+              </div>
+              <div class="project-info">
+                <h4>Rex Run</h4>
+                <p>Endless runner inspired by Chrome Dino and Geometry Dash</p>
+                <span class="project-type">Game</span>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="res/notes-app.png" alt="Notes Application" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='📝 Notes App Screenshot'">
+              </div>
+              <div class="project-info">
+                <h4>Notes</h4>
+                <p>Advanced text editor, superior to Windows Notepad</p>
+                <span class="project-type">Productivity</span>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="res/weather-widget.png" alt="Weather Widget" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='🌤️ Weather Widget Screenshot'">
+              </div>
+              <div class="project-info">
+                <h4>Weather Widget</h4>
+                <p>Real-time weather information in a clean interface</p>
+                <span class="project-type">Widget</span>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="res/flying-dual.png" alt="Flying Dual Game" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='✈️ Flying Dual Screenshot'">
+              </div>
+              <div class="project-info">
+                <h4>Flying Dual</h4>
+                <p>Local multiplayer flying game for two players</p>
+                <span class="project-type">Game</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Journey Timeline -->
-        <div class="journey-timeline">
-          <div class="container">
-            <h2 class="section-title">The Coding Journey</h2>
-            <p class="section-description">From hating programming to building revolutionary software - a transformation story.</p>
-            
-            <div class="timeline-item">
-              <div class="timeline-date">Oct 2023</div>
-              <div class="timeline-content">
-                <h3>The Turning Point</h3>
-                <p>Until my 9th grade half-yearly exams, I genuinely despised coding. It seemed pointless, complex, and utterly boring. But on November 8th, 2023, a simple idea changed everything - what if I could create a character that moves across a terminal screen based on user input?</p>
-              </div>
+       Certifications Section 
+      <div class="certifications-section">
+        <div class="container">
+          <h2 class="section-title">Certifications & Recognition</h2>
+          <p class="section-description">Formal recognition of skills and achievements from leading institutions.</p>
+          
+          <div class="cert-grid">
+            <div class="cert-item">
+              <div class="cert-icon">🏢</div>
+              <h4>Infosys</h4>
+              <div class="cert-count">5 Certificates</div>
             </div>
             
-            <div class="timeline-item">
-              <div class="timeline-date">Nov 2023</div>
-              <div class="timeline-content">
-                <h3>First Breakthrough</h3>
-                <p>Using nothing but BlueJ - a beginner IDE that struggles with codebases over 1000 lines - I created my first program. A simple character spawner that placed alphanumeric characters at specific positions. Then I evolved it into an 8-line player character, added animations by clearing the terminal every 500ms, and made it walk across the screen. All within a month.</p>
-              </div>
+            <div class="cert-item">
+              <div class="cert-icon">💻</div>
+              <h4>HackerRank</h4>
+              <div class="cert-count">1 Certificate + 5⭐ Rank</div>
             </div>
             
-            <div class="timeline-item">
-              <div class="timeline-date">Late 2023</div>
-              <div class="timeline-content">
-                <h3>First GUI Applications</h3>
-                <p>The terminal wasn't enough anymore. I created my first GUI application - a Click Per Second tester. Then came my first game: Rex Run, inspired by Chrome's dinosaur game and Geometry Dash. The addiction to creating had begun.</p>
-              </div>
+            <div class="cert-item">
+              <div class="cert-icon">📚</div>
+              <h4>SoloLearn</h4>
+              <div class="cert-count">2 Certificates</div>
             </div>
             
-            <div class="timeline-item">
-              <div class="timeline-date">2024</div>
-              <div class="timeline-content">
-                <h3>The Creative Explosion</h3>
-                <p>What followed was an unstoppable creative streak. I built 16 more applications: Ping Pong Game, Flying Dual (local multiplayer), Flappy Bird, Memo (Simon game replica), Tic Tac Toe, SG Paint (MS Paint replica), Notes (superior to Windows Notepad in many aspects), four different widgets (Weather, Clock, Mixed, and Transparent Clock), a JRE Installer, a floating keyboard, and a color picker.</p>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-date">Jan 2024</div>
-              <div class="timeline-content">
-                <h3>The Talken Vision</h3>
-                <p>The idea for Talken was born - a privacy-first chat application that would revolutionize how we think about digital communication. But I needed to discover the right technologies first.</p>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-date">Dec 2024</div>
-              <div class="timeline-content">
-                <h3>Technology Discovery</h3>
-                <p>After months of research and learning, I finally found the perfect combination of technologies to bring Talken to life. The vision was clear, the tools were ready.</p>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-date">Apr 2024</div>
-              <div class="timeline-content">
-                <h3>Academic Excellence & Resume</h3>
-                <p>After achieving 95% in my final board exams, I resumed serious work on Talken on April 11th, 2024. The academic success gave me the confidence to pursue my dream project full-time.</p>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-date">May 2024</div>
-              <div class="timeline-content">
-                <h3>Talken Launch</h3>
-                <p>On May 22nd, 2024, the first official version of Talken was ready. 17,000 lines of carefully crafted code, representing months of dedication, innovation, and the culmination of my coding journey.</p>
-              </div>
+            <div class="cert-item">
+              <div class="cert-icon">🎓</div>
+              <h4>Coursera</h4>
+              <div class="cert-count">5 Certificates</div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Projects Gallery -->
-        <div class="projects-gallery">
-          <div class="container">
-            <h2 class="section-title">Project Showcase</h2>
-            <p class="section-description">A visual journey through 18 applications built with passion and determination.</p>
-            
-            <div class="projects-grid">
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="res/talken-app.png" alt="Talken Application" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='💬 Talken Screenshot'">
-                </div>
-                <div class="project-info">
-                  <h4>Talken</h4>
-                  <p>Privacy-first chat application with Google Drive integration</p>
-                  <span class="project-type">Communication</span>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="res/sg-paint.png" alt="SG Paint Application" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='🎨 SG Paint Screenshot'">
-                </div>
-                <div class="project-info">
-                  <h4>SG Paint</h4>
-                  <p>Full-featured painting application, replica of MS Paint</p>
-                  <span class="project-type">Creative Tool</span>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="res/rex-run-game.png" alt="Rex Run Game" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='🦖 Rex Run Game Screenshot'">
-                </div>
-                <div class="project-info">
-                  <h4>Rex Run</h4>
-                  <p>Endless runner inspired by Chrome Dino and Geometry Dash</p>
-                  <span class="project-type">Game</span>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="res/notes-app.png" alt="Notes Application" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='📝 Notes App Screenshot'">
-                </div>
-                <div class="project-info">
-                  <h4>Notes</h4>
-                  <p>Advanced text editor, superior to Windows Notepad</p>
-                  <span class="project-type">Productivity</span>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="res/weather-widget.png" alt="Weather Widget" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='🌤️ Weather Widget Screenshot'">
-                </div>
-                <div class="project-info">
-                  <h4>Weather Widget</h4>
-                  <p>Real-time weather information in a clean interface</p>
-                  <span class="project-type">Widget</span>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="res/flying-dual.png" alt="Flying Dual Game" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='✈️ Flying Dual Screenshot'">
-                </div>
-                <div class="project-info">
-                  <h4>Flying Dual</h4>
-                  <p>Local multiplayer flying game for two players</p>
-                  <span class="project-type">Game</span>
-                </div>
-              </div>
-            </div>
+       Achievements & Stats 
+      <div class="achievements-section">
+        <h2 class="section-title">Achievements & Milestones</h2>
+        <div class="achievements">
+          <div class="achievement-item">
+            <span class="achievement-number">18</span>
+            <span class="achievement-label">GUI Applications Built</span>
           </div>
-        </div>
 
-        <!-- Certifications Section -->
-        <div class="certifications-section">
-          <div class="container">
-            <h2 class="section-title">Certifications & Recognition</h2>
-            <p class="section-description">Formal recognition of skills and achievements from leading institutions.</p>
-            
-            <div class="cert-grid">
-              <div class="cert-item">
-                <div class="cert-icon">🏢</div>
-                <h4>Infosys</h4>
-                <div class="cert-count">5 Certificates</div>
-              </div>
-              
-              <div class="cert-item">
-                <div class="cert-icon">💻</div>
-                <h4>HackerRank</h4>
-                <div class="cert-count">1 Certificate + 5⭐ Rank</div>
-              </div>
-              
-              <div class="cert-item">
-                <div class="cert-icon">📚</div>
-                <h4>SoloLearn</h4>
-                <div class="cert-count">2 Certificates</div>
-              </div>
-              
-              <div class="cert-item">
-                <div class="cert-icon">🎓</div>
-                <h4>Coursera</h4>
-                <div class="cert-count">5 Certificates</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Achievements & Stats -->
-        <div class="achievements-section">
-          <h2 class="section-title">Achievements & Milestones</h2>
-          <div class="achievements">
+          <a class="achievement-link" href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener">
             <div class="achievement-item">
-              <span class="achievement-number">18</span>
-              <span class="achievement-label">GUI Applications Built</span>
-            </div>
-            <div class="achievement-item">
-              <span class="achievement-number">2,030+</span>
+              <span class="achievement-number">2,240+</span>
               <span class="achievement-label">LinkedIn Followers</span>
             </div>
-            <div class="achievement-item">
-              <span class="achievement-number">13</span>
-              <span class="achievement-label">Programming Certifications</span>
-            </div>
-            <div class="achievement-item">
-              <span class="achievement-number">95%</span>
-              <span class="achievement-label">Board Exam Score</span>
-            </div>
-            <div class="achievement-item">
-              <span class="achievement-number">17,000+</span>
-              <span class="achievement-label">Lines of Code (Talken)</span>
-            </div>
-            <div class="achievement-item">
-              <span class="achievement-number">5⭐</span>
-              <span class="achievement-label">HackerRank Rating</span>
-            </div>
+          </a>
+
+          <div class="achievement-item">
+            <span class="achievement-number">13</span>
+            <span class="achievement-label">Programming Certifications</span>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-number">95%</span>
+            <span class="achievement-label">Board Exam Score</span>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-number">17,000+</span>
+            <span class="achievement-label">Lines of Code (Talken)</span>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-number">5⭐</span>
+            <span class="achievement-label">HackerRank Rating</span>
           </div>
         </div>
+      </div>
 
-        <!-- Skills & Technologies -->
-        <div class="skills-section">
-          <h2 class="section-title">Skills & Technologies</h2>
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h3>Programming Languages</h3>
-              <div class="skill-tags">
-                <span class="skill-tag advanced">Java (Advanced)</span>
-                <span class="skill-tag basic">JavaScript (Basic)</span>
-                <span class="skill-tag basic">HTML/CSS (Basic)</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h3>Frameworks & Tools</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">JavaFX</span>
-                <span class="skill-tag">Swing</span>
-                <span class="skill-tag">Google APIs</span>
-                <span class="skill-tag">GitHub</span>
-                <span class="skill-tag">Scene Builder</span>
-                <span class="skill-tag">Eclipse IDE</span>
-                <span class="skill-tag">Launch4J</span>
-                <span class="skill-tag">Maven</span>
-                <span class="skill-tag">Gradle</span>
-                <span class="skill-tag">Visual Studio Code</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">BlueJ</span>
-                <span class="skill-tag">IntelliJ IDEA</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h3>Specializations</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Desktop Applications</span>
-                <span class="skill-tag">Privacy-First Design</span>
-                <span class="skill-tag">UI/UX Design</span>
-                <span class="skill-tag">System Architecture</span>
-                <span class="skill-tag">Native 2D Game Development</span>
-              </div>
+       Skills & Technologies 
+      <div class="skills-section">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag advanced">Java (Advanced)</span>
+              <span class="skill-tag basic">JavaScript (Basic)</span>
+              <span class="skill-tag basic">HTML/CSS (Basic)</span>
             </div>
           </div>
-        </div>
-
-        <!-- Philosophy -->
-        <div class="philosophy-section">
-          <h2 class="section-title">Development Philosophy</h2>
-          <div class="philosophy-content">
-            <div class="philosophy-card">
-              <div class="philosophy-icon">🔒</div>
-              <h3>Privacy First</h3>
-              <p>Every application I build prioritizes user privacy and data sovereignty. Your data should belong to you, not to corporations.</p>
-            </div>
-            <div class="philosophy-card">
-              <div class="philosophy-icon">⚡</div>
-              <h3>Lightweight & Efficient</h3>
-              <p>I believe in creating software that's fast, efficient, and doesn't bloat your system with unnecessary features.</p>
-            </div>
-            <div class="philosophy-card">
-              <div class="philosophy-icon">🎯</div>
-              <h3>Purpose-Driven</h3>
-              <p>Every feature serves a purpose. I focus on solving real problems rather than adding complexity for its own sake.</p>
-            </div>
-            <div class="philosophy-card">
-              <div class="philosophy-icon">🚀</div>
-              <h3>Independent Innovation</h3>
-              <p>Working solo allows me to maintain complete creative control and ensure every detail meets my standards.</p>
+          <div class="skill-category">
+            <h3>Frameworks & Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaFX</span>
+              <span class="skill-tag">Swing</span>
+              <span class="skill-tag">Google APIs</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Scene Builder</span>
+              <span class="skill-tag">Eclipse IDE</span>
+              <span class="skill-tag">Launch4J</span>
+              <span class="skill-tag">Maven</span>
+              <span class="skill-tag">Gradle</span>
+              <span class="skill-tag">Visual Studio Code</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">BlueJ</span>
+              <span class="skill-tag">IntelliJ IDEA</span>
             </div>
           </div>
-        </div>
-
-        <!-- Contact & Connect -->
-        <div class="contact-section">
-          <h2 class="section-title">Let's Connect</h2>
-          <div class="contact-content">
-            <p>I'm always interested in discussing technology, privacy, and innovative software solutions. Feel free to reach out!</p>
-            
-            <div class="contact-methods">
-              <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div class="contact-info">
-                  <h4>Email</h4>
-                  <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">🏢</div>
-                <div class="contact-info">
-                  <h4>Company</h4>
-                  <p>Flex Studios</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">💼</div>
-                <div class="contact-info">
-                  <h4>LinkedIn</h4>
-                  <p>2,030+ Followers</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="cta-section">
-              <h3>Interested in Talken?</h3>
-              <p>Experience privacy-first communication today</p>
-              <a href="downloads.html" class="cta-button">Download Talken</a>
+          <div class="skill-category">
+            <h3>Specializations</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Desktop Applications</span>
+              <span class="skill-tag">Privacy-First Design</span>
+              <span class="skill-tag">UI/UX Design</span>
+              <span class="skill-tag">System Architecture</span>
+              <span class="skill-tag">Native 2D Game Development</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>
-            <a href="index.html">Home</a> |
-            <a href="downloads.html">Downloads</a> |
-            <a href="about-developer.html">About Developer</a> |
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="terms-and-conditions.html">Terms & Conditions</a>
-          </p>
-          <p>© 2025 - Talken by Flex Studios</p>
+       Philosophy 
+      <div class="philosophy-section">
+        <h2 class="section-title">Development Philosophy</h2>
+        <div class="philosophy-content">
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>Every application I build prioritizes user privacy and data sovereignty. Your data should belong to you, not to corporations.</p>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-icon">⚡</div>
+            <h3>Lightweight & Efficient</h3>
+            <p>I believe in creating software that's fast, efficient, and doesn't bloat your system with unnecessary features.</p>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🎯</div>
+            <h3>Purpose-Driven</h3>
+            <p>Every feature serves a purpose. I focus on solving real problems rather than adding complexity for its own sake.</p>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-icon">🚀</div>
+            <h3>Independent Innovation</h3>
+            <p>Working solo allows me to maintain complete creative control and ensure every detail meets my standards.</p>
+          </div>
         </div>
       </div>
-    </footer>
-  </main>
 
-  <script src="js/theme-switcher.js"></script>
-  <script src="js/navigation.js"></script>
+       Contact & Connect 
+      <div class="contact-section">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+          <p>I'm always interested in discussing technology, privacy, and innovative software solutions. Feel free to reach out!</p>
+          
+          <div class="contact-methods">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-info">
+                <h4>Email</h4>
+                <p>
+                  <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a><br/>
+                  <a href="mailto:connect@talken.in">connect@talken.in</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🏢</div>
+              <div class="contact-info">
+                <h4>Company</h4>
+                <p>Flex Studios</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-info">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener">View Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-section">
+            <h3>Interested in Talken?</h3>
+            <p>Experience privacy-first communication soon</p>
+            <a href="downloads.html" class="cta-button">MVP Launching Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>
+          <a href="index.html">Home</a> |
+          <a href="downloads.html">Downloads</a> |
+          <a href="about-developer.html">About Developer</a> |
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+        </p>
+        <p>© 2025 - Talken by Flex Studios</p>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script src="js/theme-switcher.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>
