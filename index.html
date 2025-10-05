@@ -1,238 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="fIhapg1YuL7LS9iZD4XqEjsQq36KAg3r7bStkMk6wQ4" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Talken is a chat app, built by a single developer" />
-  <title>Talken - Home</title>
-  <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="google-site-verification" content="fIhapg1YuL7LS9iZD4XqEjsQq36KAg3r7bStkMk6wQ4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Talken is a chat app, built by a single developer" />
+<title>Talken - Home</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Navigation Bar -->
-  <nav class="top-nav">
-    <div class="nav-container">
-      <!-- Logo on the left (shifted further left) -->
-      <div class="nav-logo">
-        <div class="logo-icon">T</div>
-      </div>
-      
-      <!-- Main title in center -->
-      <div class="nav-title">
-        <h1>Talken</h1>
-      </div>
-      
-      <!-- Theme toggle on the right -->
-      <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-          <span class="theme-icon">🌓</span>
-        </button>
+ Top Navigation Bar 
+<nav class="top-nav">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-icon">T</div>
+    </div>
+    <div class="nav-title">
+      <h1>Talken</h1>
+    </div>
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+        <span class="theme-icon">🌓</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+ Floating Menu Button 
+<button class="menu-toggle" id="menuToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+ Floating Navigation Header 
+<div class="floating-nav-header" id="floatingNavHeader">
+  <h3>Navigation</h3>
+</div>
+
+ Right Sidebar (Hidden by default) 
+<nav class="right-sidebar" id="rightSidebar">
+  <div class="sidebar-header">
+    <h3>Navigation</h3>
+  </div>
+  <ul class="sidebar-menu">
+    <li><a href="index.html" class="active">🏠 Home</a></li>
+    <li><a href="downloads.html">📥 Downloads</a></li>
+    <li><a href="about-developer.html">👨‍💻 About Developer</a></li>
+    <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
+    <li><a href="terms-and-conditions.html">📋 Terms & Conditions</a></li>
+  </ul>
+</nav>
+
+ Overlay for mobile 
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+ Main Content 
+<main class="main-content">
+  <header class="hero-header">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Talken</h1>
+        <p class="hero-subtitle">Aiming Towards A Better Future Of Social Connectivity</p>
+        <div class="hero-accent"></div>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Floating Menu Button -->
-  <button class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Right Sidebar (Hidden by default) -->
-  <nav class="right-sidebar" id="rightSidebar">
-    <div class="sidebar-header">
-      <h3>Navigation</h3>
-    </div>
-    <ul class="sidebar-menu">
-      <li><a href="index.html" class="active">🏠 Home</a></li>
-      <li><a href="downloads.html">📥 Downloads</a></li>
-      <li><a href="about-developer.html">👨‍💻 About Developer</a></li>
-      <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
-      <li><a href="terms-and-conditions.html">📋 Terms & Conditions</a></li>
-    </ul>
-  </nav>
-
-  <!-- Overlay for mobile -->
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <header class="hero-header">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Talken</h1>
-          <p class="hero-subtitle">Aiming Towards A Better Future Of Social Connectivity</p>
-          <div class="hero-accent"></div>
+   Talken Showcase Section 
+  <section class="content talken-showcase">
+    <div class="container">
+      <h2 class="section-title">See Talken In Action</h2>
+      <p class="section-description">Experience the clean, privacy-focused interface that puts your conversations first.</p>
+      
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <div class="showcase-image">
+            <img src="res/talken-main-interface.png" alt="Talken Main Interface" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='📱 Talken Main Interface Screenshot'">
+          </div>
+          <div class="showcase-content">
+            <h3>Clean Chat Interface</h3>
+            <p>Minimalist design focused on your conversations without distractions or ads.</p>
+          </div>
         </div>
-      </div>
-    </header>
-
-    <!-- Talken Showcase Section -->
-    <section class="content talken-showcase">
-      <div class="container">
-        <h2 class="section-title">See Talken In Action</h2>
-        <p class="section-description">Experience the clean, privacy-focused interface that puts your conversations first.</p>
         
-        <div class="showcase-grid">
-          <div class="showcase-item">
-            <div class="showcase-image">
-              <img src="res/talken-main-interface.png" alt="Talken Main Interface" onerror="this.parentElement.innerHTML='📱 Talken Main Interface Screenshot'">
-            </div>
-            <div class="showcase-content">
-              <h3>Clean Chat Interface</h3>
-              <p>Minimalist design focused on your conversations without distractions or ads.</p>
-            </div>
+        <div class="showcase-item">
+          <div class="showcase-image">
+            <img src="res/talken-login-screen.png" alt="Talken Login Screen" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='🔐 Talken Login Screen Screenshot'">
           </div>
-          
-          <div class="showcase-item">
-            <div class="showcase-image">
-              <img src="res/talken-login-screen.png" alt="Talken Login Screen" onerror="this.parentElement.innerHTML='🔐 Talken Login Screen Screenshot'">
-            </div>
-            <div class="showcase-content">
-              <h3>Secure Google Login</h3>
-              <p>Simple, secure authentication through your Google account - no additional passwords needed.</p>
-            </div>
+          <div class="showcase-content">
+            <h3>Secure Google Login</h3>
+            <p>Simple, secure authentication through your Google account — no additional passwords needed.</p>
           </div>
-          
-          <div class="showcase-item">
-            <div class="showcase-image">
-              <img src="res/talken-file-sharing.png" alt="Talken File Sharing" onerror="this.parentElement.innerHTML='📁 Talken File Sharing Screenshot'">
-            </div>
-            <div class="showcase-content">
-              <h3>Unlimited File Sharing</h3>
-              <p>Share files up to 15GB directly through your Google Drive storage.</p>
-            </div>
+        </div>
+        
+        <div class="showcase-item">
+          <div class="showcase-image">
+            <img src="res/talken-file-sharing.png" alt="Talken File Sharing" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='📁 Talken File Sharing Screenshot'">
+          </div>
+          <div class="showcase-content">
+            <h3>Unlimited File Sharing</h3>
+            <p>Share files up to 15GB directly through your Google Drive storage.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Introduction Section -->
-    <section class="content intro-section">
-      <div class="container">
-        <div class="intro-content">
-          <h2 class="section-title">Your Messages, Your Control</h2>
-          <p class="section-description">Talken is a minimalist chat app built by a solo developer, designed to put <strong>privacy first</strong>.</p>
-        </div>
+   Introduction Section 
+  <section class="content intro-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2 class="section-title">Your Messages, Your Control</h2>
+        <p class="section-description">Talken is a minimalist chat app built by a solo developer, designed to put <strong>privacy first</strong>.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="content features-section">
-      <div class="container">
-        <div class="features-content">
-          <h3 class="features-title">How Talken Works</h3>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">🔒</div>
-              <h4>Zero-Server Storage</h4>
-              <p>Messages are backed up to <em>your Google Drive</em>, not our servers</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">🚫</div>
-              <h4>No Ads, No Tracking</h4>
-              <p>Built for communication, not surveillance</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">☁️</div>
-              <h4>Mandatory Backups</h4>
-              <p>Automatic Google Drive sync ensures you never lose chats</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">∞</div>
-              <h4>Limitless Storage</h4>
-              <p>Send as many messages and files as you want, Talken will never limit you</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">👨‍💻</div>
-              <h4>One-Person Mission</h4>
-              <p>Developed independently by Shashwat Gupta of Flex Studios</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">⚡</div>
-              <h4>Extremely Lightweight</h4>
-              <p>Just 17,000 lines of code makes it optimized and lightweight for your device</p>
-            </div>
+   Features Section 
+  <section class="content features-section">
+    <div class="container">
+      <div class="features-content">
+        <h3 class="features-title">How Talken Works</h3>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h4>Zero-Server Storage</h4>
+            <p>Messages are backed up to <em>your Google Drive</em>, not our servers</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚫</div>
+            <h4>No Ads, No Tracking</h4>
+            <p>Built for communication, not surveillance</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">☁️</div>
+            <h4>Mandatory Backups</h4>
+            <p>Automatic Google Drive sync ensures you never lose chats</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">∞</div>
+            <h4>Limitless Storage</h4>
+            <p>Send as many messages and files as you want, Talken will never limit you</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👨‍💻</div>
+            <h4>One-Person Mission</h4>
+            <p>Developed independently by Shashwat Gupta of Flex Studios</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h4>Extremely Lightweight</h4>
+            <p>Just 17,000 lines of code makes it optimized and lightweight for your device</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section class="content about-section">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-text">
-            <h2 class="section-title">About Talken</h2>
-            <div class="text-blocks">
-              <p class="text-block">Talken Is A Pioneering Chat Platform Designed To Redefine The Way We Perceive Privacy In Digital Communication. Developed With Decentralization And Data Sovereignty At Its Core, Talken Offers A Seamless Experience Backed By Your Own Cloud Storage.</p>
-              
-              <p class="text-block">It Is A Completely New Realm Of Communication Applications, Where Your Privacy Is Simply Guaranteed. This Makes Talken An Ideal Choice For Journalists, Content Creators, Diplomats, And Others Who Value Discretion.</p>
-              
-              <p class="text-block">Talken Can Send Any File Of Size Up To 15 GB Or The Available Space In Your Google Drive, Which Is Unmatched By Most Other Chat Applications. All Media Sent Through Talken Is Preserved In Its Original Size And Quality.</p>
-            </div>
+   About Section 
+  <section class="content about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">About Talken</h2>
+          <div class="text-blocks">
+            <p class="text-block">Talken Is A Pioneering Chat Platform Designed To Redefine The Way We Perceive Privacy In Digital Communication. Developed With Decentralization And Data Sovereignty At Its Core, Talken Offers A Seamless Experience Backed By Your Own Cloud Storage.</p>
+            
+            <p class="text-block">It Is A Completely New Realm Of Communication Applications, Where Your Privacy Is Simply Guaranteed. This Makes Talken An Ideal Choice For Journalists, Content Creators, Diplomats, And Others Who Value Discretion.</p>
+            
+            <p class="text-block">Talken Can Send Any File Of Size Up To 15 GB Or The Available Space In Your Google Drive, Which Is Unmatched By Most Other Chat Applications. All Media Sent Through Talken Is Preserved In Its Original Size And Quality.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Quick Downloads Section (Temporary) -->
-    <section class="content quick-downloads-section">
-      <div class="container">
-        <div class="quick-downloads-content">
-          <h2 class="section-title">Quick Downloads</h2>
-          <p class="section-note"><em>Note: These will be moved to the dedicated Downloads page once confirmed.</em></p>
-          
-          <div class="quick-download-grid">
-            <div class="quick-download-item">
-              <div class="download-icon">🧰</div>
-              <h3>Talken Toolbox Desktop</h3>
-              <button class="quick-download-btn" onclick="startDownload('13tg0Y7fnJlEkjUXqLIO0KtKYHC4OaRhT')">Download</button>
-            </div>
-            <div class="quick-download-item">
-              <div class="download-icon">☕</div>
-              <h3>Talken Desktop App With JRE Bundled</h3>
-              <button class="quick-download-btn" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">Download</button>
-            </div>
-            <div class="quick-download-item">
-              <div class="download-icon">🪟</div>
-              <h3>Talken Desktop App Executable For Windows</h3>
-              <button class="quick-download-btn" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">Download</button>
-            </div>
+   Quick Downloads Section (Temporary) 
+  <section class="content quick-downloads-section">
+    <div class="container">
+      <div class="quick-downloads-content">
+        <h2 class="section-title">Quick Downloads</h2>
+        <p class="section-note"><em>Note: These will be moved to the dedicated Downloads page once confirmed.</em></p>
+        
+        <div class="quick-download-grid">
+          <div class="quick-download-item">
+            <div class="download-icon">🧰</div>
+            <h3>Talken Toolbox Desktop</h3>
+            <button class="quick-download-btn" onclick="startDownload('13tg0Y7fnJlEkjUXqLIO0KtKYHC4OaRhT')">Download</button>
+          </div>
+          <div class="quick-download-item">
+            <div class="download-icon">☕</div>
+            <h3>Talken Desktop App With JRE Bundled</h3>
+            <button class="quick-download-btn" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">Download</button>
+          </div>
+          <div class="quick-download-item">
+            <div class="download-icon">🪟</div>
+            <h3>Talken Desktop App Executable For Windows</h3>
+            <button class="quick-download-btn" onclick="startDownload('1-wA8U9srLK9FyQznR34S5GH8iSLA1JQh')">Download</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>
-            <a href="index.html">Home</a> |
-            <a href="downloads.html">Downloads</a> |
-            <a href="about-developer.html">About Developer</a> |
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="terms-and-conditions.html">Terms & Conditions</a>
-          </p>
-          <p>© 2025 - Talken by Flex Studios</p>
-        </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>
+          <a href="index.html">Home</a> |
+          <a href="downloads.html">Downloads</a> |
+          <a href="about-developer.html">About Developer</a> |
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+        </p>
+        <p>© 2025 - Talken by Flex Studios</p>
       </div>
-    </footer>
-  </main>
+    </div>
+  </footer>
+</main>
 
-  <script>
-    function startDownload(fileId) {
-      const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
-      const a = document.createElement("a");
-      a.href = directLink;
-      a.download = "";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }
-  </script>
-  <script src="js/theme-switcher.js"></script>
-  <script src="js/navigation.js"></script>
+<script>
+  function startDownload(fileId) {
+    const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    const a = document.createElement("a");
+    a.href = directLink;
+    a.download = "";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+</script>
+<script src="js/theme-switcher.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>
