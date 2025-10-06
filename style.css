@@ -1639,3 +1639,134 @@ a:hover {
   outline: 2px solid var(--accent-color);
   outline-offset: 4px;
 }
+
+/* ===== Decentralization Section Styles ===== */
+.decentralization-section {
+  padding: 8rem 0;
+  background: var(--container-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.decentralization-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.serverless-pill {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-color);
+}
+
+.decentralization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.decentralization-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 24px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  outline: none;
+}
+
+.decentralization-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.decentralization-card.mvp {
+  border-width: 1.5px;
+}
+
+.decentralization-card.planned {
+  border-style: dashed;
+  opacity: 0.95;
+}
+
+.decentralization-card:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+.card-icon {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.card-text {
+  color: var(--text-color);
+  opacity: 0.85;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 2.5rem; /* make room for status badge */
+}
+
+.status-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+}
+
+.status-badge.mvp {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.status-badge.planned {
+  background: linear-gradient(135deg, #ffa94d, #8a5cf6);
+  color: #fff;
+  border: none;
+}
+
+.title-star {
+  font-size: 0.75em;
+  opacity: 0.7;
+  vertical-align: super;
+}
+
+.tiny-footnote {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  opacity: 0.55;
+}
+
+/* Responsive tweaks for decentralization grid */
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 1.15rem;
+  }
+  .card-text {
+    margin-bottom: 2rem;
+  }
+}
