@@ -5,5 +5,5 @@
   "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v1.0/Talken.exe",
   "push": "false",
   "minJavaVersion": "21",
-  "requiredDiskSpace": "95MB"
+  "requiredDiskSpace": "80MB"
 }
