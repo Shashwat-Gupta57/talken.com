@@ -1,9 +1,9 @@
 {
   "version": "1.0",
-  "releaseDate": "2025-10-09",
+  "releaseDate": "2025-10-14",
   "changelog": "Initial release of Talken\n\n✨ New Features:\n- Decentralized DHT messaging\n- Profile management with Google Drive backup\n- Yggdrasil network integration\n- Circular profile pictures\n- Settings panel\n\n🐛 Bug Fixes:\n- Fixed OAuth token refresh\n- Fixed circular image clipping for rectangular images\n\n📝 Notes:\nFirst public release. Welcome to Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v0.9.1/Talken-1.0.jar",
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v1.0/Talken.exe",
   "push": "false",
   "minJavaVersion": "21",
-  "requiredDiskSpace": "120MB"
+  "requiredDiskSpace": "95MB"
 }
