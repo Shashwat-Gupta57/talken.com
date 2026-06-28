@@ -129,20 +129,19 @@
       </div>
     </section>
 
-    <!-- Security vault: 32,768 layers -->
+    <!-- Security vault: 32,768-cipher moving target -->
     <section class="section vault" id="security">
       <div class="container">
         <div class="vault-grid">
           <div data-reveal>
-            <span class="vault-num-label">Encryption pipeline</span>
+            <span class="vault-num-label">Cipher pool</span>
             <div class="vault-num"><span data-countup="32768">0</span></div>
-            <p class="vault-copy">Talken is architected to wrap every message in a <strong>32,768-layer</strong> encryption pipeline — a deep, multi-stage cascade of independent ciphers. Peel one layer, and 32,767 remain.</p>
+            <p class="vault-copy">Talken is architected so that every message is encrypted with <strong>one of 32,768 distinct ciphers</strong>, picked at random — chained to the message before it and evolving as you talk. An attacker never faces a single cipher; they face a moving target.</p>
             <div class="cipher-chips">
-              <span class="chip"><b>X25519</b>&nbsp;key exchange</span>
-              <span class="chip"><b>HKDF</b>&nbsp;derivation</span>
-              <span class="chip"><b>AES-256-GCM</b>&nbsp;per chunk</span>
-              <span class="chip"><b>Ed25519</b>&nbsp;signatures</span>
-              <span class="chip">+&nbsp;32,764&nbsp;more</span>
+              <span class="chip"><b>1 of 32,768</b>&nbsp;per message</span>
+              <span class="chip"><b>random</b>&nbsp;selection</span>
+              <span class="chip"><b>chained</b>&nbsp;to last message</span>
+              <span class="chip"><b>evolves</b>&nbsp;every 500 msgs</span>
             </div>
           </div>
           <div data-reveal>
@@ -154,9 +153,9 @@
           <div class="cascade-head"><span class="dots"><i></i><i></i><i></i></span> message &rarr; ciphertext</div>
           <div class="cascade-body">
             <div class="cascade-row"><span class="lyr">plaintext</span><span class="val">&ldquo;meet me at the docks, midnight&rdquo;</span></div>
-            <div class="cascade-row"><span class="lyr">layer 1 · X25519</span><span class="val">shared secret established · ephemeral key wrapped</span></div>
-            <div class="cascade-row"><span class="lyr">layer 2 · HKDF</span><span class="val">32,768 independent sub-keys derived</span></div>
-            <div class="cascade-row"><span class="lyr">layers 3…32,767</span><span class="val">AES-256-GCM cascade · per-chunk nonces · rotating keys</span></div>
+            <div class="cascade-row"><span class="lyr">selector · key 1</span><span class="val">algorithm #14,902 of 32,768 selected (deterministic)</span></div>
+            <div class="cascade-row"><span class="lyr">key 2</span><span class="val">per-message key · chained to the previous message</span></div>
+            <div class="cascade-row"><span class="lyr">evolve</span><span class="val">+Δ every 500 messages · random, peer-reproducible</span></div>
             <div class="cascade-row final"><span class="lyr">ciphertext</span><span class="val" data-cipher="56"></span></div>
           </div>
         </div>
@@ -251,7 +250,7 @@
         <div class="java-inner" data-reveal>
           <span class="section-eyebrow">Engineering</span>
           <h2>Hand-written. From scratch. <span class="accent">In Java.</span></h2>
-          <p>No starter template, no scaffold, no base set. Talken is built line by line in pure Java &amp; JavaFX — a desktop client, a peer-to-peer messaging core, an encryption pipeline, and its own backend services.</p>
+          <p>No starter template, no scaffold, no base set. Talken is built line by line in pure Java &amp; JavaFX — a desktop client, a peer-to-peer messaging core, a 32,768-cipher encryption engine, and its own backend services.</p>
           <div class="stat-strip" data-reveal-stagger>
             <div class="stat"><div class="num"><span data-countup="27500" data-suffix="+">0</span></div><div class="lbl">Lines of code</div></div>
             <div class="stat"><div class="num"><span data-countup="40" data-suffix="+">0</span></div><div class="lbl">Custom modules</div></div>

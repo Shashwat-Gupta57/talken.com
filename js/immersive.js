@@ -81,8 +81,23 @@
     els.forEach(function (el) {
       var final = el.textContent;
       if (RM) return;
-      var frame = 0, total = 28;
+      var frame = 0, total = 28, locked = false;
+      // Lock the word's box to its final size so wider random glyphs can't
+      // reflow the headline (1 line -> 2 lines -> 1 line jitter).
+      var lock = function () {
+        var w = el.getBoundingClientRect().width;
+        if (!w) return;
+        el.style.display = "inline-block";
+        el.style.width = w + "px";
+        el.style.whiteSpace = "nowrap";
+        el.style.textAlign = "left";
+        locked = true;
+      };
+      var unlock = function () {
+        el.style.display = el.style.width = el.style.whiteSpace = el.style.textAlign = "";
+      };
       var run = function () {
+        if (!locked) lock();
         var out = "";
         for (var i = 0; i < final.length; i++) {
           if (final[i] === " ") { out += " "; continue; }
@@ -90,7 +105,8 @@
           out += i < settle ? final[i] : glyphs[(Math.random() * glyphs.length) | 0];
         }
         el.textContent = out;
-        if (frame++ < total) setTimeout(run, 34); else el.textContent = final;
+        if (frame++ < total) setTimeout(run, 34);
+        else { el.textContent = final; unlock(); }
       };
       // start shortly after load
       setTimeout(run, 350);
@@ -163,8 +179,8 @@
       var seq = Promise.resolve();
       var steps = [
         function () { line('<span class="c-teal">talken@vault</span><span class="c-dim">:~$</span> ./attack --target message.tkn --mode brute-force'); return wait(500); },
-        function () { line('<span class="c-dim">[*]</span> target protected by <span class="c-num">32,768</span>-layer encryption pipeline'); return wait(450); },
-        function () { line('<span class="c-dim">[*]</span> key space ≈ <span class="c-num">2^4096</span> per layer · attempting recovery…'); return wait(500); },
+        function () { line('<span class="c-dim">[*]</span> cipher selected at random from <span class="c-num">32,768</span> · chained &amp; evolving key'); return wait(450); },
+        function () { line('<span class="c-dim">[*]</span> must guess the cipher AND the chained key · space ≈ <span class="c-num">2^4096</span> · attempting…'); return wait(500); },
         function () { return spin(); },
         function () { line('<span class="c-dim">[*]</span> throughput: <span class="c-num">10^18</span> keys/sec (idealized GPU farm)'); return wait(400); },
         function () { line('<span class="c-dim">[*]</span> estimated time to break: <span class="c-num">~10^4930</span> years'); return wait(400); },
