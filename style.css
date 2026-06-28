@@ -26,6 +26,8 @@
   --primary-glow:rgba(45,212,191,0.16);
   --live:#34d399;
   --live-soft:rgba(52,211,153,0.15);
+  --alert:#fb7185;
+  --alert-soft:rgba(251,113,133,0.14);
 
   --font-display:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,sans-serif;
   --font-body:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
@@ -58,6 +60,8 @@
   --primary-glow:rgba(13,148,136,0.14);
   --live:#0d9b6c;
   --live-soft:rgba(13,155,108,0.12);
+  --alert:#e11d48;
+  --alert-soft:rgba(225,29,48,0.10);
 }
 
 html{scroll-behavior:smooth}
@@ -384,4 +388,98 @@ footer{border-top:1px solid var(--border);background:color-mix(in srgb,var(--bg)
   .download-details{flex-direction:column;gap:.4rem}
   .legal-content,.hardware-card,.store-info,.cta-inner{padding:1.6rem}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* ===================================================================
+   IMMERSIVE LAYER — scroll reveals, security vault, crack sim,
+   built-in-Java + code rain, stat counters, living mesh.
+   All effects degrade gracefully and honor prefers-reduced-motion.
+   =================================================================== */
+
+/* scroll progress spine (top) */
+.scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:1100;background:linear-gradient(90deg,var(--primary),var(--primary-bright));box-shadow:0 0 12px var(--primary-glow);transition:width .08s linear}
+
+/* reveal on scroll */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal-stagger]>*{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+[data-reveal-stagger].in>*{opacity:1;transform:none}
+
+/* living mesh nodes (animated in hero svg) */
+.hero-mesh .node{animation:nodePulse 4s ease-in-out infinite}
+.hero-mesh .node:nth-child(2n){animation-duration:5.5s}
+.hero-mesh .node:nth-child(3n){animation-duration:6.5s}
+@keyframes nodePulse{0%,100%{opacity:.5}50%{opacity:1}}
+.hero-mesh .packet{fill:var(--primary-bright)}
+
+/* cursor-reactive glow on glass cards */
+.card,.shot,.cta-inner{--mx:50%;--my:0%}
+.card::after,.shot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(220px circle at var(--mx) var(--my),var(--primary-soft),transparent 60%)}
+.card:hover::after,.shot:hover::after{opacity:1}
+
+/* ---------- Security vault ("32,768 layers") ---------- */
+.vault{position:relative;overflow:hidden;border-top:1px solid var(--border);background:linear-gradient(180deg,transparent,var(--surface) 50%,transparent)}
+.vault-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.vault-num{font-family:var(--font-display);font-weight:800;letter-spacing:-0.04em;line-height:1;font-size:clamp(3.5rem,11vw,7.5rem);background:linear-gradient(120deg,var(--primary),var(--primary-bright));-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.vault-num-label{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;color:var(--primary-bright);margin-bottom:.4rem}
+.vault-copy{font-size:1.05rem;color:var(--muted);margin:1.1rem 0 1.6rem;max-width:520px}
+.cipher-chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.cipher-chips .chip{background:var(--surface-3);color:var(--muted);border:1px solid var(--border);font-size:.66rem;padding:.3rem .6rem}
+.cipher-chips .chip b{color:var(--primary-bright);font-weight:600}
+
+/* lattice — symbolic field of cells that ignite in a sweep */
+.lattice{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;aspect-ratio:1.15/1;padding:14px;border-radius:var(--r-lg);background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(10px)}
+.lattice i{display:block;border-radius:2px;background:var(--surface-3);transition:background .5s ease,box-shadow .5s ease}
+.lattice i.lit{background:var(--primary);box-shadow:0 0 8px var(--primary-glow)}
+.lattice i.dim{background:color-mix(in srgb,var(--primary) 35%,var(--surface-3))}
+
+/* encryption cascade panel */
+.cascade{margin-top:2.5rem;border-radius:var(--r-lg);border:1px solid var(--border);background:var(--glass);backdrop-filter:blur(12px);overflow:hidden}
+.cascade-head{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.cascade-head .dots{display:flex;gap:.4rem}
+.cascade-head .dots i{width:9px;height:9px;border-radius:50%;background:var(--border-strong)}
+.cascade-body{padding:1.1rem 1.2rem;font-family:var(--font-mono);font-size:.82rem;line-height:1.7;overflow-x:auto}
+.cascade-row{display:flex;gap:.9rem;align-items:baseline;white-space:nowrap}
+.cascade-row .lyr{color:var(--primary-bright);min-width:120px;opacity:.85}
+.cascade-row .val{color:var(--muted);word-break:break-all;white-space:normal}
+.cascade-row.final .val{color:var(--text)}
+
+/* ---------- Crack simulation terminal ---------- */
+.crack{border-radius:var(--r-lg);border:1px solid var(--border);background:#04070d;overflow:hidden;box-shadow:0 30px 80px -40px #000}
+[data-theme="light"] .crack{background:#0a0f1a}
+.crack-head{display:flex;align-items:center;gap:.6rem;padding:.65rem 1rem;border-bottom:1px solid #16202f;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;color:#7c8aa0}
+.crack-head .dots{display:flex;gap:.4rem}
+.crack-head .dots i{width:10px;height:10px;border-radius:50%}
+.crack-head .dots i:nth-child(1){background:#fb7185}.crack-head .dots i:nth-child(2){background:#fbbf24}.crack-head .dots i:nth-child(3){background:#34d399}
+.crack-body{padding:1.2rem 1.3rem;font-family:var(--font-mono);font-size:.84rem;line-height:1.8;color:#9fb3c8;min-height:240px}
+.crack-body .ln{white-space:pre-wrap}
+.crack-body .c-teal{color:var(--primary-bright)}
+.crack-body .c-dim{color:#5a6b82}
+.crack-body .c-num{color:#e6edf5;font-variant-numeric:tabular-nums}
+.crack-body .c-deny{color:var(--alert);font-weight:600}
+.crack-cursor{display:inline-block;width:9px;height:1.05em;background:var(--primary-bright);vertical-align:-2px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.crack-cta{margin-top:1.3rem;display:flex;justify-content:center}
+
+/* ---------- Built from scratch in Java + code rain ---------- */
+.java-sec{position:relative;overflow:hidden;border-top:1px solid var(--border)}
+.code-rain{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.16;-webkit-mask-image:linear-gradient(180deg,transparent,#000 25%,#000 70%,transparent);mask-image:linear-gradient(180deg,transparent,#000 25%,#000 70%,transparent)}
+.code-rain .col{position:absolute;top:-120%;font-family:var(--font-mono);font-size:13px;line-height:1.25;color:var(--primary-bright);white-space:pre;animation:rain linear infinite}
+@keyframes rain{to{transform:translateY(260%)}}
+.java-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto}
+.java-inner h2{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;letter-spacing:-0.035em}
+.java-inner h2 .accent{background:linear-gradient(120deg,var(--primary),var(--primary-bright));-webkit-background-clip:text;background-clip:text;color:transparent}
+.java-inner p{color:var(--muted);font-size:1.08rem;margin:1.1rem auto 0;max-width:600px}
+
+/* ---------- stat strip ---------- */
+.stat-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.25rem;margin-top:2.5rem}
+.stat{padding:1.6rem;border-radius:var(--r-lg);background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(10px);text-align:center}
+.stat .num{font-family:var(--font-display);font-weight:800;font-size:2.1rem;letter-spacing:-0.03em;color:var(--primary-bright);font-variant-numeric:tabular-nums}
+.stat .lbl{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--muted);margin-top:.4rem}
+
+@media (max-width:880px){.vault-grid{grid-template-columns:1fr;gap:2rem}.lattice{grid-template-columns:repeat(20,1fr)}}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  [data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}
+  .hero-mesh .node,.code-rain .col,.crack-cursor{animation:none!important}
+  .code-rain{display:none}
+}

@@ -48,21 +48,24 @@
     <header class="hero">
       <div class="hero-mesh" aria-hidden="true">
         <svg viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice">
-          <g stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="1" fill="none">
+          <g stroke="#2dd4bf" stroke-opacity="0.45" stroke-width="1" fill="none">
             <path d="M140 120 L360 70 L560 180 L760 90 L980 200 M360 70 L420 300 L560 180 M420 300 L240 420 L520 470 L760 360 L560 180 M760 360 L980 200 M760 360 L980 470 M520 470 L760 360 M240 420 L140 120 M1040 330 L980 200 M1040 330 L980 470"/>
           </g>
           <g fill="#5eead4">
-            <circle cx="140" cy="120" r="3"/><circle cx="360" cy="70" r="4"/><circle cx="560" cy="180" r="5"/>
-            <circle cx="760" cy="90" r="3"/><circle cx="980" cy="200" r="4"/><circle cx="420" cy="300" r="3.5"/>
-            <circle cx="240" cy="420" r="3"/><circle cx="520" cy="470" r="4"/><circle cx="760" cy="360" r="5"/>
-            <circle cx="980" cy="470" r="3"/><circle cx="1040" cy="330" r="3.5"/>
+            <circle class="node" cx="140" cy="120" r="3"/><circle class="node" cx="360" cy="70" r="4"/><circle class="node" cx="560" cy="180" r="5"/>
+            <circle class="node" cx="760" cy="90" r="3"/><circle class="node" cx="980" cy="200" r="4"/><circle class="node" cx="420" cy="300" r="3.5"/>
+            <circle class="node" cx="240" cy="420" r="3"/><circle class="node" cx="520" cy="470" r="4"/><circle class="node" cx="760" cy="360" r="5"/>
+            <circle class="node" cx="980" cy="470" r="3"/><circle class="node" cx="1040" cy="330" r="3.5"/>
           </g>
+          <circle class="packet" r="2.6"><animateMotion dur="3.4s" repeatCount="indefinite" path="M360 70 L420 300 L240 420 L520 470 L760 360"/></circle>
+          <circle class="packet" r="2.6"><animateMotion dur="4.2s" repeatCount="indefinite" path="M140 120 L360 70 L560 180 L760 90 L980 200"/></circle>
+          <circle class="packet" r="2.6"><animateMotion dur="3.8s" repeatCount="indefinite" path="M560 180 L760 360 L980 470"/></circle>
         </svg>
       </div>
       <div class="container">
         <div class="hero-inner">
           <span class="pill glass"><span class="dot"></span>MVP live now · v1.1</span>
-          <h1>Privacy, by <span class="accent">architecture</span>.</h1>
+          <h1>Privacy, by <span class="accent" data-scramble>architecture</span>.</h1>
           <p class="hero-sub">Talken is a serverless, peer-to-peer chat that keeps your messages and files in your own cloud — never on our servers.</p>
           <div class="hero-cta">
             <a class="btn btn-primary btn-lg" href="downloads.html">
@@ -78,12 +81,12 @@
     <!-- Decentralization at every layer -->
     <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <span class="section-eyebrow">Architecture</span>
           <h2 class="section-title">Decentralization at every layer</h2>
           <div class="section-rule"></div>
         </div>
-        <div class="grid-3">
+        <div class="grid-3" data-reveal-stagger>
           <article class="card glass"><span class="sheen"></span>
             <div class="card-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 6v4M11 11l-5 6M13 11l5 6"/></svg></div>
             <div class="card-titlerow"><h3>Serverless P2P network</h3><span class="chip chip-live">In MVP</span></div>
@@ -126,15 +129,68 @@
       </div>
     </section>
 
+    <!-- Security vault: 32,768 layers -->
+    <section class="section vault" id="security">
+      <div class="container">
+        <div class="vault-grid">
+          <div data-reveal>
+            <span class="vault-num-label">Encryption pipeline</span>
+            <div class="vault-num"><span data-countup="32768">0</span></div>
+            <p class="vault-copy">Talken is architected to wrap every message in a <strong>32,768-layer</strong> encryption pipeline — a deep, multi-stage cascade of independent ciphers. Peel one layer, and 32,767 remain.</p>
+            <div class="cipher-chips">
+              <span class="chip"><b>X25519</b>&nbsp;key exchange</span>
+              <span class="chip"><b>HKDF</b>&nbsp;derivation</span>
+              <span class="chip"><b>AES-256-GCM</b>&nbsp;per chunk</span>
+              <span class="chip"><b>Ed25519</b>&nbsp;signatures</span>
+              <span class="chip">+&nbsp;32,764&nbsp;more</span>
+            </div>
+          </div>
+          <div data-reveal>
+            <div class="lattice" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="cascade" data-reveal>
+          <div class="cascade-head"><span class="dots"><i></i><i></i><i></i></span> message &rarr; ciphertext</div>
+          <div class="cascade-body">
+            <div class="cascade-row"><span class="lyr">plaintext</span><span class="val">&ldquo;meet me at the docks, midnight&rdquo;</span></div>
+            <div class="cascade-row"><span class="lyr">layer 1 · X25519</span><span class="val">shared secret established · ephemeral key wrapped</span></div>
+            <div class="cascade-row"><span class="lyr">layer 2 · HKDF</span><span class="val">32,768 independent sub-keys derived</span></div>
+            <div class="cascade-row"><span class="lyr">layers 3…32,767</span><span class="val">AES-256-GCM cascade · per-chunk nonces · rotating keys</span></div>
+            <div class="cascade-row final"><span class="lyr">ciphertext</span><span class="val" data-cipher="56"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Try to break in -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="section-eyebrow">Threat model</span>
+          <h2 class="section-title">Try to break in.</h2>
+          <div class="section-rule"></div>
+          <p class="section-sub">Run a simulated brute-force against a single Talken message. The numbers are not on the attacker's side.</p>
+        </div>
+        <div class="crack" data-reveal>
+          <div class="crack-head"><span class="dots"><i></i><i></i><i></i></span> vault — attack simulation</div>
+          <div class="crack-body" id="crackBody">
+            <div class="ln"><span class="c-teal">talken@vault</span><span class="c-dim">:~$</span> <span class="crack-cursor"></span></div>
+          </div>
+        </div>
+        <div class="crack-cta"><button class="btn btn-primary" id="crackRun">Run attack simulation</button></div>
+      </div>
+    </section>
+
     <!-- See Talken in action -->
     <section class="section section--tight">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center" data-reveal>
           <span class="section-eyebrow">Product</span>
           <h2 class="section-title">See Talken in action</h2>
           <div class="section-rule"></div>
         </div>
-        <div class="showcase-grid">
+        <div class="showcase-grid" data-reveal-stagger>
           <div class="shot glass">
             <div class="shot-frame"><img src="res/talken-main-interface.png" alt="Talken main chat interface" loading="lazy" decoding="async" onerror="this.closest('.shot-frame').textContent='Talken — main interface'"></div>
             <h3>Clean chat interface</h3>
@@ -154,12 +210,12 @@
     <!-- How Talken works -->
     <section class="section" id="how">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <span class="section-eyebrow">How it works</span>
           <h2 class="section-title">Built so we can't see your data</h2>
           <div class="section-rule"></div>
         </div>
-        <div class="how-grid">
+        <div class="how-grid" data-reveal-stagger>
           <div class="how-item">
             <div class="how-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
             <div><h4>Zero-server storage</h4><p>We never store your messages. They travel directly between peers over the mesh.</p></div>
@@ -188,10 +244,28 @@
       </div>
     </section>
 
+    <!-- Built from scratch in Java -->
+    <section class="section java-sec">
+      <div class="code-rain" aria-hidden="true"></div>
+      <div class="container">
+        <div class="java-inner" data-reveal>
+          <span class="section-eyebrow">Engineering</span>
+          <h2>Hand-written. From scratch. <span class="accent">In Java.</span></h2>
+          <p>No starter template, no scaffold, no base set. Talken is built line by line in pure Java &amp; JavaFX — a desktop client, a peer-to-peer messaging core, an encryption pipeline, and its own backend services.</p>
+          <div class="stat-strip" data-reveal-stagger>
+            <div class="stat"><div class="num"><span data-countup="27500" data-suffix="+">0</span></div><div class="lbl">Lines of code</div></div>
+            <div class="stat"><div class="num"><span data-countup="40" data-suffix="+">0</span></div><div class="lbl">Custom modules</div></div>
+            <div class="stat"><div class="num"><span data-countup="1">0</span></div><div class="lbl">Solo developer</div></div>
+            <div class="stat"><div class="num"><span data-countup="100" data-suffix="%">0</span></div><div class="lbl">Hand-written</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA band -->
     <section class="cta-band">
       <div class="container">
-        <div class="cta-inner glass">
+        <div class="cta-inner glass" data-reveal>
           <h2>Own your conversations.</h2>
           <a class="btn btn-primary btn-lg" href="downloads.html">
             Download Talken
@@ -219,5 +293,6 @@
 
   <script src="js/theme-switcher.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/immersive.js" defer></script>
 </body>
 </html>
