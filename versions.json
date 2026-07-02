@@ -1,8 +1,8 @@
 {
-  "version": "1.3",
-  "releaseDate": "2026-07-01",
-  "changelog": "Talken 1.3\n\n✨ New:\n- Group Chats: create a group and message several people at once — still fully peer-to-peer, no central server sees your messages.\n- Add people by email and start chatting with contacts you meet in groups.\n\n🔧 Improvements:\n- App data now lives in your per-user AppData folder for more reliable storage and smoother updates.\n- Lighter, faster login with fewer server round-trips.\n\n🐛 Fixes:\n- Various reliability and stability improvements.\n\n📝 Notes:\nThanks for using Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v1.3/Talken.exe",
+  "version": "1.6",
+  "releaseDate": "2026-07-02",
+  "changelog": "Talken 1.6\n\n✨ New:\n- Redesigned sign up & log in with a cleaner, modern look.\n- Verification codes are now sent from Talken's own servers — faster and more secure.\n- Clearer, step-by-step sign up with helpful inline messages.\n\n🔒 Security:\n- Your login details are now stored encrypted on your device.\n- Your account key is encrypted before it ever leaves your device.\n\n🔧 Improvements:\n- Instant, no-freeze sign in and messaging.\n- Automatic identity self-heal so people can always reach you.\n\n📝 Notes:\nThanks for using Talken!",
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v1.6/Talken.exe",
   "push": "true",
   "minJavaVersion": "21",
   "requiredDiskSpace": "200MB"
