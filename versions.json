@@ -1,8 +1,8 @@
 {
-  "version": "1.6",
+  "version": "2.0",
   "releaseDate": "2026-07-02",
-  "changelog": "Talken 1.6\n\n✨ New:\n- Redesigned sign up & log in with a cleaner, modern look.\n- Verification codes are now sent from Talken's own servers — faster and more secure.\n- Clearer, step-by-step sign up with helpful inline messages.\n\n🔒 Security:\n- Your login details are now stored encrypted on your device.\n- Your account key is encrypted before it ever leaves your device.\n\n🔧 Improvements:\n- Instant, no-freeze sign in and messaging.\n- Automatic identity self-heal so people can always reach you.\n\n📝 Notes:\nThanks for using Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v1.6/Talken.exe",
+  "changelog": "Talken 2.0\n\n✨ New:\n- Forgot your password? You can now reset it with a verification code sent to your email.\n- You can now permanently delete your account and its data whenever you choose.\n- New Network & Connection panel with one-tap connectivity diagnostics.\n\n🔒 Security:\n- Password changes and account deletion are protected by email or password verification.\n- Your login details and account key stay encrypted on your device.\n\n🔧 Improvements:\n- Automatic firewall setup so peers can reach you reliably.\n- Automatic identity self-heal so people can always find you.\n- Instant, no-freeze sign in and messaging.\n\n📝 Notes:\nThanks for using Talken!",
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.0/Talken.exe",
   "push": "true",
   "minJavaVersion": "21",
   "requiredDiskSpace": "200MB"
