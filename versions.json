@@ -1,8 +1,8 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "releaseDate": "2026-07-02",
-  "changelog": "Talken 2.0\n\n✨ New:\n- Forgot your password? You can now reset it with a verification code sent to your email.\n- You can now permanently delete your account and its data whenever you choose.\n- New Network & Connection panel with one-tap connectivity diagnostics.\n\n🔒 Security:\n- Password changes and account deletion are protected by email or password verification.\n- Your login details and account key stay encrypted on your device.\n\n🔧 Improvements:\n- Automatic firewall setup so peers can reach you reliably.\n- Automatic identity self-heal so people can always find you.\n- Instant, no-freeze sign in and messaging.\n\n📝 Notes:\nThanks for using Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.0/Talken.exe",
+  "changelog": "Talken 2.1\n\n✨ New:\n- Talken now runs quietly in the background — stay online and keep getting messages and notifications even with the window closed.\n- Start Talken automatically when Windows starts, and jump straight to your chats — no login screen.\n- Right-click the tray icon any time to open Talken or quit it fully.\n\n🔒 Privacy:\n- Each account's data is now stored separately and privately on your device.\n\n🔧 Improvements:\n- Faster, no-flash startup that signs you in automatically.\n- Smoother, more reliable connectivity.\n\n📝 Notes:\nThanks for using Talken!",
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.1/Talken.exe",
   "push": "true",
   "minJavaVersion": "21",
   "requiredDiskSpace": "200MB"
