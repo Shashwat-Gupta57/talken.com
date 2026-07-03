@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Download Talken and other applications by Shashwat Gupta" />
-  <title>Talken - Downloads</title>
+  <meta name="description" content="Download Talken for Windows. Bundled runtime, Yggdrasil networking, background mode, and privacy-first desktop chat." />
+  <title>Download Talken - Windows Desktop App</title>
   <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="top-nav">
     <div class="nav-container">
-      <div class="nav-logo">
-        <div class="logo-icon">T</div>
-      </div>
-      <div class="nav-title">
-        <h1>Talken</h1>
-      </div>
+      <div class="nav-logo"><div class="logo-icon">T</div></div>
+      <div class="nav-title"><h1>Talken</h1></div>
       <div class="nav-actions">
         <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -26,16 +24,10 @@
     </div>
   </nav>
 
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
 
   <nav class="right-sidebar" id="rightSidebar" aria-label="Sidebar">
-    <div class="sidebar-header">
-      <h3>Navigation</h3>
-    </div>
+    <div class="sidebar-header"><h3>Navigation</h3></div>
     <ul class="sidebar-menu">
       <li><a href="index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg> Home</a></li>
       <li><a href="downloads.html" class="active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg> Downloads</a></li>
@@ -44,343 +36,130 @@
       <li><a href="terms-and-conditions.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 17h6"/></svg> Terms &amp; Conditions</a></li>
     </ul>
   </nav>
-
   <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
 
-  <main class="main-content">
-    <header class="page-header">
-      <div class="container">
-        <h1>Downloads</h1>
-        <p>Get Talken and explore other innovative applications</p>
+  <main class="main-content downloads-v2">
+    <header class="download-hero">
+      <div class="container download-hero-grid">
+        <div data-reveal>
+          <span class="pill glass"><span class="dot"></span>Talken v2.1 available now</span>
+          <h1>Install the privacy network on your desktop.</h1>
+          <p>Talken ships as a complete Windows package with the app runtime and mesh networking components included. Download, install, sign in, and stay reachable from the tray.</p>
+          <div class="hero-cta">
+            <a href="https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.1/TalkenSetup-2.1.exe" class="btn btn-primary btn-lg magnetic-cta" download>
+              Download v2.1
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
+            </a>
+            <a href="#release-notes" class="btn btn-ghost btn-lg">Read release notes</a>
+          </div>
+        </div>
+        <aside class="version-card glass" data-reveal>
+          <div class="version-top">
+            <span>current version</span>
+            <b>2.1</b>
+          </div>
+          <dl>
+            <div><dt>Platform</dt><dd>Windows 10/11 64-bit</dd></div>
+            <div><dt>Installer</dt><dd>~186 MB</dd></div>
+            <div><dt>Runtime</dt><dd>Bundled</dd></div>
+            <div><dt>Network</dt><dd>Yggdrasil included</dd></div>
+          </dl>
+        </aside>
       </div>
     </header>
 
-    <section class="content">
+    <section class="section">
       <div class="container">
-        <div class="download-section talken-section">
-          <div class="section-header">
-            <h2>Talken Downloads</h2>
-            <p>Privacy-first chat application — Choose your platform</p>
-          </div>
-
-          <div class="celebration-banner">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            Talken v2.1 is available — runs in the background, stays online, starts with Windows.
-          </div>
-
-          <div class="download-grid">
-            <div class="download-card featured">
-              <div class="available-badge">Available Now</div>
-              <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg></div>
-              <h3>Talken Desktop App With JRE Bundled</h3>
-              <p>Complete package with the Java Runtime and Yggdrasil network included. No additional setup required.</p>
-              <div class="download-details">
-                <span class="file-size">~186 MB</span>
-                <span class="compatibility">Windows 10/11 (64-bit)</span>
-              </div>
-              <a href="https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.1/TalkenSetup-2.1.exe" class="download-btn primary" download>
-                Download v2.1
-              </a>
-            </div>
-          </div>
+        <div class="install-grid" data-reveal-stagger>
+          <article class="install-card">
+            <span>01</span>
+            <h3>Download</h3>
+            <p>Get the Windows setup package from the official GitHub release asset.</p>
+          </article>
+          <article class="install-card">
+            <span>02</span>
+            <h3>Install</h3>
+            <p>The installer brings the desktop app, runtime, and network pieces together.</p>
+          </article>
+          <article class="install-card">
+            <span>03</span>
+            <h3>Sign in</h3>
+            <p>Create or open your Talken identity and connect your own cloud storage.</p>
+          </article>
+          <article class="install-card">
+            <span>04</span>
+            <h3>Stay online</h3>
+            <p>Talken can run quietly in the background and keep you reachable.</p>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="download-section sg-store-section">
-          <div class="section-header">
-            <div class="store-logo">
-              <h2>SG Store</h2>
-              <p class="store-tagline">Premium Software by Shashwat Gupta</p>
-            </div>
-            <p>Discover more innovative applications from Flex Studios</p>
+    <section class="download-detail-band" id="release-notes">
+      <div class="container detail-split">
+        <div data-reveal>
+          <span class="section-eyebrow">What's bundled</span>
+          <h2 class="section-title">No extra Java setup. No manual network wiring.</h2>
+          <p class="section-sub">The installer is meant to feel like a real desktop product: install once, then let Talken handle startup, tray presence, and app updates.</p>
+        </div>
+        <div class="bundle-list" data-reveal-stagger>
+          <div><b>Talken desktop app</b><span>JavaFX chat client</span></div>
+          <div><b>Bundled runtime</b><span>Runs without a separate Java install</span></div>
+          <div><b>Mesh networking</b><span>Yggdrasil components included</span></div>
+          <div><b>Self-update path</b><span>Future app updates can be delivered in place</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="release-panel glass" data-reveal>
+          <div>
+            <span class="section-eyebrow">Release notes</span>
+            <h2>Talken 2.1</h2>
           </div>
-
-          <div class="category-section">
-            <h3 class="category-title">Games</h3>
-            <div class="download-grid">
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Rex Run</h3>
-                <p>Endless runner inspired by Chrome Dino and Geometry Dash. Fast-paced action with smooth animations.</p>
-                <div class="download-details">
-                  <span class="file-size">~15 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Flying Dual</h3>
-                <p>Local multiplayer flying game for two players. Compete with friends on the same device.</p>
-                <div class="download-details">
-                  <span class="file-size">~12 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Flappy Bird</h3>
-                <p>Classic Flappy Bird recreation with smooth gameplay and pixel-perfect collision detection.</p>
-                <div class="download-details">
-                  <span class="file-size">~8 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Ping Pong Game</h3>
-                <p>Classic Pong game with modern graphics and responsive controls. Single and multiplayer modes.</p>
-                <div class="download-details">
-                  <span class="file-size">~10 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Memo</h3>
-                <p>Simon Says memory game replica. Test your memory with increasing difficulty levels.</p>
-                <div class="download-details">
-                  <span class="file-size">~6 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Tic Tac Toe</h3>
-                <p>Classic Tic Tac Toe with AI opponent and local multiplayer. Clean interface and smart gameplay.</p>
-                <div class="download-details">
-                  <span class="file-size">~5 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="category-section">
-            <h3 class="category-title">Productivity Tools</h3>
-            <div class="download-grid">
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>SG Paint</h3>
-                <p>Full-featured painting application, replica of MS Paint with enhanced tools and modern interface.</p>
-                <div class="download-details">
-                  <span class="file-size">~20 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Notes</h3>
-                <p>Advanced text editor superior to Windows Notepad. Features syntax highlighting and advanced formatting.</p>
-                <div class="download-details">
-                  <span class="file-size">~18 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Color Picker</h3>
-                <p>Professional color picker tool for designers and developers. Extract colors from anywhere on screen.</p>
-                <div class="download-details">
-                  <span class="file-size">~8 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Floating Keyboard</h3>
-                <p>On-screen floating keyboard for accessibility and convenience. Customizable layout and transparency.</p>
-                <div class="download-details">
-                  <span class="file-size">~12 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Click Per Second Tester</h3>
-                <p>Test your clicking speed with accurate measurements. Track your progress and compete with friends.</p>
-                <div class="download-details">
-                  <span class="file-size">~5 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="category-section">
-            <h3 class="category-title">Desktop Widgets</h3>
-            <div class="download-grid">
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Weather Widget</h3>
-                <p>Real-time weather information in a clean, customizable desktop widget. Multiple location support.</p>
-                <div class="download-details">
-                  <span class="file-size">~10 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Clock Widget</h3>
-                <p>Elegant desktop clock widget with multiple time zones and customizable appearance.</p>
-                <div class="download-details">
-                  <span class="file-size">~6 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Mixed Widget</h3>
-                <p>All-in-one widget combining weather, clock, and system information in a compact interface.</p>
-                <div class="download-details">
-                  <span class="file-size">~14 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>Transparent Clock Widget</h3>
-                <p>Minimalist transparent clock that blends seamlessly with your desktop wallpaper.</p>
-                <div class="download-details">
-                  <span class="file-size">~4 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="category-section">
-            <h3 class="category-title">System Utilities</h3>
-            <div class="download-grid">
-              <div class="download-card coming-soon">
-                <div class="coming-soon-badge">Coming Soon</div>
-                <div class="download-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
-                <h3>JRE Installer</h3>
-                <p>Automated Java Runtime Environment installer and configuration tool. Simplifies Java setup process.</p>
-                <div class="download-details">
-                  <span class="file-size">~25 MB</span>
-                  <span class="compatibility">Cross-platform</span>
-                </div>
-                <button class="download-btn disabled" disabled>
-                  Coming Soon
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="store-info">
-            <h3>About SG Store</h3>
-            <p>SG Store is your destination for premium, privacy-focused software solutions developed by Shashwat Gupta. Each application is crafted with the same attention to detail and commitment to user privacy that makes Talken special.</p>
-            <div class="store-features">
-              <div class="feature-item">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-                <span>Privacy First</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg></span>
-                <span>Lightweight</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span>
-                <span>Regular Updates</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
-                <span>Free Forever</span>
-              </div>
-            </div>
+          <div class="release-notes">
+            <p><b>Background presence:</b> Talken can run quietly in the tray so you stay online even when the main window is closed.</p>
+            <p><b>Startup flow:</b> Launch with Windows and return straight to your chats.</p>
+            <p><b>Privacy structure:</b> Account data is kept separately on the device for a cleaner local model.</p>
+            <p><b>Connectivity polish:</b> Smoother startup and more reliable reachability.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>
-            <a href="index.html">Home</a> |
-            <a href="downloads.html">Downloads</a> |
-            <a href="about-developer.html">About Developer</a> |
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="terms-and-conditions.html">Terms & Conditions</a>
-          </p>
-          <p>© 2026 - Talken by Flex Studios</p>
+    <section class="portfolio-strip">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="section-eyebrow">Also by Flex Studios</span>
+          <h2 class="section-title">Small experiments, same craft.</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="mini-projects" data-reveal-stagger>
+          <div><img src="res/sg-paint.png" alt="SG Paint app preview" loading="lazy" decoding="async"><span>SG Paint</span></div>
+          <div><img src="res/rex-run-game.png" alt="Rex Run game preview" loading="lazy" decoding="async"><span>Rex Run</span></div>
+          <div><img src="res/notes-app.png" alt="Notes app preview" loading="lazy" decoding="async"><span>Notes</span></div>
+          <div><img src="res/weather-widget.png" alt="Weather widget preview" loading="lazy" decoding="async"><span>Weather Widget</span></div>
         </div>
       </div>
-    </footer>
+    </section>
   </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left"><p>&copy; 2026 Talken by Flex Studios</p></div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="about-developer.html">About</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
 
   <script src="js/theme-switcher.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/immersive.js" defer></script>
 </body>
 </html>

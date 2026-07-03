@@ -79,13 +79,27 @@
     if (!els.length) return;
     var glyphs = "ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#%&$@/<>{}";
     els.forEach(function (el) {
-      var final = el.textContent;
-      if (RM) return;
-      var frame = 0, total = 28, locked = false;
+      var final = el.getAttribute("data-scramble") || el.textContent;
+      var seed = el.textContent || final;
+      if (RM) { el.textContent = final; return; }
+      var duration = parseInt(el.getAttribute("data-scramble-duration") || "1700", 10);
+      var delay = parseInt(el.getAttribute("data-scramble-delay") || "350", 10);
+      var tick = 42;
+      var frame = 0, total = Math.max(24, Math.round(duration / tick)), locked = false;
       // Lock the word's box to its final size so wider random glyphs can't
       // reflow the headline (1 line -> 2 lines -> 1 line jitter).
       var lock = function () {
-        var w = el.getBoundingClientRect().width;
+        var clone = el.cloneNode(true);
+        clone.textContent = final;
+        clone.style.position = "fixed";
+        clone.style.left = "-9999px";
+        clone.style.top = "0";
+        clone.style.display = "inline-block";
+        clone.style.width = "auto";
+        clone.style.whiteSpace = "nowrap";
+        document.body.appendChild(clone);
+        var w = Math.max(el.getBoundingClientRect().width, clone.getBoundingClientRect().width);
+        document.body.removeChild(clone);
         if (!w) return;
         el.style.display = "inline-block";
         el.style.width = w + "px";
@@ -94,22 +108,23 @@
         locked = true;
       };
       var unlock = function () {
-        el.style.display = el.style.width = el.style.whiteSpace = el.style.textAlign = "";
+        el.style.textAlign = "";
       };
       var run = function () {
         if (!locked) lock();
         var out = "";
         for (var i = 0; i < final.length; i++) {
           if (final[i] === " ") { out += " "; continue; }
-          var settle = (frame / total) * final.length;
-          out += i < settle ? final[i] : glyphs[(Math.random() * glyphs.length) | 0];
+          var settle = Math.floor((frame / total) * (final.length + 1));
+          var near = i === settle && frame % 3 === 0;
+          out += i < settle || near ? final[i] : (seed[i] && frame < 2 ? seed[i] : glyphs[(Math.random() * glyphs.length) | 0]);
         }
         el.textContent = out;
-        if (frame++ < total) setTimeout(run, 34);
+        if (frame++ < total) setTimeout(run, tick);
         else { el.textContent = final; unlock(); }
       };
       // start shortly after load
-      setTimeout(run, 350);
+      setTimeout(run, delay);
     });
   })();
 
@@ -234,10 +249,85 @@
     var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(build, 250); });
   })();
 
+  /* ---------- v2 route console pulse ---------- */
+  (function () {
+    var log = $("[data-network-log]");
+    if (!log || RM) return;
+    var lines = [
+      "> finding your friend",
+      "> making a private path",
+      "> skipping the company server",
+      "> message goes direct",
+      "> private path ready"
+    ];
+    var i = 0;
+    setInterval(function () {
+      var p = document.createElement("p");
+      p.textContent = lines[i++ % lines.length];
+      log.appendChild(p);
+      while (log.children.length > 4) log.removeChild(log.firstElementChild);
+    }, 1800);
+  })();
+
+  /* ---------- v2 offline delivery timeline ---------- */
+  (function () {
+    var flow = $("[data-offline-flow]");
+    if (!flow || RM) return;
+    var steps = $$(".time-step", flow);
+    if (!steps.length) return;
+    var run = function () {
+      var i = 0;
+      steps.forEach(function (s) { s.classList.remove("is-lit"); });
+      steps[0].classList.add("is-lit");
+      setInterval(function () {
+        steps.forEach(function (s) { s.classList.remove("is-lit"); });
+        steps[i % steps.length].classList.add("is-lit");
+        i++;
+      }, 1400);
+    };
+    if (!("IntersectionObserver" in window)) { run(); return; }
+    var started = false;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && !started) { started = true; run(); io.disconnect(); }
+      });
+    }, { threshold: .4 });
+    io.observe(flow);
+  })();
+
+  /* ---------- v2 cipher engine ---------- */
+  (function () {
+    var selector = $("[data-cipher-selector]");
+    var stream = $("[data-cipher-stream]");
+    if ((!selector && !stream) || RM) return;
+    var hex = "0123456789abcdef";
+    function bytes(n) {
+      var out = "";
+      for (var i = 0; i < n; i++) {
+        out += hex[(Math.random() * 16) | 0] + hex[(Math.random() * 16) | 0];
+        if (i < n - 1) out += " ";
+      }
+      return out;
+    }
+    function tick() {
+      if (selector) selector.textContent = String(1 + ((Math.random() * 32768) | 0)).padStart(5, "0");
+      if (stream) stream.textContent = bytes(18);
+    }
+    var timer;
+    var start = function () { tick(); timer = setInterval(tick, 640); };
+    var stop = function () { clearInterval(timer); };
+    if (!("IntersectionObserver" in window)) { start(); return; }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { e.isIntersecting ? start() : stop(); });
+    }, { threshold: .25 });
+    if (selector) io.observe(selector);
+    else io.observe(stream);
+  })();
+
   /* ---------- cursor-reactive glow on glass cards ---------- */
   (function () {
     if (RM) return;
-    $$(".card,.shot").forEach(function (el) {
+    $$(".card,.shot,.feature-module,.control-panel,.install-card,.version-card,.founder-sigil,.flagship-grid article,.mini-projects div").forEach(function (el) {
       el.addEventListener("pointermove", function (ev) {
         var r = el.getBoundingClientRect();
         el.style.setProperty("--mx", (ev.clientX - r.left) + "px");

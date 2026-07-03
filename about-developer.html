@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Shashwat Gupta — self-taught student developer and founder of Flex Studios, building Talken: privacy-first, peer-to-peer encrypted chat." />
-  <title>About the Developer — Talken</title>
+  <meta name="description" content="Meet Shashwat Gupta, the solo developer behind Talken and Flex Studios." />
+  <title>About the Developer - Talken</title>
   <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -38,330 +38,157 @@
   </nav>
   <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
 
-  <main class="main-content">
-
-    <!-- Hero / intro -->
-    <section class="developer-intro">
-      <div class="container">
-        <div class="developer-profile" data-reveal>
-          <div class="profile-image-placeholder"><div class="profile-icon">SG</div></div>
-          <div class="profile-info">
-            <span class="section-eyebrow">Founder · Flex Studios</span>
-            <h2>Shashwat Gupta</h2>
-            <p class="profile-title">Self-taught student developer building the future of private communication.</p>
-            <p class="profile-location">Prayagraj, Uttar Pradesh, India</p>
-            <div class="cipher-chips" style="margin-top:1.1rem">
-              <a class="chip" href="https://github.com/Shashwat-Gupta57" target="_blank" rel="noopener"><b>GitHub</b>&nbsp;@Shashwat-Gupta57</a>
-              <a class="chip" href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener"><b>LinkedIn</b>&nbsp;/shashwat-gupta57</a>
-              <a class="chip" href="mailto:connect@talken.in"><b>Email</b>&nbsp;connect@talken.in</a>
-            </div>
+  <main class="main-content founder-v2">
+    <header class="founder-hero">
+      <div class="container founder-hero-grid">
+        <div data-reveal>
+          <span class="pill glass"><span class="dot"></span>Founder - Flex Studios</span>
+          <h1>Talken began as a refusal to accept ordinary chat.</h1>
+          <p>I'm Shashwat Gupta, a self-taught student developer from Prayagraj building Talken as a privacy-first desktop product: direct routes, user-owned storage, and software that feels personally crafted.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="downloads.html">Download Talken</a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/Shashwat-Gupta57" target="_blank" rel="noopener">GitHub</a>
           </div>
+        </div>
+        <div class="founder-sigil glass" data-reveal>
+          <div class="profile-icon">SG</div>
+          <h2>Shashwat Gupta</h2>
+          <p>Solo developer. Java desktop builder. Privacy product thinker.</p>
+          <div class="sigil-links">
+            <a href="mailto:connect@talken.in">connect@talken.in</a>
+            <a href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="why-built section">
+      <div class="container story-split">
+        <div data-reveal>
+          <span class="section-eyebrow">Why I built Talken</span>
+          <h2 class="section-title">I wanted chat to feel owned, not rented.</h2>
+          <p class="section-sub">Most messaging products hide the interesting parts behind corporate infrastructure. Talken became my attempt to build the opposite: a desktop app where identity, routing, storage, and control are understandable pieces of the product.</p>
+        </div>
+        <div class="why-stack" data-reveal-stagger>
+          <div><b>No central chat server</b><span>Peer-to-peer routing as the product's emotional core.</span></div>
+          <div><b>Your own storage</b><span>Media and files tied to the user's cloud, not a company vault.</span></div>
+          <div><b>Hand-built systems</b><span>JavaFX UI, networking, identity, updates, recovery, and packaging built with intent.</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Flagship: Talken -->
     <section class="section">
       <div class="container">
-        <div class="section-head" data-reveal>
+        <div class="section-head center" data-reveal>
           <span class="section-eyebrow">The flagship</span>
-          <h2 class="section-title">Talken</h2>
+          <h2 class="section-title">Talken is the proof of taste.</h2>
           <div class="section-rule"></div>
-          <p class="section-sub">A fully decentralized, serverless, peer-to-peer encrypted chat application — designed and hand-built from scratch in Java.</p>
+          <p class="section-sub">It is not just a school project page. It is a working desktop product with deep technical roots and a visual identity built around private infrastructure.</p>
         </div>
-        <div class="how-grid" data-reveal-stagger>
-          <div class="how-item">
-            <div class="how-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 6v4M11 11l-5 6M13 11l5 6"/></svg></div>
-            <div><h4>Serverless P2P core</h4><p>A custom messaging engine connecting peers directly over a cryptographic mesh — no central chat server.</p></div>
-          </div>
-          <div class="how-item">
-            <div class="how-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-            <div><h4>32,768-cipher engine</h4><p>A moving-target design: every message encrypted by one of 32,768 ciphers, chosen at random and chained.</p></div>
-          </div>
-          <div class="how-item">
-            <div class="how-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
-            <div><h4>Own backend services</h4><p>Hand-written REST services for discovery, identity recovery, and offline message delivery.</p></div>
-          </div>
-          <div class="how-item">
-            <div class="how-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 6l-2 12"/></svg></div>
-            <div><h4>27,500+ lines of Java</h4><p>No framework scaffold, no base set — a desktop client built line by line in Java &amp; JavaFX.</p></div>
-          </div>
-        </div>
-        <div class="cta-section" data-reveal style="margin-top:2.5rem">
-          <h3>See it for yourself</h3>
-          <p>Talken's MVP is live. Download it, or read how it keeps your conversations yours.</p>
-          <a href="downloads.html" class="cta-button">Download Talken
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
-          </a>
+        <div class="flagship-grid" data-reveal-stagger>
+          <article>
+            <img src="res/talken-main-interface.png" alt="Talken main chat interface" loading="lazy" decoding="async">
+            <h3>Product surface</h3>
+            <p>A full desktop chat experience with account flow, messaging, media, settings, updates, and background behavior.</p>
+          </article>
+          <article>
+            <img src="res/talken-file-sharing.png" alt="Talken file sharing interface" loading="lazy" decoding="async">
+            <h3>Architecture surface</h3>
+            <p>P2P networking, own-cloud media, identity-key accounts, and delay-tolerant delivery shaped into a usable app.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Achievements -->
     <section class="achievements-section">
       <div class="container">
         <div class="section-head center" data-reveal>
           <span class="section-eyebrow">By the numbers</span>
-          <h2 class="section-title">Milestones</h2>
+          <h2 class="section-title">Momentum</h2>
           <div class="section-rule"></div>
         </div>
         <div class="achievements" data-reveal-stagger>
-          <div class="achievement-item"><span class="achievement-number" data-countup="18">0</span><span class="achievement-label">GUI applications built</span></div>
+          <div class="achievement-item"><span class="achievement-number" data-countup="18">0</span><span class="achievement-label">GUI apps built</span></div>
+          <div class="achievement-item"><span class="achievement-number" data-countup="27500" data-suffix="+">0</span><span class="achievement-label">Talken lines</span></div>
+          <div class="achievement-item"><span class="achievement-number" data-countup="13">0</span><span class="achievement-label">Certifications</span></div>
           <a class="achievement-link" href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener">
             <div class="achievement-item"><span class="achievement-number" data-countup="2240" data-suffix="+">0</span><span class="achievement-label">LinkedIn followers</span></div>
           </a>
-          <div class="achievement-item"><span class="achievement-number" data-countup="13">0</span><span class="achievement-label">Programming certifications</span></div>
-          <div class="achievement-item"><span class="achievement-number" data-countup="95" data-suffix="%">0</span><span class="achievement-label">Board exam score</span></div>
-          <div class="achievement-item"><span class="achievement-number" data-countup="27500" data-suffix="+">0</span><span class="achievement-label">Lines of code (Talken)</span></div>
-          <div class="achievement-item"><span class="achievement-number" data-countup="5" data-suffix="★">0</span><span class="achievement-label">HackerRank rating</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Journey timeline -->
     <section class="journey-timeline">
       <div class="container">
         <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Origin</span>
-          <h2 class="section-title">The coding journey</h2>
+          <span class="section-eyebrow">Origin story</span>
+          <h2 class="section-title">From curiosity to infrastructure.</h2>
           <div class="section-rule"></div>
-          <p class="section-sub">From disliking programming to building decentralized software — a transformation in a little over two years.</p>
         </div>
-
         <div class="timeline-item" data-reveal>
           <div class="timeline-date">Oct 2023</div>
-          <div class="timeline-content">
-            <h3>The turning point</h3>
-            <p>Until my 9th-grade half-yearly exams I genuinely disliked coding — it seemed pointless and boring. Then one idea changed everything: what if I could make a character move across a terminal screen from user input?</p>
-          </div>
-        </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-date">Nov 2023</div>
-          <div class="timeline-content">
-            <h3>First breakthrough</h3>
-            <p>My first real program — a character spawner that grew into an 8-line player character, animated by redrawing the terminal every 500ms so it could walk across the screen. All within a month.</p>
-          </div>
-        </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-date">Late 2023</div>
-          <div class="timeline-content">
-            <h3>First GUI applications</h3>
-            <p>The terminal wasn't enough. I built my first GUI app — a Click-Per-Second tester — then my first game, Rex Run, inspired by Chrome's dinosaur game and Geometry Dash.</p>
-          </div>
+          <div class="timeline-content"><h3>The first spark</h3><p>A simple question - can I move a character across a terminal screen? - turned programming from obligation into obsession.</p></div>
         </div>
         <div class="timeline-item" data-reveal>
           <div class="timeline-date">2024</div>
-          <div class="timeline-content">
-            <h3>The creative explosion</h3>
-            <p>An unstoppable streak of 16 more applications: Ping Pong, Flying Dual, Flappy Bird, Memo, Tic Tac Toe, SG Paint, Notes, four desktop widgets, a JRE installer, a floating keyboard, and a color picker.</p>
-          </div>
+          <div class="timeline-content"><h3>Many small products</h3><p>Games, tools, widgets, editors, and utilities became practice grounds for UI, input, state, packaging, and speed.</p></div>
         </div>
         <div class="timeline-item" data-reveal>
-          <div class="timeline-date">Jan 2024</div>
-          <div class="timeline-content">
-            <h3>The Talken vision</h3>
-            <p>The idea for Talken was born — a privacy-first chat application to redefine how we think about digital communication. Months went into exploring the right technologies.</p>
-          </div>
-        </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-date">May 2025</div>
-          <div class="timeline-content">
-            <h3>First test build</h3>
-            <p>The first testable build of Talken came together, laying the foundation for a privacy-first messaging experience.</p>
-          </div>
-        </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-date">Jun–Oct 2025</div>
-          <div class="timeline-content">
-            <h3>Decentralized architecture</h3>
-            <p>Shipped the user-owned storage layer, lightweight coordination services, and a distributed directory with offline-first behavior — the backbone of Talken's serverless design.</p>
-          </div>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-content"><h3>Talken takes shape</h3><p>The experiments became one serious product: peer-to-peer chat with user-owned storage and a privacy-first identity model.</p></div>
         </div>
         <div class="timeline-item launched" data-reveal>
-          <div class="timeline-date">Oct 20, 2025</div>
-          <div class="timeline-content">
-            <h3>Talken MVP launched <span class="launched-badge">Launched</span></h3>
-            <p>Public release of the Talken MVP — a complete desktop application with 1:1 messaging, your-own-cloud storage, a moving-target encryption design, and self-sovereign accounts.</p>
-          </div>
+          <div class="timeline-date">Now</div>
+          <div class="timeline-content"><h3>A product direction <span class="launched-badge">Live</span></h3><p>Talken is evolving from MVP into a polished privacy-focused software product.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Projects gallery -->
     <section class="projects-gallery">
       <div class="container">
         <div class="section-head center" data-reveal>
           <span class="section-eyebrow">Portfolio</span>
-          <h2 class="section-title">Project showcase</h2>
+          <h2 class="section-title">Earlier experiments</h2>
           <div class="section-rule"></div>
-          <p class="section-sub">A selection from 18 applications built with curiosity and persistence.</p>
+          <p class="section-sub">The smaller apps matter because they taught the product instincts that now show up in Talken.</p>
         </div>
         <div class="projects-grid" data-reveal-stagger>
-          <div class="project-card">
-            <div class="project-image"><img src="res/talken-app.png" alt="Talken" loading="lazy" decoding="async" onerror="this.closest('.project-image').textContent='Talken'"></div>
-            <div class="project-info"><h4>Talken</h4><p>Privacy-first, serverless peer-to-peer chat</p><span class="project-type">Communication</span></div>
-          </div>
-          <div class="project-card">
-            <div class="project-image"><img src="res/sg-paint.png" alt="SG Paint" loading="lazy" decoding="async" onerror="this.closest('.project-image').textContent='SG Paint'"></div>
-            <div class="project-info"><h4>SG Paint</h4><p>Full-featured painting app, an MS Paint reimagining</p><span class="project-type">Creative tool</span></div>
-          </div>
-          <div class="project-card">
-            <div class="project-image"><img src="res/rex-run-game.png" alt="Rex Run" loading="lazy" decoding="async" onerror="this.closest('.project-image').textContent='Rex Run'"></div>
-            <div class="project-info"><h4>Rex Run</h4><p>Endless runner inspired by Chrome Dino and Geometry Dash</p><span class="project-type">Game</span></div>
-          </div>
-          <div class="project-card">
-            <div class="project-image"><img src="res/notes-app.png" alt="Notes" loading="lazy" decoding="async" onerror="this.closest('.project-image').textContent='Notes'"></div>
-            <div class="project-info"><h4>Notes</h4><p>Advanced text editor, beyond Windows Notepad</p><span class="project-type">Productivity</span></div>
-          </div>
-          <div class="project-card">
-            <div class="project-image"><img src="res/weather-widget.png" alt="Weather Widget" loading="lazy" decoding="async" onerror="this.closest('.project-image').textContent='Weather Widget'"></div>
-            <div class="project-info"><h4>Weather Widget</h4><p>Real-time weather in a clean desktop widget</p><span class="project-type">Widget</span></div>
-          </div>
-          <div class="project-card">
-            <div class="project-image"><img src="res/flying-dual.png" alt="Flying Dual" loading="lazy" decoding="async" onerror="this.closest('.project-image').textContent='Flying Dual'"></div>
-            <div class="project-info"><h4>Flying Dual</h4><p>Local two-player flying game</p><span class="project-type">Game</span></div>
-          </div>
+          <div class="project-card"><div class="project-image"><img src="res/sg-paint.png" alt="SG Paint" loading="lazy" decoding="async"></div><div class="project-info"><h4>SG Paint</h4><p>A painting app built as a creative desktop tool.</p><span class="project-type">Creative</span></div></div>
+          <div class="project-card"><div class="project-image"><img src="res/rex-run-game.png" alt="Rex Run" loading="lazy" decoding="async"></div><div class="project-info"><h4>Rex Run</h4><p>An endless runner focused on motion and timing.</p><span class="project-type">Game</span></div></div>
+          <div class="project-card"><div class="project-image"><img src="res/notes-app.png" alt="Notes app" loading="lazy" decoding="async"></div><div class="project-info"><h4>Notes</h4><p>A richer desktop note-taking and editing experiment.</p><span class="project-type">Productivity</span></div></div>
+          <div class="project-card"><div class="project-image"><img src="res/weather-widget.png" alt="Weather widget" loading="lazy" decoding="async"></div><div class="project-info"><h4>Weather Widget</h4><p>Information design in a compact desktop surface.</p><span class="project-type">Widget</span></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="skills-section">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Toolkit</span>
-          <h2 class="section-title">Skills &amp; technologies</h2>
-          <div class="section-rule"></div>
-        </div>
-        <div class="skills-grid" data-reveal-stagger>
-          <div class="skill-category">
-            <h3>Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag advanced">Java (Advanced)</span>
-              <span class="skill-tag basic">JavaScript</span>
-              <span class="skill-tag basic">HTML / CSS</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Frameworks &amp; tools</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">JavaFX</span><span class="skill-tag">Swing</span><span class="skill-tag">Netty</span>
-              <span class="skill-tag">Spring Boot</span><span class="skill-tag">Google APIs</span><span class="skill-tag">Maven</span>
-              <span class="skill-tag">Gradle</span><span class="skill-tag">Git</span><span class="skill-tag">IntelliJ IDEA</span>
-              <span class="skill-tag">Launch4j</span><span class="skill-tag">Inno Setup</span><span class="skill-tag">Scene Builder</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Specializations</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Desktop applications</span><span class="skill-tag">Privacy-first design</span>
-              <span class="skill-tag">P2P &amp; networking</span><span class="skill-tag">Applied cryptography</span>
-              <span class="skill-tag">System architecture</span><span class="skill-tag">2D game development</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="certifications-section">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Recognition</span>
-          <h2 class="section-title">Certifications</h2>
-          <div class="section-rule"></div>
-        </div>
-        <div class="cert-grid" data-reveal-stagger>
-          <div class="cert-item">
-            <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v16M14 9h3a1 1 0 0 1 1 1v11M3 21h18M9 8h.01M9 12h.01M9 16h.01"/></svg></div>
-            <h4>Infosys</h4><div class="cert-count">5 certificates</div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M2 20h20M9 20l.5-4M15 20l-.5-4"/></svg></div>
-            <h4>HackerRank</h4><div class="cert-count">1 certificate · 5★</div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M6 17h12"/></svg></div>
-            <h4>SoloLearn</h4><div class="cert-count">2 certificates</div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div>
-            <h4>Coursera</h4><div class="cert-count">5 certificates</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Philosophy -->
-    <section class="philosophy-section">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Principles</span>
-          <h2 class="section-title">How I build</h2>
-          <div class="section-rule"></div>
-        </div>
-        <div class="philosophy-content" data-reveal-stagger>
-          <div class="philosophy-card">
-            <div class="philosophy-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-            <h3>Privacy first</h3><p>Your data should belong to you, not to corporations. Every project starts from that premise.</p>
-          </div>
-          <div class="philosophy-card">
-            <div class="philosophy-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg></div>
-            <h3>Lightweight &amp; efficient</h3><p>Software should be fast and respectful of your machine — no bloat, no waste.</p>
-          </div>
-          <div class="philosophy-card">
-            <div class="philosophy-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
-            <h3>Purpose-driven</h3><p>Every feature earns its place by solving a real problem — not adding complexity for its own sake.</p>
-          </div>
-          <div class="philosophy-card">
-            <div class="philosophy-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.6.7-1 1.5-1 2.5H9c0-1-.4-1.8-1-2.5A6 6 0 0 1 12 3z"/></svg></div>
-            <h3>From scratch</h3><p>Understanding beats abstraction. I build from first principles to know exactly how things work.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
     <section class="contact-section">
       <div class="container">
         <div class="section-head center" data-reveal>
           <span class="section-eyebrow">Get in touch</span>
-          <h2 class="section-title">Let's connect</h2>
+          <h2 class="section-title">Let's connect.</h2>
           <div class="section-rule"></div>
         </div>
-        <div class="contact-content">
-          <p data-reveal>Open to opportunities, collaborations, and conversations about privacy, cryptography, and building software that respects people.</p>
-          <div class="contact-methods" data-reveal-stagger>
-            <a class="contact-item" href="mailto:connect@talken.in" style="text-decoration:none">
-              <div class="contact-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-              <div class="contact-info"><h4>Email</h4><p>connect@talken.in<br>talken.flexstudios@gmail.com</p></div>
-            </a>
-            <a class="contact-item" href="https://github.com/Shashwat-Gupta57" target="_blank" rel="noopener" style="text-decoration:none">
-              <div class="contact-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6 0C6.2 2.3 5.1 2.6 5.1 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 3.7 9c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div>
-              <div class="contact-info"><h4>GitHub</h4><p>@Shashwat-Gupta57</p></div>
-            </a>
-            <a class="contact-item" href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener" style="text-decoration:none">
-              <div class="contact-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4"/></svg></div>
-              <div class="contact-info"><h4>LinkedIn</h4><p>/in/shashwat-gupta57</p></div>
-            </a>
-          </div>
-
-          <div class="cta-section" data-reveal>
-            <h3>Want to see the work?</h3>
-            <p>Talken is the clearest expression of how I build. Try it.</p>
-            <a href="downloads.html" class="cta-button">Download Talken
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
-            </a>
-          </div>
+        <div class="contact-methods" data-reveal-stagger>
+          <a class="contact-item" href="mailto:connect@talken.in">
+            <div class="contact-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <div class="contact-info"><h4>Email</h4><p>connect@talken.in<br>talken.flexstudios@gmail.com</p></div>
+          </a>
+          <a class="contact-item" href="https://github.com/Shashwat-Gupta57" target="_blank" rel="noopener">
+            <div class="contact-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6 0C6.2 2.3 5.1 2.6 5.1 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 3.7 9c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div>
+            <div class="contact-info"><h4>GitHub</h4><p>@Shashwat-Gupta57</p></div>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/shashwat-gupta57" target="_blank" rel="noopener">
+            <div class="contact-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4"/></svg></div>
+            <div class="contact-info"><h4>LinkedIn</h4><p>/in/shashwat-gupta57</p></div>
+          </a>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="footer-content">
-      <div class="footer-left"><p>© 2026 Talken by Flex Studios</p></div>
+      <div class="footer-left"><p>&copy; 2026 Talken by Flex Studios</p></div>
       <nav class="footer-links">
         <a href="index.html">Home</a>
         <a href="downloads.html">Downloads</a>
