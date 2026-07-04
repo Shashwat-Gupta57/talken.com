@@ -425,6 +425,12 @@ footer{border-top:1px solid var(--border);background:color-mix(in srgb,var(--bg)
 .cipher-chips .chip{background:var(--surface-3);color:var(--muted);border:1px solid var(--border);font-size:.66rem;padding:.3rem .6rem}
 .cipher-chips .chip b{color:var(--primary-bright);font-weight:600}
 
+/* privacymaxxing — a fun dictionary-style wink at "maxed-out privacy" */
+.slang-def{margin-top:1.7rem;padding:1.05rem 1.3rem;border-left:2px solid var(--primary-bright);background:var(--surface-3);border-radius:0 14px 14px 0}
+.slang-def .slang-word{font-family:var(--font-mono);font-weight:700;font-size:1.05rem;letter-spacing:.01em;color:var(--primary-bright)}
+.slang-def .slang-pos{margin-left:.55rem;font-family:var(--font-mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.14em;color:var(--faint)}
+.slang-def p{margin:.5rem 0 0;color:var(--muted);font-size:.92rem;line-height:1.55}
+
 /* lattice — symbolic field of cells that ignite in a sweep */
 .lattice{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;aspect-ratio:1.15/1;padding:14px;border-radius:var(--r-lg);background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(10px)}
 .lattice i{display:block;border-radius:2px;background:var(--surface-3);transition:background .5s ease,box-shadow .5s ease}

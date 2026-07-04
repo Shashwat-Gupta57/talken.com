@@ -1,8 +1,8 @@
 {
-  "version": "2.1",
-  "releaseDate": "2026-07-02",
-  "changelog": "Talken 2.1\n\n✨ New:\n- Talken now runs quietly in the background — stay online and keep getting messages and notifications even with the window closed.\n- Start Talken automatically when Windows starts, and jump straight to your chats — no login screen.\n- Right-click the tray icon any time to open Talken or quit it fully.\n\n🔒 Privacy:\n- Each account's data is now stored separately and privately on your device.\n\n🔧 Improvements:\n- Faster, no-flash startup that signs you in automatically.\n- Smoother, more reliable connectivity.\n\n📝 Notes:\nThanks for using Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.1/Talken.exe",
+  "version": "2.2",
+  "releaseDate": "2026-07-04",
+  "changelog": "Talken 2.2\n\n✨ New:\n- Continue with Google — sign up or log in with a single tap. Talken still recommends the email + password method for maximum privacy, and even with Google you get a real Talken password you can use directly and change anytime.\n\n🔒 Privacy:\n- Your password stays yours: no company ever has to sit between you and your Talken account.\n\n🔧 Fixed:\n- Resolved a sign-in issue that could reject a correct password.\n- Smoother, more reliable login and account setup.\n\n📝 Notes:\nThanks for using Talken!",
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.2/Talken.exe",
   "push": "true",
   "minJavaVersion": "21",
   "requiredDiskSpace": "200MB"
