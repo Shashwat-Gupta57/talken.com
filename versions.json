@@ -1,8 +1,8 @@
 {
-  "version": "2.2",
-  "releaseDate": "2026-07-04",
-  "changelog": "Talken 2.2\n\n✨ New:\n- Continue with Google — sign up or log in with a single tap. Talken still recommends the email + password method for maximum privacy, and even with Google you get a real Talken password you can use directly and change anytime.\n\n🔒 Privacy:\n- Your password stays yours: no company ever has to sit between you and your Talken account.\n\n🔧 Fixed:\n- Resolved a sign-in issue that could reject a correct password.\n- Smoother, more reliable login and account setup.\n\n📝 Notes:\nThanks for using Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.2/Talken.exe",
+  "version": "2.5",
+  "releaseDate": "2026-07-05",
+  "changelog": "Talken 2.5\n\n✨ New:\n- See who's around: contacts now show an online / offline dot, and a live \"typing…\" indicator right under their name — all sent directly between devices, never through a server.\n- Reply to any message with a quoted preview you can tap to jump back to the original.\n- Pin the messages that matter to the top of a chat.\n- Forward a message to several chats at once.\n- Sign in with GitHub, alongside Continue with Google — each still hands you a recovery key that's yours.\n\n🎨 Polish:\n- Cleaner forwarding picker with clear multi-select, and calmer dialogs throughout.\n\n📝 Notes:\nOnline status, typing, replies and pins are peer-to-peer by design — that little bit of state stays off the server. Thanks for using Talken!",
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.5/Talken.exe",
   "push": "true",
   "minJavaVersion": "21",
   "requiredDiskSpace": "200MB"
