@@ -52,6 +52,7 @@
             </a>
             <a href="#release-notes" class="btn btn-ghost btn-lg">Read release notes</a>
           </div>
+          <p class="hero-footnote">Windows will show a &ldquo;publisher unknown&rdquo; warning the first time &mdash; <a href="#smartscreen">here&rsquo;s why, and how to continue</a>.</p>
         </div>
         <aside class="version-card glass" data-reveal>
           <div class="version-top">
@@ -91,6 +92,35 @@
             <h3>Stay online</h3>
             <p>Talken can run quietly in the background and keep you reachable.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="smartscreen">
+      <div class="container">
+        <div class="release-panel glass" data-reveal>
+          <div>
+            <span class="section-eyebrow">Before you install</span>
+            <h2>Windows will warn you the first time</h2>
+            <p class="section-sub">This is expected, and we&rsquo;d rather explain it than have you wonder.</p>
+          </div>
+          <div class="release-notes">
+            <p>When you run the installer, Microsoft Defender SmartScreen shows a blue &ldquo;Windows protected your PC&rdquo; screen saying the publisher is unknown.</p>
+            <p><b>Why it happens:</b> Windows only recognises apps signed with a code-signing certificate. Those cost upwards of <b>$200 per year</b>, and Talken is a small independent project &mdash; that money isn&rsquo;t something we can justify yet. Unsigned simply means <i>&ldquo;Windows doesn&rsquo;t know who made this&rdquo;</i>. It does not mean anything was detected in the file.</p>
+            <p><b>To continue:</b> click <b>More info</b> on that dialog, then <b>Run anyway</b>. You only need to do this once per version.</p>
+            <figure class="smartscreen-shot">
+              <img src="res/smartscreen-warning.png" alt="The Microsoft Defender SmartScreen dialog for TalkenSetup, expanded to show the Run anyway button" loading="lazy" width="745" height="671">
+              <figcaption>After clicking <b>More info</b>, the dialog expands and the <b>Run anyway</b> button appears in the bottom-right.</figcaption>
+            </figure>
+            <p><b>Don&rsquo;t just take our word for it.</b> Only ever download Talken from <b>talken.in</b> or our official GitHub release page &mdash; and if you want to be certain the file reached you untouched, check its fingerprint. In PowerShell:</p>
+            <pre class="checksum-block"><code>Get-FileHash .\TalkenSetup-2.7.exe -Algorithm SHA256</code></pre>
+            <p>It should print exactly this:</p>
+            <ul class="checksum-list">
+              <li><b>TalkenSetup-2.7.exe</b><code>0C910359A2FABA3FA11B06BDF9120BD37267D938EAB6A56D2E5E188F82EDC5BB</code></li>
+              <li><b>Talken.exe</b><code>C0AB6779112627FC00C993D2232AAC40CC116C7E3D9121E05911EA63CC97FE84</code></li>
+            </ul>
+            <p>If the fingerprint doesn&rsquo;t match, don&rsquo;t run the file &mdash; delete it and download again from talken.in.</p>
+          </div>
         </div>
       </div>
     </section>

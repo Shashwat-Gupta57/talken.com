@@ -622,6 +622,24 @@ footer{border-top:1px solid var(--border);background:color-mix(in srgb,var(--bg)
 .release-notes{display:grid;gap:.9rem}
 .release-notes p{color:var(--muted);padding:1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface-2)}
 .release-notes b{color:var(--text)}
+
+/* --- SmartScreen explainer (downloads page) --------------------------------------------------- */
+.hero-footnote{margin:1rem 0 0;color:var(--faint);font-size:.86rem}
+.hero-footnote a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.hero-footnote a:hover{color:var(--primary-bright)}
+.smartscreen-shot{margin:0;padding:1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface-2)}
+.smartscreen-shot img{display:block;width:100%;max-width:520px;height:auto;margin:0 auto;border-radius:10px;border:1px solid var(--hairline)}
+.smartscreen-shot figcaption{margin-top:.75rem;color:var(--faint);font-size:.85rem;text-align:center}
+.smartscreen-shot figcaption b{color:var(--muted)}
+.checksum-block{margin:0;padding:.85rem 1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface-2);overflow-x:auto}
+.checksum-block code{font-family:var(--font-mono);font-size:.82rem;color:var(--primary-bright);white-space:nowrap}
+.checksum-list{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.checksum-list li{padding:.85rem 1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface-2);display:grid;gap:.35rem}
+.checksum-list b{color:var(--text);font-size:.9rem}
+.checksum-list code{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);word-break:break-all;line-height:1.5}
+@media (max-width:640px){
+  .checksum-block code{white-space:normal;word-break:break-all}
+}
 .portfolio-strip{padding:5rem 0;border-top:1px solid var(--border);background:var(--surface)}
 .mini-projects{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .mini-projects div{border:1px solid var(--border);border-radius:16px;background:var(--glass);overflow:hidden}
