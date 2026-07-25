@@ -1,0 +1,11 @@
+{
+  "versionCode": 301,
+  "versionName": "3.0.1",
+  "releaseDate": "2026-07-26",
+  "minSdk": 26,
+  "sha256": "1072d1edbc41d8ff0e89fa61bfc1fc129d4cf27aec94c5a669da45cc9525d99d",
+  "sizeBytes": 71872839,
+  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v3.0.1-test/talken-3.0.1-debug.apk",
+  "mandatory": false,
+  "changelog": "Talken 3.0.1\n\n- Attachments now crop with a resizable selection, like the desktop app.\n- Proves the in-app updater end to end."
+}
