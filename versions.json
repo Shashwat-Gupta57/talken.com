@@ -1,9 +1,12 @@
 {
-  "version": "2.7",
-  "releaseDate": "2026-07-21",
-  "changelog": "Talken 2.7\n\n✨ New:\n- Personas: show a different name, about and photo to different people. Create up to 5, assign contacts to each, and everyone else keeps seeing your default profile. Leave any field blank and it simply inherits your default.\n- Crop photos inside Talken: profile pictures, persona photos and images you send now open a real crop editor with zoom, a rule-of-thirds grid and ratio presets. Your original file is never modified.\n- Smarter photo sizes: large photos are shrunk before sending, cutting your upload and every recipient's download. You can see exactly what will be sent, switch it off for any single photo, or set the default in Settings → Chats & Messages.\n\n🐛 Fixed:\n- Photos no longer sometimes render blown-up in chat, and thumbnails are cropped instead of squashed.\n- Scrolling a chat full of photos is much smoother — images are no longer fully decoded twice on every repaint.\n- A contact's picture no longer appears zoomed after switching from a chat that had a photo.\n- Your own \"message yourself\" chat now always shows as online.\n\n🎨 Polish:\n- Profile changes publish automatically the moment you make them — no confirm button.\n- The attachment screen now uses the whole window and asks before discarding.\n- Closing to the tray is silent.\n\n📝 Notes:\nPersonas are resolved without the server ever learning who your contacts are. Thanks for using Talken!",
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.7/Talken.exe",
+  "version": "3.2",
+  "releaseDate": "2026-08-16",
+  "changelog": "Talken 3.2\n\nNew:\n- Public channels. Follow one with PC@handle from the + button, or create your own. Anyone can read a channel; only the people you authorise can post. Channels sit in your chat list alongside everything else.\n- Channel details live in the same profile window a contact's do - photo, description, follower and post counts, and for owners: edit, manage who can post, and set a channel photo.\n- Group profiles finally have controls: rename, add members, promote or remove someone, leave, and delete. Members are a proper list instead of a wall of text.\n- The + button now fans out into New chat, New group and New channel.\n- An Exit button in the sidebar that saves everything and closes properly - separate from the X, which hides to the tray.\n\nFixed:\n- Closing the app saved nothing unless a Google Drive account was connected. Everything is now saved on exit and on logout, every time.\n- Media messages sent without a caption were silently dropped on arrival.\n- Opening a profile could crash the window for a contact with no cached profile.\n- The profile window now scrolls as one page instead of trapping content in a panel.\n\nNotes:\nA channel's posts are read straight from storage, with no account and no server in the way. Talken never learns who follows what.",
+  "downloadUrl": "https://db.talken.in/releases/3.2/Talken.exe",
+  "sha256": "b1f08d56ef7bc1b3ac063ddc2a4b21d199f3f9fa9684104ef3a0713d98503ad3",
+  "installerUrl": "https://db.talken.in/releases/3.2/TalkenSetup-3.2.exe",
+  "installerSha256": "36240cce9b0b8fcc41b7ad1509421a191e47ab234f6f4a2502c3b57fb11e6f80",
   "push": "true",
   "minJavaVersion": "21",
-  "requiredDiskSpace": "200MB"
+  "requiredDiskSpace": "300MB"
 }

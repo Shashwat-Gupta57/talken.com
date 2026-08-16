@@ -1,11 +1,11 @@
 {
-  "versionCode": 301,
-  "versionName": "3.0.1",
-  "releaseDate": "2026-07-26",
+  "versionCode": 320,
+  "versionName": "3.2",
+  "releaseDate": "2026-08-16",
   "minSdk": 26,
-  "sha256": "1072d1edbc41d8ff0e89fa61bfc1fc129d4cf27aec94c5a669da45cc9525d99d",
-  "sizeBytes": 71872839,
-  "downloadUrl": "https://github.com/Shashwat-Gupta57/talken.com/releases/download/v3.0.1-test/talken-3.0.1-debug.apk",
+  "sha256": "e5d92934e432d978fcd8b7a5fb4de8af0864f4c5aee869ab80065d448a4bbd7a",
+  "sizeBytes": 111223699,
+  "downloadUrl": "https://db.talken.in/releases/3.2/Talken.apk",
   "mandatory": false,
-  "changelog": "Talken 3.0.1\n\n- Attachments now crop with a resizable selection, like the desktop app.\n- Proves the in-app updater end to end."
+  "changelog": "Talken 3.2\n\n- Public channels: follow with PC@handle, or create your own. Anyone can read; only authorised people can post.\n- Channel details, editing, photo and poster management.\n- Fixed: the VPN no longer affects other apps' connections on Wi-Fi.\n\nIMPORTANT: this build is signed with Talken's release key. If you are on 3.0 or 3.0.1 you must uninstall first, which clears your message history. This is a one-time break."
 }

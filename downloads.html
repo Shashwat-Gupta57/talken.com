@@ -42,12 +42,12 @@
     <header class="download-hero">
       <div class="container download-hero-grid">
         <div data-reveal>
-          <span class="pill glass"><span class="dot"></span>Talken v2.7 available now</span>
+          <span class="pill glass"><span class="dot"></span>Talken v3.2 available now</span>
           <h1>Install the privacy network on your desktop.</h1>
           <p>Talken ships as a complete Windows package with the app runtime and mesh networking components included. Download, install, sign in, and stay reachable from the tray.</p>
           <div class="hero-cta">
-            <a href="https://github.com/Shashwat-Gupta57/talken.com/releases/download/v2.7/TalkenSetup-2.7.exe" class="btn btn-primary btn-lg magnetic-cta" download>
-              Download v2.7
+            <a href="https://db.talken.in/releases/3.2/TalkenSetup-3.2.exe" class="btn btn-primary btn-lg magnetic-cta" download>
+              Download v3.2
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
             </a>
             <a href="#release-notes" class="btn btn-ghost btn-lg">Read release notes</a>
@@ -57,7 +57,7 @@
         <aside class="version-card glass" data-reveal>
           <div class="version-top">
             <span>current version</span>
-            <b>2.7</b>
+            <b>3.2</b>
           </div>
           <dl>
             <div><dt>Platform</dt><dd>Windows 10/11 64-bit</dd></div>
@@ -113,11 +113,12 @@
               <figcaption>After clicking <b>More info</b>, the dialog expands and the <b>Run anyway</b> button appears in the bottom-right.</figcaption>
             </figure>
             <p><b>Don&rsquo;t just take our word for it.</b> Only ever download Talken from <b>talken.in</b> or our official GitHub release page &mdash; and if you want to be certain the file reached you untouched, check its fingerprint. In PowerShell:</p>
-            <pre class="checksum-block"><code>Get-FileHash .\TalkenSetup-2.7.exe -Algorithm SHA256</code></pre>
+            <pre class="checksum-block"><code>Get-FileHash .\TalkenSetup-3.2.exe -Algorithm SHA256</code></pre>
             <p>It should print exactly this:</p>
             <ul class="checksum-list">
-              <li><b>TalkenSetup-2.7.exe</b><code>F6E88E274B485F13FB7BE0B1FE4421D6CDA582CD59145BA59E286229351954D4</code></li>
-              <li><b>Talken.exe</b><code>0B10969D7784903A71340FEEDF0F3BCA8D71858B751B98DBA6FE95BF9C5AB2F1</code></li>
+              <li><b>TalkenSetup-3.2.exe</b><code>36240CCE9B0B8FCC41B7AD1509421A191E47AB234F6F4A2502C3B57FB11E6F80</code></li>
+              <li><b>Talken.exe</b><code>B1F08D56EF7BC1B3AC063DDC2A4B21D199F3F9FA9684104EF3A0713D98503AD3</code></li>
+              <li><b>Talken.apk</b><code>E5D92934E432D978FCD8B7A5FB4DE8AF0864F4C5AEE869AB80065D448A4BBD7A</code></li>
             </ul>
             <p>If the fingerprint doesn&rsquo;t match, don&rsquo;t run the file &mdash; delete it and download again from talken.in.</p>
           </div>
@@ -146,14 +147,15 @@
         <div class="release-panel glass" data-reveal>
           <div>
             <span class="section-eyebrow">Release notes</span>
-            <h2>Talken 2.7</h2>
+            <h2>Talken 3.2</h2>
           </div>
           <div class="release-notes">
-            <p><b>Personas:</b> Show a different name, about and photo to different people. Create up to five, assign contacts to each, and everyone else keeps seeing your default profile. Leave a field blank and it inherits your default.</p>
-            <p><b>Crop photos in the app:</b> Profile pictures, persona photos and images you send now open a real crop editor &mdash; zoom, a rule-of-thirds grid and ratio presets. Your original file is never modified.</p>
-            <p><b>Smarter photo sizes:</b> Large photos are shrunk before sending, cutting your upload and every recipient&rsquo;s download. You can see exactly what will be sent, and override it per photo.</p>
-            <p><b>Sharper image rendering:</b> Fixed photos occasionally showing blown-up, squashed thumbnails, and stuttering when scrolling a chat full of images.</p>
-            <p><b>Automatic profile updates:</b> Name, about and photo changes publish the moment you make them &mdash; no confirm button.</p>
+            <p><b>Public channels:</b> One person writes, anyone can read. Follow a channel by typing its handle &mdash; <code>PC@handle</code> &mdash; into the same box you use to reach a person, or create one of your own. Only the people you authorise can post to it.</p>
+            <p><b>Read without an account:</b> A channel&rsquo;s posts are fetched straight from storage. No sign-in, nothing asked of Talken, and no record anywhere of who follows what.</p>
+            <p><b>Channel details, properly:</b> Photo, description, follower and post counts &mdash; in the same window a contact&rsquo;s profile uses. Owners can rename, set a photo, and manage who is allowed to post.</p>
+            <p><b>Groups got their controls back:</b> Rename, add members, promote or remove someone, leave, and delete. Members are a real list instead of a wall of text.</p>
+            <p><b>A clearer + button:</b> It now fans out into New chat, New group and New channel, and there is a proper Exit in the sidebar that saves everything and closes &mdash; separate from the X, which hides to the tray.</p>
+            <p><b>Fixed:</b> Closing the app saved nothing unless a Google Drive account was connected. Media sent without a caption could vanish on arrival. Opening some profiles could crash the window. On Android, the mesh no longer interferes with other apps&rsquo; connections on Wi&#8209;Fi.</p>
           </div>
         </div>
       </div>
