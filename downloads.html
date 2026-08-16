@@ -50,6 +50,10 @@
               Download v3.2
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
             </a>
+            <a href="https://db.talken.in/releases/3.2/Talken.apk" class="btn btn-ghost btn-lg" download>
+              Download for Android
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
+            </a>
             <a href="#release-notes" class="btn btn-ghost btn-lg">Read release notes</a>
           </div>
           <p class="hero-footnote">Windows will show a &ldquo;publisher unknown&rdquo; warning the first time &mdash; <a href="#smartscreen">here&rsquo;s why, and how to continue</a>.</p>
@@ -60,8 +64,8 @@
             <b>3.2</b>
           </div>
           <dl>
-            <div><dt>Platform</dt><dd>Windows 10/11 64-bit</dd></div>
-            <div><dt>Installer</dt><dd>~186 MB</dd></div>
+            <div><dt>Windows</dt><dd>10/11 64-bit &middot; 122 MB</dd></div>
+            <div><dt>Android</dt><dd>8.0+ &middot; 106 MB</dd></div>
             <div><dt>Runtime</dt><dd>Bundled</dd></div>
             <div><dt>Network</dt><dd>Yggdrasil included</dd></div>
           </dl>
@@ -75,7 +79,7 @@
           <article class="install-card">
             <span>01</span>
             <h3>Download</h3>
-            <p>Get the Windows setup package from the official GitHub release asset.</p>
+            <p>Get the Windows setup package, or the Android APK, from the official download above.</p>
           </article>
           <article class="install-card">
             <span>02</span>
@@ -138,6 +142,22 @@
           <div><b>Bundled runtime</b><span>Runs without a separate Java install</span></div>
           <div><b>Mesh networking</b><span>Yggdrasil components included</span></div>
           <div><b>Self-update path</b><span>Future app updates can be delivered in place</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="release-panel glass" data-reveal>
+          <div>
+            <span class="section-eyebrow">Android</span>
+            <h2>Installing on Android</h2>
+          </div>
+          <div class="release-notes">
+            <p>Talken is not on the Play Store, so Android will ask you to allow installs from this source the first time. That prompt is expected &mdash; it appears for any app installed outside a store.</p>
+            <p><b>Already running an earlier test build?</b> Uninstall it first. Version 3.2 is signed with Talken&rsquo;s permanent release key, and Android refuses to replace an app signed with a different one. Uninstalling clears that device&rsquo;s message history, because messages are stored only on your device and only you can decrypt them &mdash; there is no copy on a server to restore from. This is a one&#8209;time break; updates from 3.2 onward install over the top and keep everything.</p>
+            <p>After the first install, Talken updates itself: it checks for a new version, downloads it, verifies its checksum, and asks you before installing.</p>
+          </div>
         </div>
       </div>
     </section>
