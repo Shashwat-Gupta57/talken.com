@@ -558,7 +558,7 @@ footer{border-top:1px solid var(--divider);background:var(--surface);padding:44p
 
 /* ---------- hand-drawn accents (draw themselves on view) ---------- */
 .circled{position:relative;display:inline-block}
-.scribble{position:absolute;inset:-16px -26px -20px -26px;width:calc(100% + 52px);height:calc(100% + 36px);pointer-events:none;overflow:visible}
+.scribble{position:absolute;left:-40px;right:-40px;top:-24px;bottom:-26px;width:calc(100% + 80px);height:calc(100% + 50px);pointer-events:none;overflow:visible}
 .scribble path{fill:none;stroke:var(--coral);stroke-width:3.2;stroke-linecap:round;
   stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s ease-out .55s forwards}
 .squiggled{position:relative;display:inline-block}
