@@ -387,11 +387,49 @@ body.nav-open .nav-burger span:nth-child(3){transform:translateY(-4.5px) rotate(
 .bento{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
 .bento-card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
-  padding:30px;overflow:hidden;position:relative;
+  padding:30px;overflow:hidden;position:relative;display:flex;flex-direction:column;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
 }
+.bento-card:hover{transform:translateY(-4px);border-color:var(--indigo-light);box-shadow:var(--shadow-lg)}
+.b-num{position:absolute;top:22px;right:26px;font-size:.85rem;font-weight:700;color:var(--ink3);letter-spacing:.06em}
+.b-ico{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:transform .25s ease}
+.bento-card:hover .b-ico{transform:scale(1.08) rotate(-4deg)}
+.b-ico.i1{background:var(--indigo-pale);color:var(--indigo)}
+.b-ico.i2{background:var(--teal-pale);color:var(--teal)}
+.b-ico.i3{background:var(--coral-pale);color:var(--coral-dark)}
+.b-ico.i4{background:var(--bg2);color:var(--ink2)}
 .bento-card h3{font-weight:500;font-size:1.12rem;margin-bottom:8px}
 .bento-card p{color:var(--ink2);font-size:.95rem;max-width:420px}
-.bento-art{margin-top:24px}
+.bento-art{margin-top:auto;padding-top:24px}
+.mini-bubbles,.chip-row{margin-top:auto;padding-top:24px}
+/* route art: dashes flow, a sealed dot rides the line */
+.route-art{position:relative}
+.route-art .flow{animation:flowdash 1.6s linear infinite}
+@keyframes flowdash{to{stroke-dashoffset:-16}}
+.route-dot{
+  position:absolute;top:50%;left:14%;width:13px;height:13px;border-radius:50%;
+  background:var(--coral);box-shadow:0 0 0 3px var(--coral-pale);
+  transform:translateY(calc(-50% + 12px));animation:ridedot 3.2s ease-in-out infinite;
+}
+@keyframes ridedot{
+  0%{left:12%;opacity:0}
+  12%{opacity:1}
+  80%{left:84%;opacity:1}
+  92%,100%{left:88%;opacity:0}
+}
+/* the crossed-out chips */
+.chip-row{display:flex;flex-wrap:wrap;gap:9px}
+.no-chip{
+  display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:500;color:var(--ink2);
+  background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:8px 14px;
+  text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:1.5px;
+  transition:transform .2s ease,border-color .2s ease;
+}
+.no-chip .icon{width:13px;height:13px;stroke:var(--coral-dark);flex:none}
+.bento-card:hover .no-chip{border-color:var(--coral-light)}
+.bento-card:hover .no-chip:nth-child(1){transform:rotate(-2deg)}
+.bento-card:hover .no-chip:nth-child(2){transform:rotate(1.5deg)}
+.bento-card:hover .no-chip:nth-child(3){transform:rotate(-1deg)}
 .bento-art svg{width:100%;height:auto;display:block}
 /* mini chat strip inside a bento tile */
 .mini-bubbles{margin-top:24px;display:flex;flex-direction:column;gap:8px}
@@ -646,5 +684,7 @@ footer{border-top:1px solid var(--divider);background:var(--surface);padding:44p
 }
 @media (prefers-reduced-motion:reduce){
   .marquee-track{animation:none}
+  .route-art .flow,.route-dot{animation:none}
+  .route-dot{left:50%;opacity:1}
   .scribble path,.squiggle path{stroke-dashoffset:0;animation:none}
 }
