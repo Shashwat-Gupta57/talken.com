@@ -35,6 +35,89 @@
     revealed.forEach(function (el) { el.classList.add('in'); });
   }
 
+  /* ================= the message race ================= */
+  (function () {
+    var race = document.getElementById('race');
+    if (!race) return;
+    var input = document.getElementById('raceInput');
+    var sendBtn = document.getElementById('raceSend');
+    var bubbleA = document.getElementById('bubbleA');
+    var bubbleB = document.getElementById('bubbleB');
+    var server = document.getElementById('serverStation');
+    var lockSt = document.getElementById('lockStation');
+    var stack = document.getElementById('copyStack');
+    var countEl = document.getElementById('copyCount');
+    var copies = 0, racing = false;
+
+    function text() {
+      var t = (input.value || '').trim() || 'my passport scan';
+      return t.length > 28 ? t.slice(0, 27) + '\u2026' : t;
+    }
+    function setBubbles(t) {
+      bubbleA.textContent = t;
+      bubbleB.querySelector('span').textContent = t;
+    }
+    function addCopy(t) {
+      copies++;
+      countEl.textContent = copies;
+      var chip = document.createElement('span');
+      chip.className = 'copy-chip';
+      chip.textContent = 'copy kept \u00b7 ' + t;
+      if (stack.children.length >= 3) stack.removeChild(stack.firstChild);
+      stack.appendChild(chip);
+      requestAnimationFrame(function () { requestAnimationFrame(function () { chip.classList.add('on'); }); });
+    }
+    function run() {
+      if (racing) return;
+      racing = true;
+      var t = text();
+      setBubbles(t);
+      /* reset to the start */
+      [bubbleA, bubbleB].forEach(function (b) {
+        b.classList.remove('go', 'pop');
+        b.style.transition = 'none';
+        b.style.left = '7%';
+        void b.offsetWidth;
+        b.style.transition = '';
+      });
+      if (reduceMotion) { /* static outcome, no travel */
+        bubbleA.classList.add('go'); bubbleB.classList.add('go');
+        bubbleA.style.left = '70%'; bubbleB.style.left = '70%';
+        addCopy(t);
+        racing = false;
+        return;
+      }
+      bubbleA.classList.add('go');
+      bubbleB.classList.add('go');
+      /* lane B: sealed and straight across */
+      setTimeout(function () { lockSt.classList.add('snap'); }, 150);
+      setTimeout(function () { lockSt.classList.remove('snap'); }, 650);
+      setTimeout(function () { bubbleB.style.left = '72%'; }, 200);
+      setTimeout(function () { bubbleB.classList.add('pop'); }, 1300);
+      setTimeout(function () { bubbleB.classList.remove('pop'); bubbleB.classList.remove('go'); }, 2400);
+      /* lane A: stops at the server, leaves a copy behind */
+      setTimeout(function () { bubbleA.style.left = '40%'; }, 200);
+      setTimeout(function () { server.classList.add('flash'); addCopy(t); }, 1300);
+      setTimeout(function () { server.classList.remove('flash'); bubbleA.style.left = '72%'; }, 2150);
+      setTimeout(function () { bubbleA.classList.add('pop'); }, 3200);
+      setTimeout(function () { bubbleA.classList.remove('pop'); bubbleA.classList.remove('go'); racing = false; }, 4000);
+    }
+    sendBtn.addEventListener('click', run);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); run(); } });
+    /* play once by itself when the section scrolls into view */
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var seen = false;
+      var rio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !seen) { seen = true; setTimeout(run, 500); rio.disconnect(); }
+        });
+      }, { threshold: 0.45 });
+      rio.observe(race);
+    } else {
+      run();
+    }
+  })();
+
   /* ================= demo ================= */
   var stage = document.getElementById('demoStage');
   if (!stage) return;
