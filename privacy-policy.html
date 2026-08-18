@@ -1,185 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Talken Privacy Policy - Your privacy is our priority" />
-  <title>Talken - Privacy Policy</title>
-  <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <meta name="description" content="Talken's privacy policy — what little we collect, and why your messages and files never touch our servers." />
+  <title>Privacy Policy — Talken</title>
+  <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Navigation Bar -->
-<nav class="top-nav">
-  <div class="nav-container">
-    <!-- Logo on the left (shifted further left) -->
-    <div class="nav-logo">
-      <div class="logo-icon">T</div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Talken home">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+        <b class="dusk-text">Talken</b>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#coming">What's coming</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="about-developer.html">About</a>
+        <span class="nav-cta"><a class="btn btn-cta" href="downloads.html">Download</a></span>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    
-    <!-- Main title in center -->
-    <div class="nav-title">
-      <h1>Talken</h1>
+    <div class="nav-sheet">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#coming">What's coming</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="about-developer.html">About</a>
+      <a class="btn btn-cta" href="downloads.html">Download Talken</a>
     </div>
-    
-    <!-- Theme toggle on the right -->
-    <div class="nav-actions">
-      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Floating Menu Button -->
-<button class="menu-toggle" id="menuToggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-
-<!-- Right Sidebar (Hidden by default) -->
-<nav class="right-sidebar" id="rightSidebar">
-  <div class="sidebar-header">
-    <h3>Navigation</h3>
-  </div>
-  <ul class="sidebar-menu">
-    <li><a href="index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg> Home</a></li>
-    <li><a href="downloads.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg> Downloads</a></li>
-    <li><a href="about-developer.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> About Developer</a></li>
-    <li><a href="privacy-policy.html" class="active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Privacy Policy</a></li>
-    <li><a href="terms-and-conditions.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 17h6"/></svg> Terms &amp; Conditions</a></li>
-  </ul>
-</nav>
-
-<!-- Overlay for mobile -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <header class="page-header">
+  <main>
+    <header class="legal-hero">
       <div class="container">
+        <span class="eyebrow trust">Legal</span>
         <h1>Privacy Policy</h1>
-        <p>Your privacy is our top priority</p>
+        <p>Short version: your messages never touch our servers, so there is very little to have a policy about.</p>
       </div>
     </header>
 
-    <section class="content">
-      <div class="container">
-        <div class="legal-content">
-          <p><strong>Last Updated:</strong> June 2026</p>
+    <div class="legal-body">
+      <p class="legal-updated"><strong>Last updated:</strong> June 2026</p>
 
-          <h2>1. Introduction</h2>
-          <p>Welcome to Talken, developed by Flex Studios. This Privacy Policy explains how we collect, use, and protect your information when you use our chat application. By using Talken, you agree to the collection and use of information in accordance with this policy.</p>
+      <h2>1. Introduction</h2>
+      <p>Welcome to Talken, developed by Flex Studios. This Privacy Policy explains how we collect, use, and protect your information when you use our chat application. By using Talken, you agree to the collection and use of information in accordance with this policy.</p>
 
-          <h2>2. Information We Collect</h2>
-          <h3>2.1 Personal Information</h3>
-          <ul>
-            <li>The email address you provide to create and sign in to your Talken account</li>
-            <li>Google Drive access (via OAuth) used only to back up your messages and media to your own Drive — your Drive contents are never read by us</li>
-            <li>Profile information you choose to share (display name, about section)</li>
-            <li>Contact information for support purposes</li>
-          </ul>
+      <h2>2. Information We Collect</h2>
+      <h3>2.1 Personal Information</h3>
+      <ul>
+        <li>The email address you provide to create and sign in to your Talken account</li>
+        <li>Google Drive access (via OAuth) used only to store your media in your own Drive — your Drive contents are never read by us</li>
+        <li>Profile information you choose to share (display name, about section)</li>
+        <li>Contact information for support purposes</li>
+      </ul>
+      <h3>2.2 Usage Data</h3>
+      <ul>
+        <li>Application performance metrics</li>
+        <li>Error logs and crash reports</li>
+        <li>Feature usage statistics (anonymized)</li>
+      </ul>
 
-          <h3>2.2 Usage Data</h3>
-          <ul>
-            <li>Application performance metrics</li>
-            <li>Error logs and crash reports</li>
-            <li>Feature usage statistics (anonymized)</li>
-          </ul>
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the collected information for:</p>
+      <ul>
+        <li>Providing and maintaining the Talken service</li>
+        <li>Storing your media in your own Google Drive at your request</li>
+        <li>Improving application performance and user experience</li>
+        <li>Providing customer support</li>
+        <li>Detecting and preventing technical issues</li>
+      </ul>
 
-          <h2>3. How We Use Your Information</h2>
-          <p>We use the collected information for:</p>
-          <ul>
-            <li>Providing and maintaining the Talken service</li>
-            <li>Backing up your messages and media to your own Google Drive at your request</li>
-            <li>Improving application performance and user experience</li>
-            <li>Providing customer support</li>
-            <li>Detecting and preventing technical issues</li>
-          </ul>
+      <h2>4. Data Storage and Security</h2>
+      <h3>4.1 Zero-Server Storage Policy</h3>
+      <p><strong>Your messages and files are never stored on our servers.</strong> All communication data is:</p>
+      <ul>
+        <li>Stored on your devices, with media in your personal Google Drive</li>
+        <li>Encrypted during transmission</li>
+        <li>Accessible only by you and your intended recipients</li>
+        <li>Under your complete control and ownership</li>
+      </ul>
+      <h3>4.2 Security Measures</h3>
+      <ul>
+        <li>Encrypted communication between devices</li>
+        <li>Secure Google OAuth 2.0 authentication</li>
+        <li>No third-party data sharing</li>
+        <li>Regular security reviews and updates</li>
+      </ul>
 
-          <h2>4. Data Storage and Security</h2>
-          <h3>4.1 Zero-Server Storage Policy</h3>
-          <p><strong>Your messages and files are NEVER stored on our servers.</strong> All communication data is:</p>
-          <ul>
-            <li>Stored directly in your personal Google Drive</li>
-            <li>Encrypted during transmission</li>
-            <li>Accessible only by you and your intended recipients</li>
-            <li>Under your complete control and ownership</li>
-          </ul>
+      <h2>5. Third-Party Services</h2>
+      <p>Talken integrates with:</p>
+      <ul>
+        <li><strong>Google Drive API:</strong> for media and file storage in your own Drive</li>
+        <li><strong>Google OAuth:</strong> for secure authentication</li>
+      </ul>
+      <p>These services have their own privacy policies, which we encourage you to review.</p>
 
-          <h3>4.2 Security Measures</h3>
-          <ul>
-            <li>End-to-end encryption for all communications</li>
-            <li>Secure Google OAuth 2.0 authentication</li>
-            <li>No third-party data sharing</li>
-            <li>Regular security audits and updates</li>
-          </ul>
+      <h2>6. Data Retention</h2>
+      <ul>
+        <li>Messages and files: stored on your devices and in your Google Drive until you delete them</li>
+        <li>Application logs: retained for 30 days for debugging purposes</li>
+        <li>Account information: retained while your account is active</li>
+      </ul>
 
-          <h2>5. Third-Party Services</h2>
-          <p>Talken integrates with:</p>
-          <ul>
-            <li><strong>Google Drive API:</strong> For message and file storage</li>
-            <li><strong>Google OAuth:</strong> For secure authentication</li>
-          </ul>
-          <p>These services have their own privacy policies, which we encourage you to review.</p>
+      <h2>7. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Correct inaccurate data</li>
+        <li>Delete your data (including deleting your account from within the app)</li>
+        <li>Export your data</li>
+        <li>Withdraw consent for data processing</li>
+      </ul>
 
-          <h2>6. Data Retention</h2>
-          <ul>
-            <li>Messages and files: Stored in your Google Drive indefinitely (until you delete them)</li>
-            <li>Application logs: Retained for 30 days for debugging purposes</li>
-            <li>Account information: Retained while your account is active</li>
-          </ul>
+      <h2>8. Children's Privacy</h2>
+      <p>Talken is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
 
-          <h2>7. Your Rights</h2>
-          <p>You have the right to:</p>
-          <ul>
-            <li>Access your personal data</li>
-            <li>Correct inaccurate data</li>
-            <li>Delete your data (by deleting from Google Drive)</li>
-            <li>Export your data</li>
-            <li>Withdraw consent for data processing</li>
-          </ul>
+      <h2>9. Changes to This Privacy Policy</h2>
+      <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
 
-          <h2>8. Children's Privacy</h2>
-          <p>Talken is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
+      <h2>10. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a></li>
+        <li><strong>Developer:</strong> Shashwat Gupta, Flex Studios</li>
+      </ul>
 
-          <h2>9. Changes to This Privacy Policy</h2>
-          <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-
-          <h2>10. Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us:</p>
-          <ul>
-            <li><strong>Email:</strong> <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a></li>
-            <li><strong>Developer:</strong> Shashwat Gupta, Flex Studios</li>
-          </ul>
-
-          <div class="privacy-highlight">
-            <h3>🔒 Privacy Promise</h3>
-            <p>Talken was built with privacy as the foundation. We don't sell your data, we don't show ads, and we don't store your messages. Your conversations belong to you, and only you.</p>
-          </div>
-        </div>
+      <div class="legal-highlight">
+        <h3>The privacy promise</h3>
+        <p>Talken was built with privacy as the foundation. We don't sell your data, we don't show ads, and we don't store your messages. Your conversations belong to you, and only you.</p>
       </div>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>
-            <a href="index.html">Home</a> |
-            <a href="downloads.html">Downloads</a> |
-            <a href="about-developer.html">About Developer</a> |
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="terms-and-conditions.html">Terms & Conditions</a>
-          </p>
-          <p>© 2026 - Talken by Flex Studios</p>
-        </div>
-      </div>
-    </footer>
+    </div>
   </main>
 
-  <script src="js/theme-switcher.js"></script>
-  <script src="js/navigation.js"></script>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+          <b class="dusk-text">Talken</b>
+        </a>
+        <p>A little chat app from Prayagraj, India, that keeps your conversations yours.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Product</h4>
+          <a href="downloads.html">Downloads</a>
+          <a href="downloads.html#notes">Release notes</a>
+          <a href="index.html#coming">What's coming</a>
+        </div>
+        <div>
+          <h4>People</h4>
+          <a href="about-developer.html">About the developer</a>
+          <a href="mailto:connect@talken.in">Contact</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 Talken by Flex Studios</span>
+      <span>Made by Shashwat Gupta</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

@@ -4,349 +4,412 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="fIhapg1YuL7LS9iZD4XqEjsQq36KAg3r7bStkMk6wQ4" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Talken is a serverless, peer-to-peer encrypted chat that keeps your messages and files in your own cloud. Privacy, by architecture." />
-  <title>Talken - Privacy, by architecture</title>
-  <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <meta name="description" content="Talken is a free chat app for Windows and Android. Messages go straight between your devices, and your photos and files stay in your own Google Drive." />
+  <title>Talken — Talk like no one's watching</title>
+  <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
+  <meta property="og:title" content="Talken — Talk like no one’s watching" />
+  <meta property="og:description" content="Free private chat for Windows and Android. Messages go device to device, and even multi-GB files travel through your own Google Drive." />
+  <meta property="og:image" content="https://talken.in/res/og-cover.jpg" />
+  <meta property="og:url" content="https://talken.in/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <div class="nav-logo"><div class="logo-icon">T</div></div>
-      <div class="nav-title"><h1>Talken</h1></div>
-      <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
+
+  <!-- === nav === -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Talken home">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+        <b class="dusk-text">Talken</b>
+      </a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#more">What you get</a>
+        <a href="#coming">What's coming</a>
+        <a href="about-developer.html">About</a>
+        <span class="nav-cta"><a class="btn btn-cta" href="downloads.html">Download</a></span>
       </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-sheet">
+      <a href="#how">How it works</a>
+      <a href="#more">What you get</a>
+      <a href="#coming">What's coming</a>
+      <a href="about-developer.html">About</a>
+      <a class="btn btn-cta" href="downloads.html">Download Talken</a>
     </div>
   </nav>
 
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="right-sidebar" id="rightSidebar" aria-label="Sidebar">
-    <div class="sidebar-header"><h3>Navigation</h3></div>
-    <ul class="sidebar-menu">
-      <li><a href="index.html" class="active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg> Home</a></li>
-      <li><a href="downloads.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg> Downloads</a></li>
-      <li><a href="about-developer.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> About Developer</a></li>
-      <li><a href="privacy-policy.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Privacy Policy</a></li>
-      <li><a href="terms-and-conditions.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 17h6"/></svg> Terms &amp; Conditions</a></li>
-    </ul>
-  </nav>
-
-  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
-
-  <main class="main-content home-v2">
-    <header class="network-hero">
-      <div class="mesh-stage" aria-hidden="true">
-        <svg class="mesh-lines" viewBox="0 0 1400 820" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#5eead4" stop-opacity="1"/>
-              <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <g class="mesh-web" fill="none" stroke="#2dd4bf" stroke-width="1.2" stroke-opacity=".32">
-            <path d="M112 176 L324 92 L558 186 L792 96 L1126 236 L1260 482 L1008 678 L704 612 L436 720 L194 540 Z"/>
-            <path d="M324 92 L436 356 L558 186 L704 612 L792 96 L1008 678"/>
-            <path d="M194 540 L436 356 L704 612 L1260 482 L1126 236 L792 96"/>
-            <path d="M112 176 L436 356 L558 186 L1126 236"/>
-          </g>
-          <g class="mesh-nodes">
-            <circle cx="112" cy="176" r="36" fill="url(#nodeGlow)"/><circle cx="112" cy="176" r="4"/>
-            <circle cx="324" cy="92" r="42" fill="url(#nodeGlow)"/><circle cx="324" cy="92" r="5"/>
-            <circle cx="558" cy="186" r="44" fill="url(#nodeGlow)"/><circle cx="558" cy="186" r="5"/>
-            <circle cx="792" cy="96" r="38" fill="url(#nodeGlow)"/><circle cx="792" cy="96" r="4"/>
-            <circle cx="1126" cy="236" r="42" fill="url(#nodeGlow)"/><circle cx="1126" cy="236" r="5"/>
-            <circle cx="1260" cy="482" r="36" fill="url(#nodeGlow)"/><circle cx="1260" cy="482" r="4"/>
-            <circle cx="1008" cy="678" r="46" fill="url(#nodeGlow)"/><circle cx="1008" cy="678" r="5"/>
-            <circle cx="704" cy="612" r="52" fill="url(#nodeGlow)"/><circle cx="704" cy="612" r="6"/>
-            <circle cx="436" cy="720" r="36" fill="url(#nodeGlow)"/><circle cx="436" cy="720" r="4"/>
-            <circle cx="194" cy="540" r="38" fill="url(#nodeGlow)"/><circle cx="194" cy="540" r="4"/>
-            <circle cx="436" cy="356" r="50" fill="url(#nodeGlow)"/><circle cx="436" cy="356" r="6"/>
-          </g>
-          <circle class="mesh-packet p1" r="4"><animateMotion dur="6s" repeatCount="indefinite" path="M112 176 L324 92 L558 186 L1126 236 L1260 482"/></circle>
-          <circle class="mesh-packet p2" r="4"><animateMotion dur="7.2s" repeatCount="indefinite" path="M194 540 L436 356 L704 612 L1008 678"/></circle>
-          <circle class="mesh-packet p3" r="4"><animateMotion dur="5.4s" repeatCount="indefinite" path="M792 96 L704 612 L436 720"/></circle>
-        </svg>
-        <div class="encryption-rings"></div>
-      </div>
-
+  <main>
+    <!-- === hero === -->
+    <header class="hero">
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy" data-reveal>
-            <span class="pill glass"><span class="dot"></span>Talken v3.2 &mdash; Windows and Android</span>
-            <h1>Privacy, by <span class="headline-lock"><span class="accent" data-scramble="architecture." data-scramble-duration="1250" data-scramble-delay="80" aria-label="architecture.">7X9F4Q2C0M8K#</span></span></h1>
-            <p>Talken is a serverless, peer-to-peer chat that keeps messages moving directly between people and media inside your own cloud.</p>
-            <div class="hero-cta">
-              <a class="btn btn-primary btn-lg magnetic-cta" href="downloads.html">
-                Download for Windows
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
-              <a class="btn btn-ghost btn-lg" href="downloads.html">
-                Download for Android
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
-              <a class="btn btn-ghost btn-lg" href="#how-it-works">See how Talken works</a>
-            </div>
-            <div class="status-strip" aria-label="Talken feature status">
-              <span><i></i>P2P messaging</span>
-              <span><i></i>Own-cloud media</span>
-              <span><i></i>Identity-key login</span>
-              <span><i></i>Windows and Android</span>
-            </div>
-          </div>
-          <div class="hero-console glass" data-reveal>
-            <div class="console-top"><span></span><span></span><span></span><b>private chat path</b></div>
-            <div class="route-card">
-              <div class="route-person"><span>Y</span><b>You</b></div>
-              <div class="route-line"><i></i><i></i><i></i></div>
-              <div class="route-person"><span>F</span><b>Friend</b></div>
-            </div>
-            <div class="server-cross">
-              <span>No company server in the middle</span>
-              <b>skipped</b>
-            </div>
-            <div class="console-log" data-network-log>
-              <p>> finding your friend</p>
-              <p>> making a private path</p>
-              <p>> message goes direct</p>
-            </div>
-          </div>
+        <span class="eyebrow">Free on Windows and Android</span>
+        <h1>Talk like no one&rsquo;s <span class="circled"><span class="dusk-text">watching.</span><svg class="scribble" viewBox="0 0 220 90" aria-hidden="true"><path d="M28 62 C14 40 40 14 108 11 C176 8 212 26 208 48 C204 72 150 84 92 80 C44 77 16 66 24 44" pathLength="1"/></svg></span></h1>
+        <p class="lede">Because on Talken, no one is. Messages go straight from your device to your friend&rsquo;s, and your photos and files stay in your own Google&nbsp;Drive &mdash; not on some company&rsquo;s servers.</p>
+        <div class="hero-cta">
+          <a class="btn btn-cta btn-lg" href="https://db.talken.in/releases/3.2/TalkenSetup-3.2.exe" download>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-primary btn-lg" href="https://db.talken.in/releases/3.2/Talken.apk" download>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10a6 6 0 0 1 12 0"/><path d="M6 10h12v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 7.5v.01M15 7.5v.01M8 4l-1-1.6M16 4l1-1.6"/></svg>
+            Download for Android
+          </a>
         </div>
+        <div class="hero-more">
+          <a href="#demo">See how Talken works
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+        <p class="hero-note">First install? Windows and Android each ask one extra question &mdash; <a href="downloads.html#before">both explained here</a>.</p>
       </div>
     </header>
 
-    <section class="story-band problem-band">
-      <div class="container story-split">
-        <div data-reveal>
-          <span class="section-eyebrow">The problem</span>
-          <h2 class="section-title">Most chat apps ask you to trust the middle.</h2>
-          <p class="section-sub">Messages, files, metadata, accounts, backups - everything tends to orbit one company's servers. Talken starts from a different instinct: remove the middle wherever possible.</p>
-        </div>
-        <div class="trust-stack" data-reveal-stagger>
-          <div><span>01</span><b>Server receives</b><p>Your message passes through someone else's infrastructure.</p></div>
-          <div><span>02</span><b>Server stores</b><p>Backups and media become another system's responsibility.</p></div>
-          <div><span>03</span><b>Server decides</b><p>Your access depends on a central service staying friendly and alive.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section idea-section" id="how-it-works">
+    <!-- === demo: connecting Google Drive, then sending a photo === -->
+    <section class="demo-wrap" id="demo">
       <div class="container">
-        <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">The Talken idea</span>
-          <h2 class="section-title">Make privacy feel architectural.</h2>
-          <div class="section-rule"></div>
-          <p class="section-sub">Talken is designed as a set of user-owned paths: direct peer routes, user cloud media, local identity, and recovery controls that keep the account understandable.</p>
-        </div>
-        <div class="feature-rail">
-          <article class="feature-module mesh-module" data-reveal>
-            <div class="module-copy">
-              <span class="module-kicker">How it moves</span>
-              <h3>P2P mesh routing</h3>
-              <p>Two users connect over a Yggdrasil-style IPv6 mesh. The server helps with discovery, but the conversation itself is shaped as a direct route.</p>
-            </div>
-            <div class="module-visual p2p-sim" aria-hidden="true">
-              <div class="sim-node sender"><span>S</span><b>Sender</b></div>
-              <div class="sim-node receiver"><span>R</span><b>Receiver</b></div>
-              <div class="sim-server"><span>server</span><b>not in path</b></div>
-              <div class="sim-path"></div>
-              <div class="sim-packet"></div>
-            </div>
-          </article>
+        <div class="demo-frame" data-reveal>
+          <div class="demo-caption"><span class="rec" aria-hidden="true"></span><span id="demoCaption">This is Talken &mdash; your chats, on your desktop.</span></div>
+          <div class="demo-scale" id="demoScale">
+            <div class="demo-stage" id="demoStage" data-scene="chat" aria-hidden="true">
 
-          <article class="feature-module cloud-module flip" data-reveal>
-            <div class="module-copy">
-              <span class="module-kicker">Where files live</span>
-              <h3>Your media stays in your cloud.</h3>
-              <p>Files move through your own Google Drive storage instead of a Talken media silo. Big sends feel natural because the storage limit is yours.</p>
-            </div>
-            <div class="module-visual cloud-flow" aria-hidden="true">
-              <div class="file-tile">photo.png</div>
-              <div class="cloud-orbit">
-                <span>Drive</span>
+              <div class="d-chrome">
                 <i></i><i></i><i></i>
+                <span class="d-title"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>Talken</span>
               </div>
-              <div class="file-tile received">received</div>
-            </div>
-          </article>
 
-          <article class="feature-module identity-module" data-reveal>
-            <div class="module-copy">
-              <span class="module-kicker">How identity works</span>
-              <h3>Your key becomes your address.</h3>
-              <p>Talken treats identity like infrastructure: a cryptographic key anchors your account, your route, and your device's presence on the mesh.</p>
-            </div>
-            <div class="module-visual key-card" aria-hidden="true">
-              <div class="key-head">identity fingerprint</div>
-              <div class="fingerprint-lines">
-                <span>8F3A</span><span>19C0</span><span>7BE2</span><span>44DD</span>
-                <span>A901</span><span>CC2E</span><span>05BA</span><span>91F8</span>
+              <div class="d-body">
+                <!-- app sidebar -->
+                <div class="d-side">
+                  <div class="d-side-head"><span class="d-avatar">Y<img data-optional src="res/pfp-you.jpg" alt=""></span><b style="font-size:12.5px">You</b></div>
+                  <div class="d-search">Search</div>
+                  <div class="d-chat-row sel"><span class="d-avatar warm">A<img data-optional src="res/pfp-ananya.jpg" alt=""></span><span class="d-meta"><b>Ananya</b><span>the wedding shoot pls!!</span></span></div>
+                  <div class="d-chat-row"><span class="d-avatar soft">M<img data-optional src="res/pfp-mum.jpg" alt=""></span><span class="d-meta"><b>Mum</b><span>call me when free beta</span></span></div>
+                  <div class="d-chat-row"><span class="d-avatar" style="background:#14636B">W</span><span class="d-meta"><b>Wedding squad</b><span>Rohan: final video is done!!</span></span></div>
+                  <div class="d-side-foot">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/></svg>
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                    <span class="d-gear"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
+                  </div>
+                </div>
+
+                <!-- main area -->
+                <div class="d-main">
+
+                  <!-- chat view -->
+                  <div class="d-view v-chat">
+                    <div class="d-top"><span class="d-avatar warm">A<img data-optional src="res/pfp-ananya.jpg" alt=""></span><b>Ananya</b><span class="d-status"><i></i>online</span></div>
+                    <div class="d-msgs">
+                      <div class="d-bubble in">the wedding shoot pls!! it&rsquo;s like 4 GB though 😭<span class="d-time">6:41 pm</span></div>
+                      <div class="d-bubble out">no links, no compressing &mdash; sending the whole thing<span class="d-time">6:42 pm</span></div>
+                      <div class="d-sent-photo">
+                        <div class="d-bubble out media"><div class="d-file" style="padding:6px 8px"><span class="d-fico"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M13 2v7h7"/></svg></span><span><b>Wedding-Shoot.zip</b><span>4.2 GB</span></span></div><div class="d-upload"><div class="d-ring"></div></div></div>
+                        <span class="d-hint">kept in your Google Drive, shared only with Ananya</span>
+                      </div>
+                    </div>
+                    <div class="d-compose">
+                      <span class="d-attach"><svg class="icon" viewBox="0 0 24 24"><path d="M21 12l-8.5 8.5a5 5 0 0 1-7-7L14 5a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L16 7"/></svg></span>
+                      <span class="d-input">Message</span>
+                      <span class="d-send"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span>
+                    </div>
+                  </div>
+
+                  <!-- settings view -->
+                  <div class="d-view v-settings">
+                    <div class="d-top">
+                      <span class="d-back"><svg class="icon" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></span>
+                      <b>Settings &middot; Connected Drives</b>
+                    </div>
+                    <div class="d-set-body">
+                      <div class="d-set-title">Your storage</div>
+                      <div class="d-set-sub">Talken keeps your photos and files in your own Google Drive.</div>
+                      <div class="d-drive-empty">
+                        No Drive connected yet<br>
+                        <span class="d-connect-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M18 10a6 6 0 0 0-11.5-1.7A5 5 0 0 0 7 18h11a4 4 0 0 0 0-8z"/></svg>Connect Google Drive</span>
+                      </div>
+                      <div class="d-drive-row">
+                        <span class="d-cloud"><svg class="icon" viewBox="0 0 24 24"><path d="M18 10a6 6 0 0 0-11.5-1.7A5 5 0 0 0 7 18h11a4 4 0 0 0 0-8z"/></svg></span>
+                        <span><b>you@gmail.com</b><span>Connected &middot; your files stay in this Drive</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- account picker -->
+                  <div class="d-picker">
+                    <div class="d-picker-card">
+                      <h5>Choose an account</h5>
+                      <p>to continue to Talken</p>
+                      <div class="d-acc"><span class="d-avatar">Y<img data-optional src="res/pfp-you.jpg" alt=""></span><span><b>You</b><span>you@gmail.com</span></span></div>
+                      <div class="d-acc"><span class="d-avatar soft">S</span><span><b>Studio</b><span>studio.work@gmail.com</span></span></div>
+                    </div>
+                  </div>
+
+                  <!-- toast -->
+                  <div class="d-toast"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Google Drive connected</div>
+                </div>
               </div>
-              <div class="scan-line"></div>
-            </div>
-          </article>
 
-          <article class="feature-module offline-module flip" data-reveal>
-            <div class="module-copy">
-              <span class="module-kicker">What happens offline</span>
-              <h3>Messages wait for people, not the other way around.</h3>
-              <p>If a recipient is offline, Talken keeps the delivery intent alive and completes the handoff when they return.</p>
+              <!-- cursor -->
+              <div class="d-cursor" id="demoCursor"><svg viewBox="0 0 20 20"><path d="M4.5 2.5v14.6l3.9-3.4 2.5 5.6 2.6-1.1-2.5-5.6 5.3-.5z" fill="#27243A" stroke="#fff" stroke-width="1.2"/></svg></div>
+
             </div>
-            <div class="module-visual offline-timeline" data-offline-flow aria-hidden="true">
-              <div class="time-step active"><b>send</b><span>12:41</span></div>
-              <div class="time-step"><b>wait</b><span>offline</span></div>
-              <div class="time-step"><b>deliver</b><span>online</span></div>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="control-section">
+    <!-- === value marquee === -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>No ads</span><i></i><span>No trackers</span><i></i><span>Your own Drive</span><i></i><span>Device to device</span><i></i><span>Multi-GB files</span><i></i><span>No phone number</span><i></i><span>Free forever</span><i></i>
+        <span>No ads</span><i></i><span>No trackers</span><i></i><span>Your own Drive</span><i></i><span>Device to device</span><i></i><span>Multi-GB files</span><i></i><span>No phone number</span><i></i><span>Free forever</span><i></i>
+      </div>
+    </div>
+
+    <!-- === relatable === -->
+    <section class="section tint" id="how">
       <div class="container">
         <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Control surface</span>
-          <h2 class="section-title">Private software should feel calm, not fragile.</h2>
-          <div class="section-rule"></div>
+          <span class="eyebrow trust">The honest question</span>
+          <h2>Ever paused before sending something personal?</h2>
+          <p class="lede">That little pause is you knowing your chats pass through other people&rsquo;s computers. On most apps, they do. Here&rsquo;s the difference.</p>
         </div>
-        <div class="control-grid" data-reveal-stagger>
-          <article class="control-panel tray-panel">
-            <span class="panel-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14M7 19V8a5 5 0 0 1 10 0v11"/><path d="M9 19a3 3 0 0 0 6 0"/></svg></span>
-            <h3>Stays reachable</h3>
-            <p>Runs quietly in the tray, starts with Windows, and keeps your presence alive without demanding attention.</p>
-            <div class="toggle-row"><span>Background mode</span><b>on</b></div>
-          </article>
-          <article class="control-panel recovery-panel">
-            <span class="panel-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-            <h3>Recovery with choice</h3>
-            <p>Password reset, recovery opt-out, and account deletion are framed as user control, not hidden plumbing.</p>
-            <div class="recovery-actions"><span>reset</span><span>opt out</span><span>delete</span></div>
-          </article>
-          <article class="control-panel craft-panel">
-            <span class="panel-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 6l-2 12"/></svg></span>
-            <h3>Built with intent</h3>
-            <p>A solo-built Java desktop app with custom networking, auth, update, media, and UI systems.</p>
-            <div class="mini-stats"><b>27,500+</b><span>lines</span></div>
-          </article>
-          <article class="control-panel presence-panel">
-            <span class="panel-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M6 6a8 8 0 0 0 0 12M18 6a8 8 0 0 1 0 12M8.8 8.8a4.5 4.5 0 0 0 0 6.4M15.2 8.8a4.5 4.5 0 0 1 0 6.4"/></svg></span>
-            <h3>Presence that never hits a server</h3>
-            <p>Online, offline, and &ldquo;typing&hellip;&rdquo; travel straight between devices as tiny live signals &mdash; real-time status, with that little bit of state kept off the server.</p>
-            <div class="toggle-row"><span>State signals</span><b>peer-to-peer</b></div>
-          </article>
-          <article class="control-panel messaging-panel">
-            <span class="panel-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></span>
-            <h3>Familiar, without the surveillance</h3>
-            <p>Replies, pinned messages, and forwarding feel like the messengers you know &mdash; plus one-tap sign-in with Google or GitHub that still hands you a recovery key you own.</p>
-            <div class="recovery-actions"><span>reply</span><span>pin</span><span>forward</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cipher-engine section" id="security">
-      <div class="container">
-        <div class="cipher-grid">
-          <div data-reveal>
-            <span class="section-eyebrow">Cipher engine</span>
-            <h2 class="section-title">32,768 possible routes through the lock.</h2>
-            <p class="section-sub">Talken's security story has a memorable center: a moving-target cipher engine that makes encryption feel alive, mechanical, and difficult to pin down.</p>
-            <div class="cipher-chips">
-              <span class="chip"><b>1 of 32,768</b>&nbsp;selected</span>
-              <span class="chip"><b>keyed</b>&nbsp;pipeline</span>
-              <span class="chip"><b>moving</b>&nbsp;target</span>
-            </div>
-            <div class="slang-def" data-reveal>
-              <span class="slang-word">privacymaxxing</span>
-              <span class="slang-pos">verb &middot; slang</span>
-              <p>pushing privacy past &ldquo;good enough&rdquo; to its absolute maximum &mdash; the default setting for everything Talken does.</p>
-            </div>
+        <div class="compare">
+          <div class="compare-card" data-reveal>
+            <span class="compare-tag">Most chat apps</span>
+            <h3>Your message makes a stop first</h3>
+            <p>Everything you send goes to the company&rsquo;s servers before it reaches your friend. Your photos are on their computers too.</p>
+            <svg viewBox="0 0 400 120" aria-hidden="true">
+              <circle cx="45" cy="60" r="24" fill="#F5F0E9" stroke="#E9E4DA" stroke-width="2"/>
+              <text x="45" y="66" text-anchor="middle" font-family="Roboto,Arial" font-size="15" font-weight="500" fill="#615C78">You</text>
+              <path d="M78 60h48" stroke="#AAA6BC" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+              <path d="M120 55l8 5-8 5" stroke="#AAA6BC" stroke-width="2" fill="none"/>
+              <rect x="140" y="30" width="120" height="60" rx="10" fill="#ECE6DC"/>
+              <rect x="156" y="44" width="12" height="12" rx="2" fill="#AAA6BC"/><rect x="174" y="44" width="12" height="12" rx="2" fill="#AAA6BC"/><rect x="192" y="44" width="12" height="12" rx="2" fill="#AAA6BC"/>
+              <text x="200" y="78" text-anchor="middle" font-family="Roboto,Arial" font-size="12.5" fill="#615C78">their servers</text>
+              <path d="M274 60h48" stroke="#AAA6BC" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+              <path d="M316 55l8 5-8 5" stroke="#AAA6BC" stroke-width="2" fill="none"/>
+              <circle cx="358" cy="60" r="24" fill="#F5F0E9" stroke="#E9E4DA" stroke-width="2"/>
+              <text x="358" y="66" text-anchor="middle" font-family="Roboto,Arial" font-size="14" font-weight="500" fill="#615C78">Friend</text>
+            </svg>
           </div>
-          <div class="cipher-machine glass" data-reveal>
-            <div class="machine-ring"><span data-cipher-selector>14902</span></div>
-            <div class="machine-stream" data-cipher-stream>4f 91 c0 a8 1d fe 73 29</div>
-            <div class="machine-slots">
-              <i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
+          <div class="compare-card good" data-reveal>
+            <span class="compare-tag">Talken</span>
+            <h3>Your message goes to your friend</h3>
+            <p>Device to device, sealed on the way. That&rsquo;s the whole route &mdash; there is no company server in the middle to read anything.</p>
+            <svg viewBox="0 0 400 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="26" fill="#EEEDF9" stroke="#8580C8" stroke-width="2"/>
+              <text x="60" y="66" text-anchor="middle" font-family="Roboto,Arial" font-size="15" font-weight="500" fill="#423E86">You</text>
+              <path d="M96 60h208" stroke="#5450AA" stroke-width="2.5" fill="none"/>
+              <path d="M296 54l10 6-10 6" stroke="#5450AA" stroke-width="2.5" fill="none"/>
+              <rect x="178" y="46" width="28" height="28" rx="8" fill="#E1F1F2"/>
+              <path d="M186 60l4 4 8-8" stroke="#14636B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="340" cy="60" r="26" fill="#EEEDF9" stroke="#8580C8" stroke-width="2"/>
+              <text x="340" y="66" text-anchor="middle" font-family="Roboto,Arial" font-size="14" font-weight="500" fill="#423E86">Friend</text>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="product-walkthrough section">
+    <!-- === more than privacy === -->
+    <section class="section" id="more">
       <div class="container">
         <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Product feel</span>
-          <h2 class="section-title">A real desktop app, not a concept poster.</h2>
-          <div class="section-rule"></div>
+          <span class="eyebrow">What you get</span>
+          <h2>Privacy is just the <span class="squiggled">start.<svg class="squiggle" viewBox="0 0 120 12" aria-hidden="true"><path d="M4 8 Q20 2 36 7 T68 6 T100 7 T116 5" pathLength="1"/></svg></span></h2>
         </div>
-        <div class="walkthrough-frame glass" data-reveal>
-          <div class="desktop-bar"><span></span><span></span><span></span><b>Talken</b></div>
-          <div class="walkthrough-main">
-            <img src="res/talken-main-interface.png" alt="Talken main chat interface" loading="lazy" decoding="async">
+        <div class="more-grid">
+          <div class="more-item" data-reveal>
+            <span class="m-ico i1"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M13 2v7h7"/></svg></span>
+            <div><h3>Really big files</h3><p>Movies, whole albums, project folders &mdash; up to your Drive&rsquo;s space, not a tiny attachment cap.</p></div>
           </div>
-          <div class="walkthrough-tabs" data-reveal-stagger>
-            <div><img src="res/talken-login-screen.png" alt="Talken login screen" loading="lazy" decoding="async"><span>Login</span></div>
-            <div><img src="res/talken-main-interface.png" alt="Talken chat screen" loading="lazy" decoding="async"><span>Chat</span></div>
-            <div><img src="res/talken-file-sharing.png" alt="Talken file sharing screen" loading="lazy" decoding="async"><span>File sharing</span></div>
-            <div class="tray-preview"><b>T</b><span>Tray mode</span></div>
+          <div class="more-item" data-reveal>
+            <span class="m-ico i2"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><circle cx="17.5" cy="9" r="2.8"/><path d="M15.5 14.7c2.9.2 6 2 6 5.3"/></svg></span>
+            <div><h3>Personas</h3><p>Show one name and photo to work, another to friends. Each contact sees the you that you choose.</p></div>
+          </div>
+          <div class="more-item" data-reveal>
+            <span class="m-ico i3"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l18-7-4 16-6-5-3 4v-5z"/></svg></span>
+            <div><h3>Public channels</h3><p>One person posts, anyone can follow &mdash; like a tiny newspaper. Anyone can read, even without an account.</p></div>
+          </div>
+          <div class="more-item" data-reveal>
+            <span class="m-ico i4"><svg class="icon" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4M8 21h8"/></svg></span>
+            <div><h3>Calls and voice notes</h3><p>Voice calls and quick voice messages, over the same private route as everything else.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="founder-band">
-      <div class="container founder-split">
-        <div data-reveal>
-          <span class="section-eyebrow">Why it feels personal</span>
-          <h2 class="section-title">Built like a privacy tool someone actually wanted for themselves.</h2>
-          <p class="section-sub">Talken carries a rare texture: one developer, one obsession, and a lot of system-level work stitched into a product that wants to respect the person using it.</p>
+    <!-- === the core four, 2 + 2 === -->
+    <section class="section tint">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">The important stuff</span>
+          <h2>Four things, kept short.</h2>
         </div>
-        <div class="founder-card glass" data-reveal>
-          <b>Flex Studios</b>
-          <p>Independent, privacy-first software by Shashwat Gupta.</p>
-          <a class="btn btn-ghost" href="about-developer.html">Meet the developer</a>
+        <div class="bento">
+          <div class="bento-card" data-reveal>
+            <h3>No middleman</h3>
+            <p>Messages travel from your device to theirs. There isn&rsquo;t a company server in between to read, store, or lose them.</p>
+            <div class="bento-art">
+              <svg viewBox="0 0 400 70" aria-hidden="true">
+                <circle cx="34" cy="35" r="17" fill="#EEEDF9" stroke="#8580C8" stroke-width="2"/>
+                <path d="M60 35h276" stroke="#5450AA" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M328 29l10 6-10 6" stroke="#5450AA" stroke-width="2.5" fill="none"/>
+                <circle cx="366" cy="35" r="17" fill="#EEEDF9" stroke="#8580C8" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bento-card" data-reveal>
+            <h3>Big files, no shrinking</h3>
+            <p>Photos, videos and files ride through your own Google Drive &mdash; so a 4&nbsp;GB video sends as easily as a text, at full quality.</p>
+            <div class="mini-bubbles">
+              <span class="mb in">the raw video pls, not the compressed one 🙏</span>
+              <span class="mb file"><span class="f-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M15 10l4.5-2.5v9L15 14"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg></span><span><b>Haldi-Full.mp4</b><span>3.1 GB &middot; full quality</span></span></span>
+            </div>
+          </div>
+          <div class="bento-card" data-reveal>
+            <h3>Friends offline? It waits</h3>
+            <p>A message sent while they&rsquo;re away is held safely and handed over the moment they&rsquo;re back. Nothing is lost in between.</p>
+            <div class="mini-bubbles">
+              <span class="mb out">good night! 🌙</span>
+              <span class="mb in" style="color:#615C78">delivered at 7:04 am, when they woke up</span>
+            </div>
+          </div>
+          <div class="bento-card" data-reveal>
+            <h3>No phone number needed</h3>
+            <p>Your account is a key that only you hold. No SIM card, no uploading your contact list, no spam calls afterwards.</p>
+            <div class="bento-art">
+              <svg viewBox="0 0 400 70" aria-hidden="true">
+                <rect x="150" y="14" width="42" height="42" rx="11" fill="#EEEDF9"/>
+                <circle cx="171" cy="30" r="6" fill="none" stroke="#5450AA" stroke-width="2.5"/>
+                <path d="M171 36v12M171 48h8M171 43h6" stroke="#5450AA" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <text x="212" y="41" font-family="Roboto,Arial" font-size="13" fill="#615C78">= your account</text>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- === see it working === -->
+    <section class="section dots-bg">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow warm">See it working</span>
+          <h2>Gigabytes between friends, like it&rsquo;s nothing.</h2>
+          <p class="lede">Groups, voice notes, replies &mdash; and files the size of movies, sent at full quality with no expiry links.</p>
+        </div>
+        <div class="app-shot" data-reveal>
+          <div class="shot-chrome"><i></i><i></i><i></i><span>Wedding squad &middot; 4 people</span></div>
+          <div class="shot-body">
+            <div class="shot-msg in"><span class="shot-who" style="color:#14636B">Rohan</span>
+              <span class="shot-file"><span class="f-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M15 10l4.5-2.5v9L15 14"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg></span><span><b>Final-Video.mp4</b><span>3.8 GB &middot; full quality</span></span></span>
+            </div>
+            <div class="shot-msg in media"><span class="shot-who" style="color:#E85F40">Ananya</span><span class="shot-photo"><img data-optional src="res/shot-photo.jpg" alt=""></span><span class="shot-cap">a still from the final cut 🥹</span></div>
+            <div class="shot-msg in voice"><span class="shot-who" style="color:#3E8F96">Mira</span>
+              <span class="shot-voice"><svg class="icon" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z" fill="currentColor" stroke="none"/></svg><i style="height:8px"></i><i style="height:14px"></i><i style="height:10px"></i><i style="height:16px"></i><i style="height:7px"></i><i style="height:12px"></i><i style="height:15px"></i><i style="height:9px"></i><i style="height:13px"></i><i style="height:6px"></i><em>0:11</em></span>
+            </div>
+            <div class="shot-msg out"><span class="shot-quote">Rohan &middot; Final-Video.mp4</span>got the whole thing in one go. no compressing, no link that dies in a week 🙌</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === roadmap === -->
+    <section class="section tint" id="coming">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">The next six months</span>
+          <h2>What&rsquo;s coming.</h2>
+          <p class="lede">Talken is built by one developer, in the open with its users. This is what&rsquo;s on the bench right now.</p>
+        </div>
+        <div class="roadmap">
+          <div class="road-item" data-reveal>
+            <span class="r-dot now"></span>
+            <div><h3>Stronger locks on every message <span class="road-badge now">In testing</span></h3>
+            <p>Every message sealed end-to-end by default, so only your devices can ever read them.</p></div>
+          </div>
+          <div class="road-item" data-reveal>
+            <span class="r-dot soon"></span>
+            <div><h3>Voice rooms <span class="road-badge soon">Building</span></h3>
+            <p>A group voice space friends can drop into and leave anytime &mdash; no ringing anyone.</p></div>
+          </div>
+          <div class="road-item" data-reveal>
+            <span class="r-dot soon"></span>
+            <div><h3>Finding channels <span class="road-badge soon">Building</span></h3>
+            <p>Search public channels by name instead of typing an exact handle.</p></div>
+          </div>
+          <div class="road-item" data-reveal>
+            <span class="r-dot later"></span>
+            <div><h3>Pause and resume big transfers <span class="road-badge later">Planned</span></h3>
+            <p>Sending something huge on patchy Wi&#8209;Fi? Pick up right where it left off.</p></div>
+          </div>
+          <div class="road-item" data-reveal>
+            <span class="r-dot later"></span>
+            <div><h3>A fresh new look <span class="road-badge later">Planned</span></h3>
+            <p>The apps get the same warm design you&rsquo;re looking at right now.</p></div>
+          </div>
+        </div>
+        <p class="road-note">No hard dates &mdash; things ship when they&rsquo;re solid.</p>
+      </div>
+    </section>
+
+    <!-- === final CTA === -->
     <section class="cta-band">
       <div class="container">
-        <div class="cta-inner glass" data-reveal>
-          <h2>Start with a chat app that is built around you.</h2>
-          <a class="btn btn-primary btn-lg magnetic-cta" href="downloads.html">
-            Download Talken
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
-          </a>
-          <p class="cta-note">Windows 10/11 - Android 8.0+ - bundled runtime, no Java setup needed</p>
+        <div class="cta-card" data-reveal>
+          <h2>Ready when you are.</h2>
+          <p>Free. No ads. Nothing sold &mdash; because nothing about you is collected.</p>
+          <div class="hero-cta">
+            <a class="btn btn-cta btn-lg" href="https://db.talken.in/releases/3.2/TalkenSetup-3.2.exe" download>Download for Windows</a>
+            <a class="btn btn-primary btn-lg" href="https://db.talken.in/releases/3.2/Talken.apk" download>Download for Android</a>
+          </div>
+          <p class="hero-note">Takes about two minutes to set up &middot; <a href="downloads.html">install guide</a></p>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- === footer === -->
   <footer>
-    <div class="footer-content">
-      <div class="footer-left"><p>&copy; 2026 Talken by Flex Studios</p></div>
-      <nav class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="downloads.html">Downloads</a>
-        <a href="about-developer.html">About</a>
-        <a href="privacy-policy.html">Privacy</a>
-        <a href="terms-and-conditions.html">Terms</a>
-      </nav>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+          <b class="dusk-text">Talken</b>
+        </a>
+        <p>A little chat app from Prayagraj, India, that keeps your conversations yours.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Product</h4>
+          <a href="downloads.html">Downloads</a>
+          <a href="downloads.html#notes">Release notes</a>
+          <a href="index.html#coming">What's coming</a>
+        </div>
+        <div>
+          <h4>People</h4>
+          <a href="about-developer.html">About the developer</a>
+          <a href="mailto:connect@talken.in">Contact</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 Talken by Flex Studios</span>
+      <span>Made by Shashwat Gupta</span>
     </div>
   </footer>
 
-  <script src="js/theme-switcher.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/immersive.js" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

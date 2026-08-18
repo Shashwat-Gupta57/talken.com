@@ -1,224 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Talken Terms and Conditions" />
-  <title>Talken - Terms & Conditions</title>
-  <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <meta name="description" content="The terms and conditions for using Talken on Windows and Android." />
+  <title>Terms &amp; Conditions — Talken</title>
+  <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Navigation Bar -->
-<nav class="top-nav">
-  <div class="nav-container">
-    <!-- Logo on the left (shifted further left) -->
-    <div class="nav-logo">
-      <div class="logo-icon">T</div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Talken home">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+        <b class="dusk-text">Talken</b>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#coming">What's coming</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="about-developer.html">About</a>
+        <span class="nav-cta"><a class="btn btn-cta" href="downloads.html">Download</a></span>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    
-    <!-- Main title in center -->
-    <div class="nav-title">
-      <h1>Talken</h1>
+    <div class="nav-sheet">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#coming">What's coming</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="about-developer.html">About</a>
+      <a class="btn btn-cta" href="downloads.html">Download Talken</a>
     </div>
-    
-    <!-- Theme toggle on the right -->
-    <div class="nav-actions">
-      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Floating Menu Button -->
-<button class="menu-toggle" id="menuToggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-
-<!-- Right Sidebar (Hidden by default) -->
-<nav class="right-sidebar" id="rightSidebar">
-  <div class="sidebar-header">
-    <h3>Navigation</h3>
-  </div>
-  <ul class="sidebar-menu">
-    <li><a href="index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg> Home</a></li>
-    <li><a href="downloads.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg> Downloads</a></li>
-    <li><a href="about-developer.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> About Developer</a></li>
-    <li><a href="privacy-policy.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Privacy Policy</a></li>
-    <li><a href="terms-and-conditions.html" class="active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 17h6"/></svg> Terms &amp; Conditions</a></li>
-  </ul>
-</nav>
-
-<!-- Overlay for mobile -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <header class="page-header">
+  <main>
+    <header class="legal-hero">
       <div class="container">
-        <h1>Terms & Conditions</h1>
-        <p>Please read these terms carefully</p>
+        <span class="eyebrow trust">Legal</span>
+        <h1>Terms &amp; Conditions</h1>
+        <p>Please read these terms carefully — they exist to protect both you and us.</p>
       </div>
     </header>
 
-    <section class="content">
-      <div class="container">
-        <div class="legal-content">
-          <p><strong>Last Updated:</strong> June 2026</p>
+    <div class="legal-body">
+      <p class="legal-updated"><strong>Last updated:</strong> June 2026</p>
 
-          <h2>1. Acceptance of Terms</h2>
-          <p>By downloading, installing, or using Talken, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our application.</p>
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Talken, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our application.</p>
 
-          <h2>2. Description of Service</h2>
-          <p>Talken is a privacy-focused chat application that:</p>
-          <ul>
-            <li>Stores messages and files in your personal Google Drive</li>
-            <li>Provides end-to-end encrypted communication</li>
-            <li>Offers peer-to-peer calling functionality</li>
-            <li>Supports file sharing up to 15 GB or your available Google Drive space</li>
-          </ul>
+      <h2>2. Description of Service</h2>
+      <p>Talken is a privacy-focused chat application that:</p>
+      <ul>
+        <li>Stores your media and files in your personal Google Drive</li>
+        <li>Sends messages directly between devices, encrypted in transit</li>
+        <li>Offers peer-to-peer calling functionality</li>
+        <li>Supports file sharing up to 15 GB or your available Google Drive space</li>
+      </ul>
 
-          <h2>3. User Responsibilities</h2>
-          <h3>3.1 Account Security</h3>
-          <ul>
-            <li>You are responsible for maintaining the security of your Talken account credentials and any connected Google account</li>
-            <li>You must not share your account credentials with others</li>
-            <li>You must notify us immediately of any unauthorized use</li>
-          </ul>
+      <h2>3. User Responsibilities</h2>
+      <h3>3.1 Account Security</h3>
+      <ul>
+        <li>You are responsible for maintaining the security of your Talken account credentials and any connected Google account</li>
+        <li>You must not share your account credentials with others</li>
+        <li>You must notify us immediately of any unauthorized use</li>
+      </ul>
+      <h3>3.2 Acceptable Use</h3>
+      <p>You agree NOT to use Talken for:</p>
+      <ul>
+        <li>Illegal activities or content</li>
+        <li>Harassment, bullying, or threatening behavior</li>
+        <li>Sharing copyrighted material without permission</li>
+        <li>Distributing malware, viruses, or harmful code</li>
+        <li>Spamming or unsolicited commercial messages</li>
+        <li>Impersonating others or creating fake accounts</li>
+      </ul>
 
-          <h3>3.2 Acceptable Use</h3>
-          <p>You agree NOT to use Talken for:</p>
-          <ul>
-            <li>Illegal activities or content</li>
-            <li>Harassment, bullying, or threatening behavior</li>
-            <li>Sharing copyrighted material without permission</li>
-            <li>Distributing malware, viruses, or harmful code</li>
-            <li>Spamming or unsolicited commercial messages</li>
-            <li>Impersonating others or creating fake accounts</li>
-          </ul>
+      <h2>4. Content and Data</h2>
+      <h3>4.1 Your Content</h3>
+      <ul>
+        <li>You retain full ownership of all content you share through Talken</li>
+        <li>You are solely responsible for the content you share</li>
+        <li>You grant Talken permission to transmit your content to intended recipients</li>
+      </ul>
+      <h3>4.2 Data Storage</h3>
+      <ul>
+        <li>All messages and files are stored on your devices and in YOUR Google Drive, not our servers</li>
+        <li>You control the retention and deletion of your data</li>
+        <li>We do not have access to your stored messages or files</li>
+      </ul>
 
-          <h2>4. Content and Data</h2>
-          <h3>4.1 Your Content</h3>
-          <ul>
-            <li>You retain full ownership of all content you share through Talken</li>
-            <li>You are solely responsible for the content you share</li>
-            <li>You grant Talken permission to transmit your content to intended recipients</li>
-          </ul>
+      <h2>5. Privacy and Security</h2>
+      <ul>
+        <li>We implement industry-standard security measures</li>
+        <li>Your privacy is protected as outlined in our Privacy Policy</li>
+        <li>We do not sell, rent, or share your personal information</li>
+        <li>Communication between devices is encrypted</li>
+      </ul>
 
-          <h3>4.2 Data Storage</h3>
-          <ul>
-            <li>All messages and files are stored in YOUR Google Drive, not our servers</li>
-            <li>You control the retention and deletion of your data</li>
-            <li>We do not have access to your stored messages or files</li>
-          </ul>
+      <h2>6. Intellectual Property</h2>
+      <ul>
+        <li>Talken and its original content are owned by Flex Studios</li>
+        <li>You may not copy, modify, or distribute our software without permission</li>
+        <li>All trademarks and logos are property of their respective owners</li>
+      </ul>
 
-          <h2>5. Privacy and Security</h2>
-          <ul>
-            <li>We implement industry-standard security measures</li>
-            <li>Your privacy is protected as outlined in our Privacy Policy</li>
-            <li>We do not sell, rent, or share your personal information</li>
-            <li>Communication is encrypted end-to-end</li>
-          </ul>
+      <h2>7. Disclaimers and Limitations</h2>
+      <h3>7.1 Service Availability</h3>
+      <ul>
+        <li>We strive for high availability but cannot guarantee uninterrupted service</li>
+        <li>Maintenance and updates may temporarily affect availability</li>
+        <li>Third-party service dependencies (Google Drive) may impact functionality</li>
+      </ul>
+      <h3>7.2 Limitation of Liability</h3>
+      <p>Talken is provided "as is" without warranties. We are not liable for:</p>
+      <ul>
+        <li>Data loss or corruption</li>
+        <li>Service interruptions</li>
+        <li>Third-party actions or content</li>
+        <li>Indirect or consequential damages</li>
+      </ul>
 
-          <h2>6. Intellectual Property</h2>
-          <ul>
-            <li>Talken and its original content are owned by Flex Studios</li>
-            <li>You may not copy, modify, or distribute our software without permission</li>
-            <li>All trademarks and logos are property of their respective owners</li>
-          </ul>
+      <h2>8. System Requirements</h2>
+      <ul>
+        <li>Windows 10/11 (64-bit), or Android 8.0 (Oreo) and newer</li>
+        <li>Java 21 or newer, bundled in the Windows installer — no separate install needed. Not required on Android.</li>
+        <li>Google account with Drive access (for media and file storage)</li>
+        <li>Stable internet connection</li>
+        <li>Minimum 2 GB RAM and ~250 MB free disk space</li>
+      </ul>
 
-          <h2>7. Disclaimers and Limitations</h2>
-          <h3>7.1 Service Availability</h3>
-          <ul>
-            <li>We strive for 99.9% uptime but cannot guarantee uninterrupted service</li>
-            <li>Maintenance and updates may temporarily affect availability</li>
-            <li>Third-party service dependencies (Google Drive) may impact functionality</li>
-          </ul>
+      <h2>9. Updates and Modifications</h2>
+      <ul>
+        <li>We may update Talken to improve functionality and security</li>
+        <li>Updates may be automatic or require manual installation</li>
+        <li>Continued use after updates constitutes acceptance of changes</li>
+      </ul>
 
-          <h3>7.2 Limitation of Liability</h3>
-          <p>Talken is provided "as is" without warranties. We are not liable for:</p>
-          <ul>
-            <li>Data loss or corruption</li>
-            <li>Service interruptions</li>
-            <li>Third-party actions or content</li>
-            <li>Indirect or consequential damages</li>
-          </ul>
+      <h2>10. Termination</h2>
+      <h3>10.1 By You</h3>
+      <ul>
+        <li>You may stop using Talken at any time</li>
+        <li>Uninstall the application to terminate your use</li>
+        <li>Your data remains in your Google Drive</li>
+      </ul>
+      <h3>10.2 By Us</h3>
+      <p>We may terminate your access if you:</p>
+      <ul>
+        <li>Violate these terms</li>
+        <li>Use the service for illegal purposes</li>
+        <li>Attempt to harm or exploit the service</li>
+      </ul>
 
-          <h2>8. System Requirements</h2>
-          <ul>
-            <li>Windows 10/11 (64-bit), or Android 8.0 (Oreo) and newer</li>
-            <li>Java 21 or newer, bundled in the Windows installer &mdash; no separate install needed. Not required on Android.</li>
-            <li>Google account with Drive access (for message and media backup)</li>
-            <li>Stable internet connection</li>
-            <li>Minimum 2 GB RAM and ~250 MB free disk space</li>
-          </ul>
+      <h2>11. Governing Law</h2>
+      <p>These terms are governed by the laws of India. Any disputes will be resolved in the courts of Prayagraj, Uttar Pradesh, India.</p>
 
-          <h2>9. Updates and Modifications</h2>
-          <ul>
-            <li>We may update Talken to improve functionality and security</li>
-            <li>Updates may be automatic or require manual installation</li>
-            <li>Continued use after updates constitutes acceptance of changes</li>
-          </ul>
+      <h2>12. Contact Information</h2>
+      <p>For questions about these Terms and Conditions:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a></li>
+        <li><strong>Developer:</strong> Shashwat Gupta, Flex Studios</li>
+        <li><strong>Location:</strong> Prayagraj, Uttar Pradesh, India</li>
+      </ul>
 
-          <h2>10. Termination</h2>
-          <h3>10.1 By You</h3>
-          <ul>
-            <li>You may stop using Talken at any time</li>
-            <li>Uninstall the application to terminate your use</li>
-            <li>Your data remains in your Google Drive</li>
-          </ul>
+      <h2>13. Changes to Terms</h2>
+      <p>We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated "Last updated" date. Continued use of Talken after changes constitutes acceptance of the new terms.</p>
 
-          <h3>10.2 By Us</h3>
-          <p>We may terminate your access if you:</p>
-          <ul>
-            <li>Violate these terms</li>
-            <li>Use the service for illegal purposes</li>
-            <li>Attempt to harm or exploit the service</li>
-          </ul>
-
-          <h2>11. Governing Law</h2>
-          <p>These terms are governed by the laws of India. Any disputes will be resolved in the courts of Prayagraj, Uttar Pradesh, India.</p>
-
-          <h2>12. Contact Information</h2>
-          <p>For questions about these Terms and Conditions:</p>
-          <ul>
-            <li><strong>Email:</strong> <a href="mailto:talken.flexstudios@gmail.com">talken.flexstudios@gmail.com</a></li>
-            <li><strong>Developer:</strong> Shashwat Gupta, Flex Studios</li>
-            <li><strong>Location:</strong> Prayagraj, Uttar Pradesh, India</li>
-          </ul>
-
-          <h2>13. Changes to Terms</h2>
-          <p>We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of Talken after changes constitutes acceptance of the new terms.</p>
-
-          <div class="terms-highlight">
-            <h3>📋 Fair Use Promise</h3>
-            <p>These terms exist to protect both you and us. We believe in fair, transparent policies that respect your rights while ensuring Talken remains a safe, reliable platform for everyone.</p>
-          </div>
-        </div>
+      <div class="legal-highlight">
+        <h3>Fair use promise</h3>
+        <p>These terms exist to protect both you and us. We believe in fair, transparent policies that respect your rights while ensuring Talken remains a safe, reliable place for everyone.</p>
       </div>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>
-            <a href="index.html">Home</a> |
-            <a href="downloads.html">Downloads</a> |
-            <a href="about-developer.html">About Developer</a> |
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="terms-and-conditions.html">Terms & Conditions</a>
-          </p>
-          <p>© 2026 - Talken by Flex Studios</p>
-        </div>
-      </div>
-    </footer>
+    </div>
   </main>
 
-  <script src="js/theme-switcher.js"></script>
-  <script src="js/navigation.js"></script>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+          <b class="dusk-text">Talken</b>
+        </a>
+        <p>A little chat app from Prayagraj, India, that keeps your conversations yours.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Product</h4>
+          <a href="downloads.html">Downloads</a>
+          <a href="downloads.html#notes">Release notes</a>
+          <a href="index.html#coming">What's coming</a>
+        </div>
+        <div>
+          <h4>People</h4>
+          <a href="about-developer.html">About the developer</a>
+          <a href="mailto:connect@talken.in">Contact</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 Talken by Flex Studios</span>
+      <span>Made by Shashwat Gupta</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

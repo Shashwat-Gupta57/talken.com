@@ -3,216 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Download Talken for Windows. Bundled runtime, Yggdrasil networking, background mode, and privacy-first desktop chat." />
-  <title>Download Talken - Windows Desktop App</title>
-  <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <meta name="description" content="Download Talken for Windows and Android. Free, private chat — messages go device to device and your files stay in your own Google Drive." />
+  <title>Download Talken — Windows &amp; Android</title>
+  <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <div class="nav-logo"><div class="logo-icon">T</div></div>
-      <div class="nav-title"><h1>Talken</h1></div>
-      <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Talken home">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+        <b class="dusk-text">Talken</b>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#coming">What's coming</a>
+        <a href="downloads.html" class="active">Downloads</a>
+        <a href="about-developer.html">About</a>
       </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-sheet">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#coming">What's coming</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="about-developer.html">About</a>
     </div>
   </nav>
 
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <main>
+    <header class="dl-hero">
+      <div class="container">
+        <span class="eyebrow warm">Version 3.2 &middot; free</span>
+        <h1>Get Talken.</h1>
+        <p class="lede">Two minutes to set up. Everything Talken needs is inside the installer &mdash; nothing else to download.</p>
 
-  <nav class="right-sidebar" id="rightSidebar" aria-label="Sidebar">
-    <div class="sidebar-header"><h3>Navigation</h3></div>
-    <ul class="sidebar-menu">
-      <li><a href="index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg> Home</a></li>
-      <li><a href="downloads.html" class="active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg> Downloads</a></li>
-      <li><a href="about-developer.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> About Developer</a></li>
-      <li><a href="privacy-policy.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Privacy Policy</a></li>
-      <li><a href="terms-and-conditions.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 17h6"/></svg> Terms &amp; Conditions</a></li>
-    </ul>
-  </nav>
-  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
-
-  <main class="main-content downloads-v2">
-    <header class="download-hero">
-      <div class="container download-hero-grid">
-        <div data-reveal>
-          <span class="pill glass"><span class="dot"></span>Talken v3.2 available now</span>
-          <h1>Install the privacy network on your desktop.</h1>
-          <p>Talken ships as a complete Windows package with the app runtime and mesh networking components included. Download, install, sign in, and stay reachable from the tray.</p>
-          <div class="hero-cta">
-            <a href="https://db.talken.in/releases/3.2/TalkenSetup-3.2.exe" class="btn btn-primary btn-lg magnetic-cta" download>
-              Download v3.2
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
-            </a>
-            <a href="https://db.talken.in/releases/3.2/Talken.apk" class="btn btn-ghost btn-lg" download>
-              Download for Android
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
-            </a>
-            <a href="#release-notes" class="btn btn-ghost btn-lg">Read release notes</a>
+        <div class="dl-cards">
+          <div class="dl-card" id="windows" data-reveal>
+            <div class="d-plat">
+              <span class="p-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+              <div><h2>Windows</h2><span class="d-specs">Windows 10 or 11, 64-bit &middot; 122 MB</span></div>
+            </div>
+            <p class="d-specs">Installs like any desktop app, then lives quietly in the tray so friends can always reach you.</p>
+            <a class="btn btn-cta btn-lg" href="https://db.talken.in/releases/3.2/TalkenSetup-3.2.exe" download>Download for Windows</a>
+            <p class="d-fine">Windows shows an &ldquo;unknown publisher&rdquo; note the first time &mdash; <a href="#before">here&rsquo;s why, and how to continue</a>.</p>
           </div>
-          <p class="hero-footnote">Windows will show a &ldquo;publisher unknown&rdquo; warning the first time &mdash; <a href="#smartscreen">here&rsquo;s why, and how to continue</a>.</p>
+
+          <div class="dl-card" id="android" data-reveal>
+            <div class="d-plat">
+              <span class="p-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 10a6 6 0 0 1 12 0"/><path d="M6 10h12v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 7.5v.01M15 7.5v.01M8 4l-1-1.6M16 4l1-1.6"/></svg></span>
+              <div><h2>Android</h2><span class="d-specs">Android 8.0 and newer &middot; 106 MB</span></div>
+            </div>
+            <p class="d-specs">Downloads straight from us, not a store. After the first install, Talken updates itself and always asks first.</p>
+            <a class="btn btn-primary btn-lg" href="https://db.talken.in/releases/3.2/Talken.apk" download>Download for Android</a>
+            <p class="d-fine">Android asks once to allow installs from this source &mdash; <a href="#android-install">what to expect</a>.</p>
+          </div>
         </div>
-        <aside class="version-card glass" data-reveal>
-          <div class="version-top">
-            <span>current version</span>
-            <b>3.2</b>
-          </div>
-          <dl>
-            <div><dt>Windows</dt><dd>10/11 64-bit &middot; 122 MB</dd></div>
-            <div><dt>Android</dt><dd>8.0+ &middot; 106 MB</dd></div>
-            <div><dt>Runtime</dt><dd>Bundled</dd></div>
-            <div><dt>Network</dt><dd>Yggdrasil included</dd></div>
-          </dl>
-        </aside>
       </div>
     </header>
 
     <section class="section">
       <div class="container">
-        <div class="install-grid" data-reveal-stagger>
-          <article class="install-card">
-            <span>01</span>
-            <h3>Download</h3>
-            <p>Get the Windows setup package, or the Android APK, from the official download above.</p>
-          </article>
-          <article class="install-card">
-            <span>02</span>
-            <h3>Install</h3>
-            <p>The installer brings the desktop app, runtime, and network pieces together.</p>
-          </article>
-          <article class="install-card">
-            <span>03</span>
-            <h3>Sign in</h3>
-            <p>Create or open your Talken identity and connect your own cloud storage.</p>
-          </article>
-          <article class="install-card">
-            <span>04</span>
-            <h3>Stay online</h3>
-            <p>Talken can run quietly in the background and keep you reachable.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="smartscreen">
-      <div class="container">
-        <div class="release-panel glass" data-reveal>
-          <div>
-            <span class="section-eyebrow">Before you install</span>
-            <h2>Windows will warn you the first time</h2>
-            <p class="section-sub">This is expected, and we&rsquo;d rather explain it than have you wonder.</p>
-          </div>
-          <div class="release-notes">
-            <p>When you run the installer, Microsoft Defender SmartScreen shows a blue &ldquo;Windows protected your PC&rdquo; screen saying the publisher is unknown.</p>
-            <p><b>Why it happens:</b> Windows only recognises apps signed with a code-signing certificate. Those cost upwards of <b>$200 per year</b>, and Talken is a small independent project &mdash; that money isn&rsquo;t something we can justify yet. Unsigned simply means <i>&ldquo;Windows doesn&rsquo;t know who made this&rdquo;</i>. It does not mean anything was detected in the file.</p>
-            <p><b>To continue:</b> click <b>More info</b> on that dialog, then <b>Run anyway</b>. You only need to do this once per version.</p>
-            <figure class="smartscreen-shot">
-              <img src="res/smartscreen-warning.png" alt="The Microsoft Defender SmartScreen dialog for TalkenSetup, expanded to show the Run anyway button" loading="lazy" width="745" height="671">
-              <figcaption>After clicking <b>More info</b>, the dialog expands and the <b>Run anyway</b> button appears in the bottom-right.</figcaption>
-            </figure>
-            <p><b>Don&rsquo;t just take our word for it.</b> Only ever download Talken from <b>talken.in</b> or our official GitHub release page &mdash; and if you want to be certain the file reached you untouched, check its fingerprint. In PowerShell:</p>
-            <pre class="checksum-block"><code>Get-FileHash .\TalkenSetup-3.2.exe -Algorithm SHA256</code></pre>
-            <p>It should print exactly this:</p>
-            <ul class="checksum-list">
-              <li><b>TalkenSetup-3.2.exe</b><code>36240CCE9B0B8FCC41B7AD1509421A191E47AB234F6F4A2502C3B57FB11E6F80</code></li>
-              <li><b>Talken.exe</b><code>B1F08D56EF7BC1B3AC063DDC2A4B21D199F3F9FA9684104EF3A0713D98503AD3</code></li>
-              <li><b>Talken.apk</b><code>E5D92934E432D978FCD8B7A5FB4DE8AF0864F4C5AEE869AB80065D448A4BBD7A</code></li>
-            </ul>
-            <p>If the fingerprint doesn&rsquo;t match, don&rsquo;t run the file &mdash; delete it and download again from talken.in.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="download-detail-band" id="release-notes">
-      <div class="container detail-split">
-        <div data-reveal>
-          <span class="section-eyebrow">What's bundled</span>
-          <h2 class="section-title">No extra Java setup. No manual network wiring.</h2>
-          <p class="section-sub">The installer is meant to feel like a real desktop product: install once, then let Talken handle startup, tray presence, and app updates.</p>
-        </div>
-        <div class="bundle-list" data-reveal-stagger>
-          <div><b>Talken desktop app</b><span>JavaFX chat client</span></div>
-          <div><b>Bundled runtime</b><span>Runs without a separate Java install</span></div>
-          <div><b>Mesh networking</b><span>Yggdrasil components included</span></div>
-          <div><b>Self-update path</b><span>Future app updates can be delivered in place</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="release-panel glass" data-reveal>
-          <div>
-            <span class="section-eyebrow">Android</span>
-            <h2>Installing on Android</h2>
-          </div>
-          <div class="release-notes">
-            <p>Talken is not on the Play Store, so Android will ask you to allow installs from this source the first time. That prompt is expected &mdash; it appears for any app installed outside a store.</p>
-            <p><b>Already running an earlier test build?</b> Uninstall it first. Version 3.2 is signed with Talken&rsquo;s permanent release key, and Android refuses to replace an app signed with a different one. Uninstalling clears that device&rsquo;s message history, because messages are stored only on your device and only you can decrypt them &mdash; there is no copy on a server to restore from. This is a one&#8209;time break; updates from 3.2 onward install over the top and keep everything.</p>
-            <p>After the first install, Talken updates itself: it checks for a new version, downloads it, verifies its checksum, and asks you before installing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="release-panel glass" data-reveal>
-          <div>
-            <span class="section-eyebrow">Release notes</span>
-            <h2>Talken 3.2</h2>
-          </div>
-          <div class="release-notes">
-            <p><b>Public channels:</b> One person writes, anyone can read. Follow a channel by typing its handle &mdash; <code>PC@handle</code> &mdash; into the same box you use to reach a person, or create one of your own. Only the people you authorise can post to it.</p>
-            <p><b>Read without an account:</b> A channel&rsquo;s posts are fetched straight from storage. No sign-in, nothing asked of Talken, and no record anywhere of who follows what.</p>
-            <p><b>Channel details, properly:</b> Photo, description, follower and post counts &mdash; in the same window a contact&rsquo;s profile uses. Owners can rename, set a photo, and manage who is allowed to post.</p>
-            <p><b>Groups got their controls back:</b> Rename, add members, promote or remove someone, leave, and delete. Members are a real list instead of a wall of text.</p>
-            <p><b>A clearer + button:</b> It now fans out into New chat, New group and New channel, and there is a proper Exit in the sidebar that saves everything and closes &mdash; separate from the X, which hides to the tray.</p>
-            <p><b>Fixed:</b> Closing the app saved nothing unless a Google Drive account was connected. Media sent without a caption could vanish on arrival. Opening some profiles could crash the window. On Android, the mesh no longer interferes with other apps&rsquo; connections on Wi&#8209;Fi.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio-strip">
-      <div class="container">
         <div class="section-head center" data-reveal>
-          <span class="section-eyebrow">Also by Flex Studios</span>
-          <h2 class="section-title">Small experiments, same craft.</h2>
-          <div class="section-rule"></div>
+          <span class="eyebrow">Getting started</span>
+          <h2>Four small steps.</h2>
         </div>
-        <div class="mini-projects" data-reveal-stagger>
-          <div><img src="res/sg-paint.png" alt="SG Paint app preview" loading="lazy" decoding="async"><span>SG Paint</span></div>
-          <div><img src="res/rex-run-game.png" alt="Rex Run game preview" loading="lazy" decoding="async"><span>Rex Run</span></div>
-          <div><img src="res/notes-app.png" alt="Notes app preview" loading="lazy" decoding="async"><span>Notes</span></div>
-          <div><img src="res/weather-widget.png" alt="Weather widget preview" loading="lazy" decoding="async"><span>Weather Widget</span></div>
+        <div class="steps">
+          <div class="step" data-reveal><em>1</em><h3>Download</h3><p>Grab the installer for your device from the buttons above.</p></div>
+          <div class="step" data-reveal><em>2</em><h3>Install</h3><p>Run it. Everything Talken needs comes bundled inside.</p></div>
+          <div class="step" data-reveal><em>3</em><h3>Sign in</h3><p>Create your account and connect your own Google Drive for photos and files.</p></div>
+          <div class="step" data-reveal><em>4</em><h3>Talk</h3><p>Add a friend and say hi. Talken stays reachable in the background.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" id="before">
+      <div class="container">
+        <div class="panel" data-reveal>
+          <span class="eyebrow">Before you install on Windows</span>
+          <h2>Windows will warn you the first time</h2>
+          <div class="panel-body">
+            <p>When you run the installer, Windows shows a blue &ldquo;Windows protected your PC&rdquo; screen saying the publisher is unknown.</p>
+            <p><b>Why it happens:</b> Windows only recognises apps whose makers pay for a signing certificate &mdash; upwards of $200 a year. Talken is a small independent project, so for now it&rsquo;s unsigned. That means <i>&ldquo;Windows doesn&rsquo;t know who made this&rdquo;</i> &mdash; not that anything wrong was found in the file.</p>
+            <p><b>To continue:</b> click <b>More info</b>, then <b>Run anyway</b>. Once per version, that&rsquo;s it.</p>
+            <figure>
+              <img src="res/smartscreen-warning.png" alt="The Windows SmartScreen dialog, expanded to show the Run anyway button" loading="lazy" width="745" height="671">
+              <figcaption>After clicking <b>More info</b>, the <b>Run anyway</b> button appears at the bottom.</figcaption>
+            </figure>
+            <details>
+              <summary><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>Want to double-check your download? (optional)</summary>
+              <div class="det-body">
+                <p>Only ever download Talken from <b>talken.in</b>. If you&rsquo;d like to be certain the file reached you untouched, open PowerShell in your Downloads folder and run:</p>
+                <div class="cmd-block"><code>Get-FileHash .\TalkenSetup-3.2.exe -Algorithm SHA256</code></div>
+                <p>It should print exactly one of these fingerprints:</p>
+                <ul class="checksum-list">
+                  <li><b>TalkenSetup-3.2.exe</b><code>36240CCE9B0B8FCC41B7AD1509421A191E47AB234F6F4A2502C3B57FB11E6F80</code></li>
+                  <li><b>Talken.exe</b><code>B1F08D56EF7BC1B3AC063DDC2A4B21D199F3F9FA9684104EF3A0713D98503AD3</code></li>
+                  <li><b>Talken.apk</b><code>E5D92934E432D978FCD8B7A5FB4DE8AF0864F4C5AEE869AB80065D448A4BBD7A</code></li>
+                </ul>
+                <p>If it doesn&rsquo;t match, delete the file and download again from talken.in.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="panel" id="android-install" data-reveal>
+          <span class="eyebrow">Before you install on Android</span>
+          <h2>Installing on Android</h2>
+          <div class="panel-body notes-list">
+            <p>Talken isn&rsquo;t on the Play Store, so Android asks you to allow installs from this source the first time. That prompt is expected &mdash; it appears for any app installed outside a store.</p>
+            <p><b>Already running an earlier test build?</b> Uninstall it first. Version 3.2 is signed with Talken&rsquo;s permanent release key, and Android refuses to replace an app signed with a different one. Uninstalling clears that device&rsquo;s message history, because messages live only on your device and only you can read them &mdash; there is no copy on a server to restore from. This is a one&#8209;time break; updates from 3.2 onward install over the top and keep everything.</p>
+            <p>After the first install, Talken updates itself: it checks for a new version, downloads it, verifies it, and asks you before installing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <div class="container">
+        <div class="panel" data-reveal>
+          <span class="eyebrow warm">Release notes</span>
+          <h2>What&rsquo;s new in 3.2</h2>
+          <div class="panel-body notes-list">
+            <p><b>Public channels:</b> one person writes, anyone can read. Follow a channel by typing its handle &mdash; <b>PC@handle</b> &mdash; into the same box you use to reach a person, or create your own. Only people you allow can post to it.</p>
+            <p><b>Read without an account:</b> a channel&rsquo;s posts are fetched straight from storage. No sign-in, and no record anywhere of who follows what.</p>
+            <p><b>Channel details, properly:</b> photo, description, follower and post counts &mdash; in the same window a contact&rsquo;s profile uses. Owners can rename, set a photo, and manage who can post.</p>
+            <p><b>Groups got their controls back:</b> rename, add members, promote or remove someone, leave, and delete &mdash; with members shown as a real list.</p>
+            <p><b>A clearer + button:</b> it now fans out into New chat, New group and New channel. And there&rsquo;s a proper Exit in the sidebar that saves everything and closes &mdash; separate from the X, which hides to the tray.</p>
+            <p><b>Fixed:</b> closing the app could skip saving unless a Drive was connected; photo messages without a caption could vanish on arrival; some profiles crashed the window when opened; and on Android, Talken no longer interferes with other apps&rsquo; connections on Wi&#8209;Fi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <h2>Questions before you jump in?</h2>
+          <p>See <a href="index.html#how">how Talken works</a>, or write to the developer directly &mdash; a real person answers.</p>
+          <div class="hero-cta">
+            <a class="btn btn-ghost btn-lg" href="mailto:connect@talken.in">connect@talken.in</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-left"><p>&copy; 2026 Talken by Flex Studios</p></div>
-      <nav class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="downloads.html">Downloads</a>
-        <a href="about-developer.html">About</a>
-        <a href="privacy-policy.html">Privacy</a>
-        <a href="terms-and-conditions.html">Terms</a>
-      </nav>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#5450AA"/><rect x="22" y="26" width="56" height="16" rx="7" fill="#fff"/><rect x="42" y="34" width="16" height="48" rx="7" fill="#fff"/></svg>
+          <b class="dusk-text">Talken</b>
+        </a>
+        <p>A little chat app from Prayagraj, India, that keeps your conversations yours.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Product</h4>
+          <a href="downloads.html">Downloads</a>
+          <a href="downloads.html#notes">Release notes</a>
+          <a href="index.html#coming">What's coming</a>
+        </div>
+        <div>
+          <h4>People</h4>
+          <a href="about-developer.html">About the developer</a>
+          <a href="mailto:connect@talken.in">Contact</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 Talken by Flex Studios</span>
+      <span>Made by Shashwat Gupta</span>
     </div>
   </footer>
 
-  <script src="js/theme-switcher.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/immersive.js" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
